@@ -1,0 +1,2 @@
+# Tidea
+Money collecting
