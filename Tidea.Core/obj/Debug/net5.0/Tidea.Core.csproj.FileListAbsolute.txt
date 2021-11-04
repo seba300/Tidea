@@ -1,0 +1,45 @@
+/Users/Dom/Downloads/Tidea/Tidea.Core/bin/Debug/net5.0/Tidea.Core.deps.json
+/Users/Dom/Downloads/Tidea/Tidea.Core/bin/Debug/net5.0/Tidea.Core.runtimeconfig.json
+/Users/Dom/Downloads/Tidea/Tidea.Core/bin/Debug/net5.0/Tidea.Core.runtimeconfig.dev.json
+/Users/Dom/Downloads/Tidea/Tidea.Core/bin/Debug/net5.0/Tidea.Core.dll
+/Users/Dom/Downloads/Tidea/Tidea.Core/bin/Debug/net5.0/ref/Tidea.Core.dll
+/Users/Dom/Downloads/Tidea/Tidea.Core/bin/Debug/net5.0/Tidea.Core.pdb
+/Users/Dom/Downloads/Tidea/Tidea.Core/obj/Debug/net5.0/Tidea.Core.csproj.AssemblyReference.cache
+/Users/Dom/Downloads/Tidea/Tidea.Core/obj/Debug/net5.0/Tidea.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Dom/Downloads/Tidea/Tidea.Core/obj/Debug/net5.0/Tidea.Core.AssemblyInfoInputs.cache
+/Users/Dom/Downloads/Tidea/Tidea.Core/obj/Debug/net5.0/Tidea.Core.AssemblyInfo.cs
+/Users/Dom/Downloads/Tidea/Tidea.Core/obj/Debug/net5.0/Tidea.Core.csproj.CoreCompileInputs.cache
+/Users/Dom/Downloads/Tidea/Tidea.Core/obj/Debug/net5.0/Tidea.Core.dll
+/Users/Dom/Downloads/Tidea/Tidea.Core/obj/Debug/net5.0/ref/Tidea.Core.dll
+/Users/Dom/Downloads/Tidea/Tidea.Core/obj/Debug/net5.0/Tidea.Core.pdb
+/Users/Dom/Downloads/Tidea/Tidea.Core/obj/Debug/net5.0/Tidea.Core.genruntimeconfig.cache
+/Users/Dom/Documents/Tidea/Tidea.Core/bin/Debug/net5.0/Tidea.Core.deps.json
+/Users/Dom/Documents/Tidea/Tidea.Core/bin/Debug/net5.0/Tidea.Core.runtimeconfig.json
+/Users/Dom/Documents/Tidea/Tidea.Core/bin/Debug/net5.0/Tidea.Core.runtimeconfig.dev.json
+/Users/Dom/Documents/Tidea/Tidea.Core/bin/Debug/net5.0/Tidea.Core.dll
+/Users/Dom/Documents/Tidea/Tidea.Core/bin/Debug/net5.0/ref/Tidea.Core.dll
+/Users/Dom/Documents/Tidea/Tidea.Core/bin/Debug/net5.0/Tidea.Core.pdb
+/Users/Dom/Documents/Tidea/Tidea.Core/obj/Debug/net5.0/Tidea.Core.csproj.AssemblyReference.cache
+/Users/Dom/Documents/Tidea/Tidea.Core/obj/Debug/net5.0/Tidea.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Dom/Documents/Tidea/Tidea.Core/obj/Debug/net5.0/Tidea.Core.AssemblyInfoInputs.cache
+/Users/Dom/Documents/Tidea/Tidea.Core/obj/Debug/net5.0/Tidea.Core.AssemblyInfo.cs
+/Users/Dom/Documents/Tidea/Tidea.Core/obj/Debug/net5.0/Tidea.Core.csproj.CoreCompileInputs.cache
+/Users/Dom/Documents/Tidea/Tidea.Core/obj/Debug/net5.0/Tidea.Core.dll
+/Users/Dom/Documents/Tidea/Tidea.Core/obj/Debug/net5.0/ref/Tidea.Core.dll
+/Users/Dom/Documents/Tidea/Tidea.Core/obj/Debug/net5.0/Tidea.Core.pdb
+/Users/Dom/Documents/Tidea/Tidea.Core/obj/Debug/net5.0/Tidea.Core.genruntimeconfig.cache
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Core/bin/Debug/net5.0/Tidea.Core.deps.json
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Core/bin/Debug/net5.0/Tidea.Core.runtimeconfig.json
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Core/bin/Debug/net5.0/Tidea.Core.runtimeconfig.dev.json
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Core/bin/Debug/net5.0/Tidea.Core.dll
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Core/bin/Debug/net5.0/ref/Tidea.Core.dll
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Core/bin/Debug/net5.0/Tidea.Core.pdb
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Core/obj/Debug/net5.0/Tidea.Core.csproj.AssemblyReference.cache
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Core/obj/Debug/net5.0/Tidea.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Core/obj/Debug/net5.0/Tidea.Core.AssemblyInfoInputs.cache
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Core/obj/Debug/net5.0/Tidea.Core.AssemblyInfo.cs
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Core/obj/Debug/net5.0/Tidea.Core.csproj.CoreCompileInputs.cache
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Core/obj/Debug/net5.0/Tidea.Core.dll
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Core/obj/Debug/net5.0/ref/Tidea.Core.dll
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Core/obj/Debug/net5.0/Tidea.Core.pdb
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Core/obj/Debug/net5.0/Tidea.Core.genruntimeconfig.cache

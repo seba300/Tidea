@@ -1,0 +1,54 @@
+/Users/Dom/Downloads/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Infrastructure.deps.json
+/Users/Dom/Downloads/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Infrastructure.runtimeconfig.json
+/Users/Dom/Downloads/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Infrastructure.runtimeconfig.dev.json
+/Users/Dom/Downloads/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Infrastructure.dll
+/Users/Dom/Downloads/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/ref/Tidea.Infrastructure.dll
+/Users/Dom/Downloads/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Infrastructure.pdb
+/Users/Dom/Downloads/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Core.dll
+/Users/Dom/Downloads/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Core.pdb
+/Users/Dom/Downloads/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.csproj.AssemblyReference.cache
+/Users/Dom/Downloads/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Dom/Downloads/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.AssemblyInfoInputs.cache
+/Users/Dom/Downloads/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.AssemblyInfo.cs
+/Users/Dom/Downloads/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/Dom/Downloads/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.csproj.CopyComplete
+/Users/Dom/Downloads/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.dll
+/Users/Dom/Downloads/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/ref/Tidea.Infrastructure.dll
+/Users/Dom/Downloads/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.pdb
+/Users/Dom/Downloads/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.genruntimeconfig.cache
+/Users/Dom/Documents/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Infrastructure.deps.json
+/Users/Dom/Documents/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Infrastructure.runtimeconfig.json
+/Users/Dom/Documents/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Infrastructure.runtimeconfig.dev.json
+/Users/Dom/Documents/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Infrastructure.dll
+/Users/Dom/Documents/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/ref/Tidea.Infrastructure.dll
+/Users/Dom/Documents/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Infrastructure.pdb
+/Users/Dom/Documents/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Core.dll
+/Users/Dom/Documents/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Core.pdb
+/Users/Dom/Documents/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.csproj.AssemblyReference.cache
+/Users/Dom/Documents/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Dom/Documents/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.AssemblyInfoInputs.cache
+/Users/Dom/Documents/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.AssemblyInfo.cs
+/Users/Dom/Documents/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/Dom/Documents/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.csproj.CopyComplete
+/Users/Dom/Documents/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.dll
+/Users/Dom/Documents/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/ref/Tidea.Infrastructure.dll
+/Users/Dom/Documents/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.pdb
+/Users/Dom/Documents/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.genruntimeconfig.cache
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Infrastructure.deps.json
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Infrastructure.runtimeconfig.json
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Infrastructure.runtimeconfig.dev.json
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Infrastructure.dll
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/ref/Tidea.Infrastructure.dll
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Infrastructure.pdb
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Core.dll
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Core.pdb
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.csproj.AssemblyReference.cache
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.AssemblyInfoInputs.cache
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.AssemblyInfo.cs
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.csproj.CopyComplete
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.dll
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/ref/Tidea.Infrastructure.dll
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.pdb
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.genruntimeconfig.cache
