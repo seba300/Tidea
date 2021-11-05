@@ -62,14 +62,14 @@ namespace Tidea.Web.Areas.Identity.Pages.Account
             public string Email { get; set; }
 
             [Required]
-            [StringLength(100, ErrorMessage = "{0} musi mieć minimum {2} znaków i może maksymalnie zaierać {1} znaków.", MinimumLength = 6)]
+            [StringLength(100, ErrorMessage = "{0} musi mieć minimum {2} znaków i może maksymalnie zawierać {1} znaków.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Hasło")]
             public string Password { get; set; }
 
             [DataType(DataType.Password)]
             [Display(Name = "Potwierdź hasło")]
-            [Compare("Password", ErrorMessage = "Hasło i hasło potwierdzające nie pasują do siebie")]
+            [Compare("Password", ErrorMessage = "Hasła nie są takie same")]
             public string ConfirmPassword { get; set; }
         }
 
