@@ -31,7 +31,7 @@ namespace Tidea.Web
                 options.UseSqlServer(
                     Configuration.GetConnectionString("TideaDbContextConnection")));
             
-            services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<TideaDbContext>();
             
             services.AddRazorPages();
@@ -55,6 +55,7 @@ namespace Tidea.Web
                 options.User.AllowedUserNameCharacters =
                     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
                 options.User.RequireUniqueEmail = false;
+              
             });
 
             services.ConfigureApplicationCookie(options =>
@@ -68,6 +69,8 @@ namespace Tidea.Web
                 options.SlidingExpiration = true;
             });
             
+            //Allow refresh without recompiling
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
