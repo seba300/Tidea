@@ -1,13 +1,49 @@
-# Default ignored files
-/shelf/
-/workspace.xml
-# Rider ignored files
-/.idea.Tidea.iml
-/modules.xml
-/projectSettingsUpdater.xml
-/contentModel.xml
-# Editor-based HTTP Client requests
-/httpRequests/
-# Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
+Last login: Thu Nov  4 23:31:28 on ttys000
+Dom@ZDI24-NB04-DS ~ % cd Desktop 
+Dom@ZDI24-NB04-DS Desktop % cd Praca\ Dyplomowa 
+Dom@ZDI24-NB04-DS Praca Dyplomowa % cd tidea
+Dom@ZDI24-NB04-DS tidea % ls
+Tidea.Core		Tidea.Web
+Tidea.Infrastructure	Tidea.sln
+Dom@ZDI24-NB04-DS tidea % ls -la
+total 40
+drwxr-xr-x@ 10 Dom  staff   320  4 lis 23:51 .
+drwxrwxrwx   9 Dom  staff   288  4 lis 23:12 ..
+-rw-rw-r--@  1 Dom  staff  8196  4 lis 23:48 .DS_Store
+drwxr-xr-x  15 Dom  staff   480  5 lis 01:52 .git
+-rw-r--r--   1 Dom  staff  1146  4 lis 23:51 .gitignore
+drwxr-xr-x@  3 Dom  staff    96  4 lis 23:08 .idea
+drwxr-xr-x@  8 Dom  staff   256  4 lis 23:48 Tidea.Core
+drwxr-xr-x@  9 Dom  staff   288  4 lis 23:48 Tidea.Infrastructure
+drwxr-xr-x@ 15 Dom  staff   480  4 lis 23:48 Tidea.Web
+-rw-rw-r--@  1 Dom  staff  1768 14 paź 12:20 Tidea.sln
+Dom@ZDI24-NB04-DS tidea % vi .gitignore 
+
+
+
+
+###################
+# compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.pdb
+*.dll.config
+*.cache
+*.suo
+# Include dlls if they’re in the NuGet packages directory
+!/packages/*/lib/*.dll
+!/packages/*/lib/*/*.dll
+# Include dlls if they're in the CommonReferences directory
+!*CommonReferences/*.dll
+####################
+# VS Upgrade stuff #
+####################
+UpgradeLog.XML
+_UpgradeReport_Files/
+###############
+# Directories #
+".gitignore" 75L, 1146B
+
