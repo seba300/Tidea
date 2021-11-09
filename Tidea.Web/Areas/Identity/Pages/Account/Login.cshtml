@@ -20,8 +20,8 @@
                     <label asp-for="Input.Password"></label>
                     <input asp-for="Input.Password" class="form-control"/>
                     <span asp-validation-for="Input.Password" class="text-danger"></span>
-                    <ToDo>Change login validation</ToDo>
-                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <!--TODO Change login validation -->
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 </div>
                 <div class="form-group">
                     <div class="checkbox">
