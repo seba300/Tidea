@@ -43,16 +43,16 @@ namespace Tidea.Web.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Required]
-            [EmailAddress]
+            [Required(ErrorMessage = "Pole nie może być puste")]
+            [EmailAddress(ErrorMessage = "Wprowadź poprawny adres email")]
             public string Email { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "Pole nie może być puste")]
             [DataType(DataType.Password)]
             [Display(Name = "Hasło")]
             public string Password { get; set; }
 
-            [Display(Name = "Zapamiętaj?")]
+            [Display(Name = "Zapamiętaj")]
             public bool RememberMe { get; set; }
         }
 

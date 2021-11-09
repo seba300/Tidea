@@ -46,22 +46,22 @@ namespace Tidea.Web.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Required]
+            [Required(ErrorMessage = "Pole nie może być puste")]
             [DataType(DataType.Text)]
             [Display(Name = "Imię")]
             public string FirstName { get; set; }
             
-            [Required]
+            [Required(ErrorMessage = "Pole nie może być puste")]
             [DataType(DataType.Text)]
             [Display(Name = "Nazwisko")]
             public string LastName { get; set; }
             
-            [Required]
-            [EmailAddress]
+            [Required(ErrorMessage = "Pole nie może być puste")]
+            [EmailAddress(ErrorMessage = "Wprowadź poprawny adres email")]
             [Display(Name = "Email")]
             public string Email { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "Pole nie może być puste")]
             [StringLength(100, ErrorMessage = "{0} musi mieć minimum {2} znaków i może maksymalnie zawierać {1} znaków.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Hasło")]

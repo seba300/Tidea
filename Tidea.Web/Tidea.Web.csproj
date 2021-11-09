@@ -34,6 +34,21 @@
       <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_ValidationScriptsPartial.cshtml" />
       <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_ViewImports.cshtml" />
       <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_ViewStart.cshtml" />
+      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-brands-400.eot" />
+      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-brands-400.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-brands-400.ttf" />
+      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-brands-400.woff" />
+      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-brands-400.woff2" />
+      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-regular-400.eot" />
+      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-regular-400.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-regular-400.ttf" />
+      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-regular-400.woff" />
+      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-regular-400.woff2" />
+      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-solid-900.eot" />
+      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-solid-900.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-solid-900.ttf" />
+      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-solid-900.woff" />
+      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-solid-900.woff2" />
     </ItemGroup>
 
 </Project>
