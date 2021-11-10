@@ -5,7 +5,17 @@
     <projectFile profileName="Tidea">Tidea/Tidea.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb5fbb89-b719-4f81-bef1-59daa0c9ed95" name="Changes" comment="Add padding in Login and Register form.&#10;Change validation alerts language.&#10;Add css and webfonts files to provide icons." />
+    <list default="true" id="bb5fbb89-b719-4f81-bef1-59daa0c9ed95" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tidea/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tidea/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/Areas/Identity/Pages/Account/Login.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Areas/Identity/Pages/Account/Login.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Areas/Identity/Pages/Account/Login.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Areas/Identity/Pages/Account/Login.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.pdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +34,6 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/Pages/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tidea.Web/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tidea.Web/Startup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tidea.Web/appsettings.json" root0="FORCE_HIGHLIGHTING" />
@@ -97,7 +106,8 @@
       <workItem from="1636063766705" duration="199000" />
       <workItem from="1636063987233" duration="5313000" />
       <workItem from="1636146099807" duration="9088000" />
-      <workItem from="1636218173975" duration="10585000" />
+      <workItem from="1636218173975" duration="10804000" />
+      <workItem from="1636581466818" duration="2256000" />
     </task>
     <task id="LOCAL-00001" summary="Create _AuthLayout.cshtml. Change site.css. Change Login and Register page view.">
       <created>1636073560221</created>
@@ -134,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636499482900</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add TODO.">
+      <created>1636499665044</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1636499665044</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +180,7 @@
     <MESSAGE value="Change Register form layout in Register.cshtml.&#10;Change main page.&#10;Turn off mail required." />
     <MESSAGE value="Change Login form layout in Login.cshtml." />
     <MESSAGE value="Add padding in Login and Register form.&#10;Change validation alerts language.&#10;Add css and webfonts files to provide icons." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add padding in Login and Register form.&#10;Change validation alerts language.&#10;Add css and webfonts files to provide icons." />
+    <MESSAGE value="Add TODO." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add TODO." />
   </component>
 </project>
