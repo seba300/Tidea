@@ -47,7 +47,6 @@
 /Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.AssemblyInfoInputs.cache
 /Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.AssemblyInfo.cs
 /Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.csproj.CoreCompileInputs.cache
-/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.csproj.CopyComplete
 /Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.dll
 /Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/ref/Tidea.Infrastructure.dll
 /Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.pdb

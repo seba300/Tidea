@@ -779,3 +779,7 @@
 /Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/bin/Debug/net5.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 /Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/bin/Debug/net5.0/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 /Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/bin/Debug/net5.0/Microsoft.Extensions.DependencyModel.dll
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/obj/Debug/net5.0/Razor/Areas/Identity/Pages/Account/Manage/Index.cshtml.g.cs
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/obj/Debug/net5.0/Razor/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml.g.cs
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/obj/Debug/net5.0/Razor/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml.g.cs
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/obj/Debug/net5.0/Razor/Areas/Identity/Pages/Account/_StatusMessage.cshtml.g.cs
