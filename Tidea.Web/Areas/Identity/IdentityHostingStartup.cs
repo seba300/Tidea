@@ -1,21 +1,15 @@
-using System;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Tidea.Infrastructure.Data;
+using Tidea.Web.Areas.Identity;
 
-[assembly: HostingStartup(typeof(Tidea.Web.Areas.Identity.IdentityHostingStartup))]
+[assembly: HostingStartup(typeof(IdentityHostingStartup))]
+
 namespace Tidea.Web.Areas.Identity
 {
     public class IdentityHostingStartup : IHostingStartup
     {
         public void Configure(IWebHostBuilder builder)
         {
-            builder.ConfigureServices((context, services) => {
-            });
+            builder.ConfigureServices((context, services) => { });
         }
     }
 }

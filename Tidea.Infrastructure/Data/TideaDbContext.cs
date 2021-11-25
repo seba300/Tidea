@@ -1,6 +1,6 @@
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Tidea.Core.Entities;
 
 namespace Tidea.Infrastructure.Data
 {
@@ -10,5 +10,8 @@ namespace Tidea.Infrastructure.Data
             : base(options)
         {
         }
+        public DbSet<Campaign> Campaigns { get; set; }
+        public DbSet<Donation> Donations { get; set; }
+        public DbSet<Media> Medias { get; set; }
     }
 }

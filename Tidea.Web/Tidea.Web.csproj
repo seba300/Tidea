@@ -6,49 +6,49 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.12" />
-      <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.12" />
-      <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.11" />
-      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.11">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      </PackageReference>
-      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.11" />
-      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.11">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      </PackageReference>
-      <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.12" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.12" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.12" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.12">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.12" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.12">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Tidea.Infrastructure\Tidea.Infrastructure.csproj" />
+        <ProjectReference Include="..\Tidea.Infrastructure\Tidea.Infrastructure.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Login.cshtml" />
-      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Logout.cshtml" />
-      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Register.cshtml" />
-      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ResetPassword.cshtml" />
-      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\_ViewImports.cshtml" />
-      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_ValidationScriptsPartial.cshtml" />
-      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_ViewImports.cshtml" />
-      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_ViewStart.cshtml" />
-      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-brands-400.eot" />
-      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-brands-400.svg" />
-      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-brands-400.ttf" />
-      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-brands-400.woff" />
-      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-brands-400.woff2" />
-      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-regular-400.eot" />
-      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-regular-400.svg" />
-      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-regular-400.ttf" />
-      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-regular-400.woff" />
-      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-regular-400.woff2" />
-      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-solid-900.eot" />
-      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-solid-900.svg" />
-      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-solid-900.ttf" />
-      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-solid-900.woff" />
-      <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-solid-900.woff2" />
+        <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Login.cshtml" />
+        <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Logout.cshtml" />
+        <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Register.cshtml" />
+        <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ResetPassword.cshtml" />
+        <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\_ViewImports.cshtml" />
+        <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_ValidationScriptsPartial.cshtml" />
+        <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_ViewImports.cshtml" />
+        <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_ViewStart.cshtml" />
+        <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-brands-400.eot" />
+        <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-brands-400.svg" />
+        <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-brands-400.ttf" />
+        <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-brands-400.woff" />
+        <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-brands-400.woff2" />
+        <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-regular-400.eot" />
+        <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-regular-400.svg" />
+        <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-regular-400.ttf" />
+        <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-regular-400.woff" />
+        <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-regular-400.woff2" />
+        <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-solid-900.eot" />
+        <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-solid-900.svg" />
+        <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-solid-900.ttf" />
+        <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-solid-900.woff" />
+        <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-solid-900.woff2" />
     </ItemGroup>
 
 </Project>

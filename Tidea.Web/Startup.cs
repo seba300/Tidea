@@ -1,17 +1,12 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Tidea.Core.Entities;
 using Tidea.Infrastructure.Data;
 
 namespace Tidea.Web
@@ -29,14 +24,13 @@ namespace Tidea.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<TideaDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("TideaDbContextConnection")));
-            
+                options.UseSqlServer(Configuration.GetConnectionString("TideaDbContextConnection")));
+
             services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<TideaDbContext>();
-            
+
             services.AddRazorPages();
-            
+
             services.Configure<IdentityOptions>(options =>
             {
                 // Password settings.
@@ -70,7 +64,7 @@ namespace Tidea.Web
             });
 
             //TODO: Fix ChangePassword and Email pages. There is possible that I need to add sth to Startup.cs file
-            
+
             //Allow refresh without recompiling
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
