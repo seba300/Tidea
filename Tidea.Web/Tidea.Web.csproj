@@ -51,4 +51,8 @@
         <_ContentIncludedByDefault Remove="wwwroot\fontawesome\webfonts\fa-solid-900.woff2" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="wwwroot\CampaignsMedia" />
+    </ItemGroup>
+
 </Project>
