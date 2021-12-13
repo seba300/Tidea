@@ -1,0 +1,27 @@
+@page
+@model CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form id="summernote"></form>
+<script>
+$('#summernote').summernote({
+  toolbar: [
+    // [groupName, [list of button]]
+    ['style', ['bold', 'italic', 'underline', 'clear']],
+    ['font', ['strikethrough', 'superscript', 'subscript']],
+    ['fontsize', ['fontsize']],
+    ['para', ['ul', 'ol', 'paragraph']],
+    ['insert', ['picture', 'video']]
+  ],
+  height: 500
+});
+$('.note-statusbar').hide(); 
+$('.note-statusbar').height(100); 
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

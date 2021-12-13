@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Tidea.Core.Entities;
 using Tidea.Infrastructure.Data;
+using Tidea;
 
 namespace Tidea.Web
 {
@@ -67,6 +68,12 @@ namespace Tidea.Web
 
             //Allow refresh without recompiling
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
+            services.AddDbContext<Tidea.Infrastructure.Data.TideaDbContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("TideaDbContextConnection")));
+
+            services.AddDbContext<Tidea.Infrastructure.Data.TideaDbContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("InfrastructureTideaDbContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
