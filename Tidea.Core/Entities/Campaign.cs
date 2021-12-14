@@ -13,18 +13,34 @@ namespace Tidea.Core.Entities
         public int Id { get; set; }
 
         [Required] 
+        [Display(Name = "Tytuł zbiórki")]
         public string CampaignName { get; set; }
+        
+        [Required] 
+        [Display(Name = "Wstęp zbiórki")]
+        public string CampaignIntroduction { get; set; }
+        
+        [Required] 
+        [Display(Name = "Cel zbiórki")]
+        public string CampaignPurpose { get; set; }
 
         [Required] 
+        [Display(Name = "Opis")]
         public string Description { get; set; }
 
         [Required] 
+        [Display(Name = "Data rozpoczęcia kampanii")]
         public DateTime CampaignStartDate { get; set; }
 
         [Required] 
+        [Display(Name = "Data zakończenia kampanii")]
         public DateTime CampaignEndDate { get; set; }
-
+        
         [Required] 
+        [Display(Name = "Potrzebna kwota")]
+        public decimal AmountNeeded { get; set; }
+        
+        [Display(Name = "Zebrana kwota")]
         public decimal TotalAmountCollected { get; set; }
         
         public virtual ApplicationUser ApplicationUser { get; set; }

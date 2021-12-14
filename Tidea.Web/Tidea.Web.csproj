@@ -76,6 +76,11 @@
         <_ContentIncludedByDefault Remove="Pages\Campaign\Details.cshtml" />
         <_ContentIncludedByDefault Remove="Pages\Campaign\Edit.cshtml" />
         <_ContentIncludedByDefault Remove="Pages\Campaign\Index.cshtml" />
+        <_ContentIncludedByDefault Remove="Pages\Szablon\Create.cshtml" />
+        <_ContentIncludedByDefault Remove="Pages\Szablon\Delete.cshtml" />
+        <_ContentIncludedByDefault Remove="Pages\Szablon\Details.cshtml" />
+        <_ContentIncludedByDefault Remove="Pages\Szablon\Edit.cshtml" />
+        <_ContentIncludedByDefault Remove="Pages\Szablon\Index.cshtml" />
     </ItemGroup>
 
     <ItemGroup>
