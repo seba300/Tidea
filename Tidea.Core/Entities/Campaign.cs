@@ -43,8 +43,13 @@ namespace Tidea.Core.Entities
         [Display(Name = "Zebrana kwota")]
         public decimal TotalAmountCollected { get; set; }
         
+        [Required]
         public virtual ApplicationUser ApplicationUser { get; set; }
         public virtual ICollection<Donation> Donations { get; set; }
         public virtual ICollection<Media> Media { get; set; }
+        
+        [Required]
+        [Display(Name = "Kategoria zbiórki")]
+        public virtual ICollection<Category> Categories { get; set; }
     }
 }

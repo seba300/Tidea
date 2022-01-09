@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Tidea;
 using Tidea.Core.Entities;
+using Tidea.Web.Models;
 
 namespace Tidea.Web.Pages.Campaign
 {
@@ -26,6 +27,8 @@ namespace Tidea.Web.Pages.Campaign
 
         [BindProperty]
         public Core.Entities.Campaign Campaign { get; set; }
+        public CategoryModel CategoryModel { get; set; }
+        public Media Media { get; set; }
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()

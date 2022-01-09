@@ -1,51 +1,69 @@
 @page
+@using Tidea.Web.Models
+@using System.Linq
 @model CreateModel
 
 @{
     ViewData["Title"] = "Create";
 }
-<form method="post" xmlns="http://www.w3.org/1999/html">
+<form method="post">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <input type="hidden" asp-for="Campaign.Id"/>
+    @* Nazwa zbiórki *@
     <div class="form-group">
         <label asp-for="Campaign.CampaignName" class="control-label h4"></label>
         <textarea asp-for="Campaign.CampaignName" class="form-control" style="resize:none" rows="1"></textarea>
         <span asp-validation-for="Campaign.CampaignName" class="text-danger"></span>
     </div>
+    @* Zdjecie zbiórki *@
     <div class="form-group">
-        <label for="CampaignImage" class="h4">Zdjęcie zbiorki</label>
-        <input accept="image/*" type="file" id="imgInp" class="form-control-file"/>
+        <label class="h4">Zdjęcie zbiorki</label>
+        <input asp-for="Media.ImageSource" accept="image/*" type="file" id="imgInp" class="form-control-file"/>
         <br/>
-      <img id="imgPreview" src="#" alt="Podgląd zdjęcia" height="200" width="200"/>
+        <img id="imgPreview" src="#" alt="Podgląd zdjęcia" height="200" width="200"/>
     </div>
+    @* Kategoria zbiórki *@
     <div class="form-group">
-        <h4>KATEGORIA ZBIORKI</h4> 
+        <label class="control-label h4">Kategorie</label>
+        <select class="form-control" asp-for="CategoryModel.Category" asp-items="Html.GetEnumSelectList<Category>()"></select>
+        <span asp-validation-for="CategoryModel.Category" class="text-danger"></span>
     </div>
+    @* Wstęp zbiórki *@
     <div class="form-group">
         <label asp-for="Campaign.CampaignIntroduction" class="control-label h4"></label>
         <textarea asp-for="Campaign.CampaignIntroduction" class="form-control" id="summernoteIntroduction"></textarea>
         <span asp-validation-for="Campaign.CampaignIntroduction" class="text-danger"></span>
     </div>
+    @* Opis zbiórki *@
     <div class="form-group">
         <label asp-for="Campaign.Description" class="control-label h4"></label>
         <textarea asp-for="Campaign.Description" class="form-control" id="summernoteDescription"></textarea>
         <span asp-validation-for="Campaign.Description" class="text-danger"></span>
     </div>
+    @* Cel zbiórki *@
     <div class="form-group">
         <label asp-for="Campaign.CampaignPurpose" class="control-label h4"></label>
         <textarea asp-for="Campaign.CampaignPurpose" class="form-control" id="summernotePurpose"></textarea>
         <span asp-validation-for="Campaign.CampaignPurpose" class="text-danger"></span>
     </div>
+    @* Potrzebna kwota do realizacji zbiórki *@
     <div class="form-group">
         <label asp-for="Campaign.AmountNeeded" class="control-label h4"></label>
-        <input asp-for="Campaign.AmountNeeded" class="form-control"/>
-        <span asp-validation-for="Campaign.AmountNeeded" class="text-danger"></span>
+        <div class="input-group mb-2">
+            <input asp-for="Campaign.AmountNeeded" class="form-control"/>
+            <div class="input-group-prepend">
+                <div class="input-group-text">zł</div>
+            </div>
+            <span asp-validation-for="Campaign.AmountNeeded" class="text-danger"></span>
+        </div>
     </div>
+    @* Data rozpoczęcia zbiórki *@
     <div class="form-group">
         <label asp-for="Campaign.CampaignStartDate" class="control-label h4"></label>
         <input asp-for="Campaign.CampaignStartDate" class="form-control"/>
         <span asp-validation-for="Campaign.CampaignStartDate" class="text-danger"></span>
     </div>
+    @* Data zakończenia zbiórki *@
     <div class="form-group">
         <label asp-for="Campaign.CampaignEndDate" class="control-label h4"></label>
         <input asp-for="Campaign.CampaignEndDate" class="form-control"/>
@@ -57,6 +75,7 @@
 </form>
 
 <form id="summernote"></form>
+
 
 <script>
 $('#summernotePurpose').summernote({
@@ -92,8 +111,10 @@ $('#summernoteDescription').summernote({
   ],
   height: 400
 });
+//Hide right summernote bar
 $('.note-statusbar').hide();
 
+//Display image on page as a preview
 imgInp.onchange = evt => {
   const [file] = imgInp.files
   if (file) {

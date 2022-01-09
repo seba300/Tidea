@@ -328,4 +328,3 @@
 /Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/refs/System.Xml.XPath.dll
 /Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/refs/System.Xml.XPath.XDocument.dll
 /Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/bin/Debug/net5.0/refs/WindowsBase.dll
-/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.csproj.CopyComplete

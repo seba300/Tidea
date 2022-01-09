@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Identity;
 
@@ -7,10 +8,12 @@ namespace Tidea.Core.Entities
     public class ApplicationUser : IdentityUser
     {
         [PersonalData]
+        [Required]
         [Column(TypeName = "nvarchar(100)")]
         public string FirstName { get; set; }
 
         [PersonalData]
+        [Required]
         [Column(TypeName = "nvarchar(100)")]
         public string LastName { get; set; }
 
