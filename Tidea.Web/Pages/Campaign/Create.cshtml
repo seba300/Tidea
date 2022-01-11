@@ -1,6 +1,6 @@
 @page
-@using Tidea.Web.Models
 @using System.Linq
+@using Tidea.Core.Entities
 @model CreateModel
 
 @{
@@ -25,8 +25,8 @@
     @* Kategoria zbiórki *@
     <div class="form-group">
         <label class="control-label h4">Kategorie</label>
-        <select class="form-control" asp-for="CategoryModel.Category" asp-items="Html.GetEnumSelectList<Category>()"></select>
-        <span asp-validation-for="CategoryModel.Category" class="text-danger"></span>
+        <select class="form-control" asp-for="Category.CategoryName" asp-items="Html.GetEnumSelectList<CategoryName>()"></select>
+        <span asp-validation-for="Category.CategoryName" class="text-danger"></span>
     </div>
     @* Wstęp zbiórki *@
     <div class="form-group">

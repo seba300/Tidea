@@ -13,5 +13,6 @@ namespace Tidea.Infrastructure.Data
         public DbSet<Campaign> Campaigns { get; set; }
         public DbSet<Donation> Donations { get; set; }
         public DbSet<Media> Medias { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }

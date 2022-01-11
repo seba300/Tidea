@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tidea.Infrastructure.Data;
 
 namespace Tidea.Data.Migrations
 {
     [DbContext(typeof(TideaDbContext))]
-    partial class TideaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220111204852_AddCategoriesEntity")]
+    partial class AddCategoriesEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -343,7 +345,7 @@ namespace Tidea.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("CampaignId")
+                    b.Property<int>("CampaignId")
                         .HasColumnType("int");
 
                     b.Property<string>("ImageSource")
@@ -445,7 +447,9 @@ namespace Tidea.Data.Migrations
                 {
                     b.HasOne("Tidea.Core.Entities.Campaign", "Campaign")
                         .WithMany("Media")
-                        .HasForeignKey("CampaignId");
+                        .HasForeignKey("CampaignId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Campaign");
                 });

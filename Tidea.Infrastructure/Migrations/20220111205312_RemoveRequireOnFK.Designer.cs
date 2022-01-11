@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tidea.Infrastructure.Data;
 
 namespace Tidea.Data.Migrations
 {
     [DbContext(typeof(TideaDbContext))]
-    partial class TideaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220111205312_RemoveRequireOnFK")]
+    partial class RemoveRequireOnFK
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

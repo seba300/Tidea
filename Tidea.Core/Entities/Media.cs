@@ -11,7 +11,7 @@ namespace Tidea.Core.Entities
         public string ImageSource { get; set; }
         public string VideoUrl { get; set; }
         
-        [Required]
+        //[Required]
         public virtual Campaign Campaign { get; set; }
     }
 }

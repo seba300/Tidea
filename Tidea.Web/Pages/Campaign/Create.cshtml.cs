@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Tidea;
 using Tidea.Core.Entities;
-using Tidea.Web.Models;
+using Category = Tidea.Core.Entities.Category;
 
 namespace Tidea.Web.Pages.Campaign
 {
@@ -27,7 +27,11 @@ namespace Tidea.Web.Pages.Campaign
 
         [BindProperty]
         public Core.Entities.Campaign Campaign { get; set; }
-        public CategoryModel CategoryModel { get; set; }
+        
+        [BindProperty]
+        public Category Category { get; set; }
+        
+        [BindProperty]
         public Media Media { get; set; }
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
@@ -35,10 +39,13 @@ namespace Tidea.Web.Pages.Campaign
         {
             if (!ModelState.IsValid)
             {
+                System.Diagnostics.Debug.WriteLine("dupa");
                 return Page();
             }
 
             _context.Campaigns.Add(Campaign);
+            _context.Medias.Add(Media);
+            _context.Categories.Add(Category);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
