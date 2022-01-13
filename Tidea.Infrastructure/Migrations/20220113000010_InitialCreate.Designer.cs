@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tidea.Infrastructure.Data;
 
-namespace Tidea.Data.Migrations
+namespace Tidea.Infrastructure.Migrations
 {
     [DbContext(typeof(TideaDbContext))]
-    [Migration("20220108215438_UpdatedCampaignEntities")]
-    partial class UpdatedCampaignEntities
+    [Migration("20220113000010_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -269,6 +269,9 @@ namespace Tidea.Data.Migrations
                     b.Property<DateTime>("CampaignStartDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("CategoryId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -280,6 +283,8 @@ namespace Tidea.Data.Migrations
 
                     b.HasIndex("ApplicationUserId");
 
+                    b.HasIndex("CategoryId");
+
                     b.ToTable("Campaigns");
                 });
 
@@ -290,18 +295,12 @@ namespace Tidea.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("CampaignId")
+                    b.Property<int>("CategoryName")
                         .HasColumnType("int");
-
-                    b.Property<string>("CategoryName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CampaignId");
-
-                    b.ToTable("Category");
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("Tidea.Core.Entities.Donation", b =>
@@ -311,10 +310,7 @@ namespace Tidea.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CampaignId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("CategoryId")
+                    b.Property<int?>("CampaignId")
                         .HasColumnType("int");
 
                     b.Property<string>("Comment")
@@ -334,8 +330,6 @@ namespace Tidea.Data.Migrations
 
                     b.HasIndex("CampaignId");
 
-                    b.HasIndex("CategoryId");
-
                     b.ToTable("Donations");
                 });
 
@@ -346,7 +340,7 @@ namespace Tidea.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CampaignId")
+                    b.Property<int?>("CampaignId")
                         .HasColumnType("int");
 
                     b.Property<string>("ImageSource")
@@ -419,27 +413,20 @@ namespace Tidea.Data.Migrations
                         .WithMany()
                         .HasForeignKey("ApplicationUserId");
 
-                    b.Navigation("ApplicationUser");
-                });
+                    b.HasOne("Tidea.Core.Entities.Category", "Category")
+                        .WithMany("Campaigns")
+                        .HasForeignKey("CategoryId");
 
-            modelBuilder.Entity("Tidea.Core.Entities.Category", b =>
-                {
-                    b.HasOne("Tidea.Core.Entities.Campaign", null)
-                        .WithMany("Categories")
-                        .HasForeignKey("CampaignId");
+                    b.Navigation("ApplicationUser");
+
+                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("Tidea.Core.Entities.Donation", b =>
                 {
                     b.HasOne("Tidea.Core.Entities.Campaign", "Campaign")
                         .WithMany("Donations")
-                        .HasForeignKey("CampaignId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Tidea.Core.Entities.Category", null)
-                        .WithMany("Donations")
-                        .HasForeignKey("CategoryId");
+                        .HasForeignKey("CampaignId");
 
                     b.Navigation("Campaign");
                 });
@@ -448,17 +435,13 @@ namespace Tidea.Data.Migrations
                 {
                     b.HasOne("Tidea.Core.Entities.Campaign", "Campaign")
                         .WithMany("Media")
-                        .HasForeignKey("CampaignId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CampaignId");
 
                     b.Navigation("Campaign");
                 });
 
             modelBuilder.Entity("Tidea.Core.Entities.Campaign", b =>
                 {
-                    b.Navigation("Categories");
-
                     b.Navigation("Donations");
 
                     b.Navigation("Media");
@@ -466,7 +449,7 @@ namespace Tidea.Data.Migrations
 
             modelBuilder.Entity("Tidea.Core.Entities.Category", b =>
                 {
-                    b.Navigation("Donations");
+                    b.Navigation("Campaigns");
                 });
 #pragma warning restore 612, 618
         }

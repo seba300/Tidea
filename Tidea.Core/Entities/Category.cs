@@ -26,10 +26,10 @@ namespace Tidea.Core.Entities
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        [Required]
+
+        [Required] 
         public CategoryName CategoryName { get; set; }
-        
-        //[Required]
-        public virtual ICollection<Donation> Donations { get; set; }
+
+        public virtual ICollection<Campaign> Campaigns { get; set; }
     }
 }

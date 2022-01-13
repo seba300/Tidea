@@ -21,8 +21,8 @@ namespace Tidea.Core.Entities
         [Required]
         [EmailAddress(ErrorMessage = "Pole nie może być puste")]
         public string DonorEmail { get; set; }
-
-        [Required]
+        
+        
         public virtual Campaign Campaign { get; set; }
     }
 }
