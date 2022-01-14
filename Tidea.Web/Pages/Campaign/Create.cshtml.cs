@@ -40,6 +40,12 @@ namespace Tidea.Web.Pages.Campaign
                 return Page();
             }
 
+            //Class which provides methods to upload files to drive
+            UploadFile uploadFile = new UploadFile();
+            
+            //Upload image do drive and get image name with extension
+            var imageName = uploadFile.UploadImage(CreateCampaignViewModel.Media.ImageFile);
+            
             //Add to queue
             await _context.Campaigns.AddAsync(new Core.Entities.Campaign
             {
@@ -49,23 +55,12 @@ namespace Tidea.Web.Pages.Campaign
                 CampaignPurpose = CreateCampaignViewModel.Campaign.CampaignPurpose,
                 AmountNeeded = CreateCampaignViewModel.Campaign.AmountNeeded,
                 CampaignStartDate = CreateCampaignViewModel.Campaign.CampaignStartDate,
-                CampaignEndDate = CreateCampaignViewModel.Campaign.CampaignEndDate
-            });
-
-            //Class which provides methods to upload files to drive
-            UploadFile uploadFile = new UploadFile();
-            
-            //Upload image do drive and get image name with extension
-            var imageName = uploadFile.UploadImage(CreateCampaignViewModel.Media.ImageFile);
-
-            await _context.Medias.AddAsync(new Media
-            {
-                ImageName = imageName
-            });
-            
-            await _context.Categories.AddAsync(new Category
-            {
-                CategoryName = CreateCampaignViewModel.Category.CategoryName
+                CampaignEndDate = CreateCampaignViewModel.Campaign.CampaignEndDate,
+                Category = CreateCampaignViewModel.Category,
+                Media = new List<Media> {new Media
+                {
+                    ImageName = imageName
+                }}
             });
 
             //Save to DB
