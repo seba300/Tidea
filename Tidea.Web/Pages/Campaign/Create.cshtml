@@ -6,7 +6,7 @@
 @{
     ViewData["Title"] = "Create";
 }
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     @* Nazwa zbiórki *@
     <div class="form-group">
@@ -17,7 +17,8 @@
     @* Zdjecie zbiórki *@
     <div class="form-group">
         <label class="h4">Zdjęcie zbiorki</label>
-        <input asp-for="CreateCampaignViewModel.Media.ImageSource" accept="image/*" type="file" id="imgInp" class="form-control-file"/>
+        <input asp-for="CreateCampaignViewModel.Media.ImageFile" accept="image/*" type="file" id="imgInp" class="form-control-file"/>
+        <span asp-validation-for="CreateCampaignViewModel.Media.ImageFile" class="text-danger"></span>
         <br/>
         <img id="imgPreview" src="#" alt="Podgląd zdjęcia" height="200" width="200"/>
     </div>
