@@ -29,10 +29,6 @@ namespace Tidea.Core.Entities
         public string Description { get; set; }
 
         [Required]
-        [Display(Name = "Data rozpoczęcia kampanii")]
-        public DateTime CampaignStartDate { get; set; }
-
-        [Required]
         [Display(Name = "Data zakończenia kampanii")]
         public DateTime CampaignEndDate { get; set; }
         

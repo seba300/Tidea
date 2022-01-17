@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Tidea.Core.Entities;
 
-namespace Tidea.Web
+namespace Tidea.Web.Services
 {
     public class UploadFile
     {

@@ -64,8 +64,6 @@ namespace Tidea.Web
                 options.SlidingExpiration = true;
             });
 
-            //TODO: Fix ChangePassword and Email pages. There is possible that I need to add sth to Startup.cs file
-
             //Allow refresh without recompiling
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
 

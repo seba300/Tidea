@@ -2,26 +2,34 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Tidea;
+using Tidea.Web.Services;
 using Tidea.Core.Entities;
 using Tidea.Web.ViewModels;
 using Category = Tidea.Core.Entities.Category;
 
 namespace Tidea.Web.Pages.Campaign
 {
+    [Authorize]
     public class CreateModel : PageModel
     {
         private readonly Tidea.Infrastructure.Data.TideaDbContext _context;
-
-        public CreateModel(Tidea.Infrastructure.Data.TideaDbContext context)
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        public CreateModel(Tidea.Infrastructure.Data.TideaDbContext context,
+            UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager)
         {
             _context = context;
+            _userManager = userManager;
+            _signInManager = signInManager;
         }
         
         public IActionResult OnGet()
@@ -54,13 +62,13 @@ namespace Tidea.Web.Pages.Campaign
                 Description = CreateCampaignViewModel.Campaign.Description,
                 CampaignPurpose = CreateCampaignViewModel.Campaign.CampaignPurpose,
                 AmountNeeded = CreateCampaignViewModel.Campaign.AmountNeeded,
-                CampaignStartDate = CreateCampaignViewModel.Campaign.CampaignStartDate,
                 CampaignEndDate = CreateCampaignViewModel.Campaign.CampaignEndDate,
                 Category = CreateCampaignViewModel.Category,
                 Media = new List<Media> {new Media
                 {
                     ImageName = imageName
-                }}
+                }},
+                ApplicationUser = await _userManager.GetUserAsync(User)
             });
 
             //Save to DB
