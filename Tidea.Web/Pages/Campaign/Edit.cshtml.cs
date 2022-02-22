@@ -22,7 +22,7 @@ namespace Tidea.Web.Pages.Campaign
 
         [BindProperty]
         public Core.Entities.Campaign Campaign { get; set; }
-
+        
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
