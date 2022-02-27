@@ -12,6 +12,8 @@ namespace Tidea.Web.Services
         {
             
         }
+        
+        //Add images from created campaign to CampaignsMedia folder
         public string UploadImage(IFormFile imageFile)
         {
             string fileName = null;

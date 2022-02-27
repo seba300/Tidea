@@ -1,9 +1,9 @@
-namespace Tidea.Web.Models
+namespace Tidea.Web.Models.Order
 {
     public class Product
     {
-        public string Name { get; set; }
-        public decimal UnityPrice { get; set; }
-        public int Quantity { get; set; }
+        public string name { get; set; }
+        public decimal unitPrice { get; set; }
+        public int quantity { get; set; }
     }
 }

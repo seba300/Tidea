@@ -5,17 +5,11 @@
     Layout = null;
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-<div>
     <form method="post">
         <button type="submit">test</button>
     </form>
-</div>
-</body>
-</html>
+
+@* @if (Model.response!=null) *@
+@* { *@
+@*     @Html.Raw(Model.response.Content) *@
+@* } *@
