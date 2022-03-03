@@ -16,6 +16,8 @@ namespace Tidea.Web.Pages.Order
     public class CreateOrder : PageModel
     {
         private Uri baseAddress = new Uri("https://secure.snd.payu.com/");
+        
+        //Configuration store properties
         private const string merchantPosId = "428004";
         private const string clientId = "428004";
         private const string clientSecret = "eca193ab1e753aaa0cf8f6324561713b";
@@ -58,6 +60,7 @@ namespace Tidea.Web.Pages.Order
                 {
                     using (var response = await httpClient.PostAsync("pl/standard/user/oauth/authorize", content))
                     {
+                        //Json result
                         string responseData = await response.Content.ReadAsStringAsync();
                         
                         //We are binding json result with prepared model class

@@ -85,8 +85,4 @@
         <_ContentIncludedByDefault Remove="Pages\Szablon\Index.cshtml" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="wwwroot\CampaignsMedia" />
-    </ItemGroup>
-
 </Project>

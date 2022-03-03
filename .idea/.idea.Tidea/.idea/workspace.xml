@@ -6,57 +6,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb5fbb89-b719-4f81-bef1-59daa0c9ed95" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Tidea.Web/Models/Order/PayUPostData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tidea.Web/Models/Order/PayUToken.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/49a82396-5e14-4340-b314-1fb0f0aa20e0-Zrzut ekranu 2021-12-6 o 22.43.15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/4d2e223d-584c-4d52-885d-3ffb478ae369-Zrzut ekranu 2021-12-6 o 22.43.15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/4e109ada-d1bc-4174-9d8a-e96acf6ff9d9-Zrzut ekranu 2021-12-6 o 22.43.15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/cf845c57-1507-403c-b8c6-7d98320bd166-fiat-126-maluch-1-9e6b06ce6f28d6.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tidea/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tidea/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Core/Tidea.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Core/Tidea.Core.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Core/bin/Debug/net5.0/Tidea.Core.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Core/bin/Debug/net5.0/Tidea.Core.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Core/obj/Debug/net5.0/Tidea.Core.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Core/obj/Debug/net5.0/Tidea.Core.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Core/obj/Tidea.Core.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Core/obj/Tidea.Core.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Core/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Core/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Core/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Core/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Core/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Core/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Core/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Core/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Infrastructure/Tidea.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Infrastructure/Tidea.Infrastructure.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Infrastructure.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Infrastructure.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Infrastructure/obj/Tidea.Infrastructure.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Infrastructure/obj/Tidea.Infrastructure.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Infrastructure/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Infrastructure/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Infrastructure/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Infrastructure/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Infrastructure/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Infrastructure/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Infrastructure/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Infrastructure/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/Models/Order/Buyer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Models/Order/Buyer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/Models/Order/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Models/Order/Product.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Order/CreateOrder.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Order/CreateOrder.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Order/CreateOrder.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Order/CreateOrder.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/Services/UploadFile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Services/UploadFile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/Tidea.Web.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Tidea.Web.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/ViewModels/CreateOrderViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/ViewModels/CreateOrderViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/ref/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/ref/Tidea.Web.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Order/CreateOrder.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Order/CreateOrder.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Index.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/ref/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/ref/Tidea.Web.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Tidea.Web.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Tidea.Web.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +162,10 @@
       <workItem from="1645653199464" duration="5094000" />
       <workItem from="1645732590180" duration="7013000" />
       <workItem from="1645797126713" duration="11015000" />
-      <workItem from="1645883968537" duration="11396000" />
+      <workItem from="1645883968537" duration="11740000" />
+      <workItem from="1645980490173" duration="917000" />
+      <workItem from="1646174484686" duration="644000" />
+      <workItem from="1646257874536" duration="6194000" />
     </task>
     <task id="LOCAL-00001" summary="Create _AuthLayout.cshtml. Change site.css. Change Login and Register page view.">
       <created>1636073560221</created>
