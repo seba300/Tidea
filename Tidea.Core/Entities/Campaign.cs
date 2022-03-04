@@ -16,13 +16,13 @@ namespace Tidea.Core.Entities
         [Display(Name = "Tytuł zbiórki")]
         public string CampaignName { get; set; }
         
-        [Required]
-        [Display(Name = "Wstęp zbiórki")]
-        public string CampaignIntroduction { get; set; }
-        
-        [Required]
-        [Display(Name = "Cel zbiórki")]
-        public string CampaignPurpose { get; set; }
+        // [Required]
+        // [Display(Name = "Wstęp zbiórki")]
+        // public string CampaignIntroduction { get; set; }
+        //
+        // [Required]
+        // [Display(Name = "Cel zbiórki")]
+        // public string CampaignPurpose { get; set; }
 
         [Required]
         [Display(Name = "Opis")]
@@ -42,7 +42,7 @@ namespace Tidea.Core.Entities
         
         public virtual ApplicationUser ApplicationUser { get; set; }
         public virtual ICollection<Donation> Donations { get; set; }
-        public virtual ICollection<Media> Media { get; set; }
+        public virtual Media Media { get; set; }
         public virtual Category Category { get; set; }
     }
 }

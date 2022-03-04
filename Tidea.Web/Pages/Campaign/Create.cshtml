@@ -28,23 +28,11 @@
         <select class="form-control" asp-for="CreateCampaignViewModel.Category.CategoryName" asp-items="Html.GetEnumSelectList<CategoryName>()"></select>
         <span asp-validation-for="CreateCampaignViewModel.Category.CategoryName" class="text-danger"></span>
     </div>
-    @* Wstęp zbiórki *@
-    <div class="form-group">
-        <label asp-for="CreateCampaignViewModel.Campaign.CampaignIntroduction" class="control-label h4"></label>
-        <textarea asp-for="CreateCampaignViewModel.Campaign.CampaignIntroduction" class="form-control" id="summernoteIntroduction"></textarea>
-        <span asp-validation-for="CreateCampaignViewModel.Campaign.CampaignIntroduction" class="text-danger"></span>
-    </div>
     @* Opis zbiórki *@
     <div class="form-group">
         <label asp-for="CreateCampaignViewModel.Campaign.Description" class="control-label h4"></label>
         <textarea asp-for="CreateCampaignViewModel.Campaign.Description" class="form-control" id="summernoteDescription"></textarea>
         <span asp-validation-for="CreateCampaignViewModel.Campaign.Description" class="text-danger"></span>
-    </div>
-    @* Cel zbiórki *@
-    <div class="form-group">
-        <label asp-for="CreateCampaignViewModel.Campaign.CampaignPurpose" class="control-label h4"></label>
-        <textarea asp-for="CreateCampaignViewModel.Campaign.CampaignPurpose" class="form-control" id="summernotePurpose"></textarea>
-        <span asp-validation-for="CreateCampaignViewModel.Campaign.CampaignPurpose" class="text-danger"></span>
     </div>
     @* Potrzebna kwota do realizacji zbiórki *@
     <div class="form-group">
@@ -72,28 +60,6 @@
 
 
 <script>
-$('#summernotePurpose').summernote({
-  toolbar: [
-    // [groupName, [list of button]]
-    ['style', ['bold', 'italic', 'underline', 'clear']],
-    ['font', ['strikethrough', 'superscript', 'subscript']],
-    ['fontsize', ['fontsize']],
-    ['para', ['ul', 'ol', 'paragraph']],
-    ['insert', ['picture', 'video']]
-  ],
-  height: 400
-});
-$('#summernoteIntroduction').summernote({
-  toolbar: [
-    // [groupName, [list of button]]
-    ['style', ['bold', 'italic', 'underline', 'clear']],
-    ['font', ['strikethrough', 'superscript', 'subscript']],
-    ['fontsize', ['fontsize']],
-    ['para', ['ul', 'ol', 'paragraph']],
-    ['insert', ['picture', 'video']]
-  ],
-  height: 400
-});
 $('#summernoteDescription').summernote({
   toolbar: [
     // [groupName, [list of button]]

@@ -1,6 +1,7 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;
   &lt;Assembly Path="/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Core/bin/Debug/net5.0/refs/System.IO.UnmanagedMemoryStream.dll" /&gt;
+  &lt;Assembly Path="/Users/Dom/.nuget/packages/htmlagilitypack.netcore/1.5.0.1/lib/netstandard1.3/HtmlAgilityPack.NetCore.dll" /&gt;
 &lt;/AssemblyExplorer&gt;</s:String>
 	
 	

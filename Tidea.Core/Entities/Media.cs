@@ -15,7 +15,9 @@ namespace Tidea.Core.Entities
         [NotMapped]
         [DisplayName("Upload File")]
         public IFormFile ImageFile { get; set; }
+        [NotMapped]
+        public string ImagePath { get; set; }
         
-        public virtual Campaign Campaign { get; set; }
+        //public virtual Campaign Campaign { get; set; }
     }
 }

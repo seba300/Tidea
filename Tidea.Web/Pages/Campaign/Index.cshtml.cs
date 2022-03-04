@@ -9,17 +9,18 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Tidea;
 using Tidea.Core.Entities;
+using Tidea.Infrastructure.Data;
 
 namespace Tidea.Web.Pages.Campaign
 {
     [Authorize]
     public class IndexModel : PageModel
     {
-        private readonly Tidea.Infrastructure.Data.TideaDbContext _context;
+        private readonly TideaDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
 
-        public IndexModel(Tidea.Infrastructure.Data.TideaDbContext context,
+        public IndexModel(TideaDbContext context,
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager)
         {

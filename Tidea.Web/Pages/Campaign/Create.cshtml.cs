@@ -58,16 +58,13 @@ namespace Tidea.Web.Pages.Campaign
             await _context.Campaigns.AddAsync(new Core.Entities.Campaign
             {
                 CampaignName = CreateCampaignViewModel.Campaign.CampaignName,
-                CampaignIntroduction = CreateCampaignViewModel.Campaign.CampaignIntroduction,
                 Description = CreateCampaignViewModel.Campaign.Description,
-                CampaignPurpose = CreateCampaignViewModel.Campaign.CampaignPurpose,
                 AmountNeeded = CreateCampaignViewModel.Campaign.AmountNeeded,
                 CampaignEndDate = CreateCampaignViewModel.Campaign.CampaignEndDate,
                 Category = CreateCampaignViewModel.Category,
-                Media = new List<Media> {new Media
-                {
+                Media = new Media {
                     ImageName = imageName
-                }},
+                },
                 ApplicationUser = await _userManager.GetUserAsync(User)
             });
 
