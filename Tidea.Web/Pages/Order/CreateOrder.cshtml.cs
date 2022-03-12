@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -7,6 +8,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using RestSharp;
 using Tidea.Web.ViewModels;
 using System.Net.Http;
+using System.Text;
 using Newtonsoft.Json;
 using Tidea.Web.Models;
 using Tidea.Web.Models.Order;
@@ -29,16 +31,42 @@ namespace Tidea.Web.Pages.Order
         //Create Order
         public async Task<RedirectResult> OnPostAsync()
         {
-            string currencyCode="PLN";
-            var createOrderViewModel = new CreateOrderViewModel();
+            var createOrderViewModel = new CreateOrderViewModel
+            {
+                merchantPosId = "428004",
+                notifyUrl = "http://tidea.pl/notify",
+                currencyCode = "PLN",
+                description = "RTV market",
+                totalAmount = "21000",
+                customerIp = "127.0.0.1",
+                buyer = new Buyer
+                {
+                    email = "john.doe@example.com",
+                    phone="654111654",
+                    firstName = "John",
+                    lastName = "Doe",
+                    language = "pl"
+                },
+                products = new List<Product>()
+                {
+                    new Product()
+                    {
+                        name = "Wireless Mouse for Laptop",
+                        quantity = "1",
+                        unitPrice = "15000"
+                    }
+                }
+            };
+            
             
             string accessToken = GetAccessToken().Result.access_token;
 
             using (var httpClient = new HttpClient{ BaseAddress = baseAddress })
             {
                 httpClient.DefaultRequestHeaders.TryAddWithoutValidation("authorization", "Bearer " + accessToken);
-  
-                using (var content = new StringContent("{\n        \"notifyUrl\": \"http://tidea.pl/notify\",\n        \"customerIp\": \"127.0.0.1\",\n        \"merchantPosId\": \"428004\",\n        \"description\": \"RTV market\",\n        \"currencyCode\": \"PLN\",\n        \"totalAmount\": \"21000\",\n        \"buyer\": {\n            \"email\": \"john.doe@example.com\",\n            \"phone\": \"654111654\",\n            \"firstName\": \"John\",\n            \"lastName\": \"Doe\",\n            \"language\": \"pl\"\n        },\n        \"products\": [\n            {\n                \"name\": \"Wireless Mouse for Laptop\",\n                \"unitPrice\": \"15000\",\n                \"quantity\": \"1\"\n            }\n        ]\n    }", System.Text.Encoding.Default, "application/json"))
+
+                //JsonConvert... -> convert object to json
+                using (var content = new StringContent(JsonConvert.SerializeObject(createOrderViewModel), System.Text.Encoding.Default, "application/json"))
                 {
                     using (var response = await httpClient.PostAsync("api/v2_1/orders/", content))
                     {
@@ -49,7 +77,7 @@ namespace Tidea.Web.Pages.Order
                 }
             }
         }
-        
+      
         private async Task<PayUToken> GetAccessToken()
         {
             PayUToken payUToken = null;

@@ -32,7 +32,7 @@ namespace Tidea.Web.Pages
             //Instance of object to provide html conversion to plain text
             htmlConverter = new HtmlConverter();
             
-            Campaigns = await _context.Campaigns.Take(8).Select(x => new Core.Entities.Campaign
+            Campaigns = await _context.Campaigns.OrderBy(y=>y.Id).Take(8).Select(x => new Core.Entities.Campaign
             {
                 Id = x.Id,
                 CampaignName = x.CampaignName,

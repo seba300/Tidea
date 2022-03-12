@@ -33,9 +33,11 @@ namespace Tidea.Core.Entities
         public DateTime CampaignEndDate { get; set; }
         
         [Required]
+        [Column(TypeName = "decimal(18,2)")]
         [Display(Name = "Potrzebna kwota")]
         public decimal AmountNeeded { get; set; }
         
+        [Column(TypeName = "decimal(18,2)")]
         [Display(Name = "Zebrana kwota")]
         public decimal TotalAmountCollected { get; set; }
         
