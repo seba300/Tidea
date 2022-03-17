@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Tidea.Web.Services;
 using Tidea.Core.Entities;
+using Tidea.Web.Models.Order;
 using Tidea.Web.ViewModels;
 using Category = Tidea.Core.Entities.Category;
 
@@ -39,6 +40,7 @@ namespace Tidea.Web.Pages.Campaign
 
         [BindProperty]
         public CreateCampaignViewModel CreateCampaignViewModel { get; set; }
+
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()

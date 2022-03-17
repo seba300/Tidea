@@ -1,15 +1,16 @@
-@page
+@page "{id}"
+@using Tidea.Web.Models.Order
 @model DetailsModel
 
 @{
     ViewData["Title"] = "Details";
 }
 
+
 @* <div> *@
 @*     <a asp-page="./Edit" asp-route-id="@Model.Campaign.Id">Edit</a> | *@
 @*     <a asp-page="./Index">Back to List</a> *@
 @* </div> *@
-
 
 <div class="container">
     <h1>@Html.DisplayFor(model => model.Campaign.CampaignName)</h1>
@@ -21,17 +22,19 @@
                         <div class="container py-0 px-0">
                             <div class="row d-flex justify-content-center">
                                 <div class="col-md-2 col-lg-10 col-xl-12">
+
+                                    <!-- -->
                                     <div class="px-1 py-1 border border-primary border-2 rounded mt-2 d-flex justify-content-between">
                                         <div class="d-flex flex-row align-items-center">
-                                            <img src="https://i.imgur.com/S17BrTx.webp" class="rounded" width="40"/>
+                                            <i class="fas fa-hand-holding-usd fa-2x mr-2 ml-2"></i>
                                             <div class="d-flex flex-column ms-4 ml-1">
                                                 <span class="h5 mb-1">@Model.Campaign.TotalAmountCollected zł</span>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                                </div>
                                                 <span class="small text-muted">@Model.Campaign.AmountNeeded zł</span>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="progress mb-1">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 77%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                     <!-- -->
 
@@ -40,48 +43,52 @@
                                             <div>
                                                 <h4>Wpłać sumę</h4>
                                                 <p class="text-muted pb-2">
-                                                    Proszę wybrać jedną z poniżej wymienionych opcji płatności, bądź też wprowadzić ją ręcznie.
+                                                    Proszę wybrać jedną z poniżej wymienionych opcji płatności.
                                                 </p>
                                             </div>
 
-                                            <div class="px-1 py-1 border border-primary border-2 rounded mt-2 d-flex justify-content-between">
-                                                <div class="d-flex flex-row align-items-center">
-                                                    <img src="https://i.imgur.com/S17BrTx.webp" class="rounded" width="40"/>
-                                                    <div class="d-flex flex-column ms-4 ml-1">
-                                                        <span class="h5 mb-0">Small Business</span>
-                                                        <span class="small text-muted">CHANGE PLAN</span>
-                                                    </div>
+                                            <!-- -->
+                                            <form method="post">
+                                                <div class="btn-group-toggle" data-toggle="buttons">
+                                                    <label class="btn btn-lg btn-outline-primary btn-block mt-2">
+                                                        <i class="fa-solid fa-money-bill-wave"></i>
+                                                        <input type="radio" asp-for="MyRadioOption" value="1">10 zł
+                                                    </label>
+                                                    
+                                                    <label class="btn btn-lg btn-outline-primary btn-block mt-2">
+                                                        <i class="fa-solid fa-money-bill-wave"></i>
+                                                        <input type="radio" asp-for="MyRadioOption" value="2">20 zł
+                                                    </label>
+                                                    
+                                                    <label class="btn btn-lg btn-outline-primary btn-block mt-2">
+                                                        <i class="fa-solid fa-money-bill-wave"></i>
+                                                        <input type="radio" asp-for="MyRadioOption" value="3">30 zł
+                                                    </label>
                                                 </div>
-                                            </div>
-                                            <div class="px-1 py-1 border border-primary border-2 rounded mt-2 d-flex justify-content-between">
-                                                <div class="d-flex flex-row align-items-center">
-                                                    <img src="https://i.imgur.com/S17BrTx.webp" class="rounded" width="40"/>
-                                                    <div class="d-flex flex-column ms-4 ml-1">
-                                                        <span class="h5 mb-1">Small Business</span>
-                                                        <span class="small text-muted">CHANGE PLAN</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="px-1 py-1 border border-primary border-2 rounded mt-2 d-flex justify-content-between">
-                                                <div class="d-flex flex-row align-items-center">
-                                                    <img src="https://i.imgur.com/S17BrTx.webp" class="rounded" width="40"/>
-                                                    <div class="d-flex flex-column ms-4 ml-1">
-                                                        <span class="h5 mb-1">Small Business</span>
-                                                        <span class="small text-muted">CHANGE PLAN</span>
-                                                    </div>
-                                                </div>
-                                            </div>
 
-                                            <div class="form-outline mt-5">
-                                                <input type="text" id="formControlLg" class="form-control form-control-md" placeholder="Imię i nazwisko"/>
-                                                <input type="text" id="formControlLg" class="form-control form-control-md" placeholder="Email"/>
-                                            </div>
-                                            <div class="mt-3">
-                                                <a style="text-decoration: none;" class="mb-0" asp-page="/Order/CreateOrder">
-                                                    <button class="btn btn-danger btn-lg btn-block">
-                                                        Wpłać teraz <i class="fas fa-long-arrow-alt-right"></i>
-                                                    </button>
-                                                </a>
+                                                <div class="form-outline mt-2">
+                                                    <div class="form-row">
+                                                        <div class="col">
+                                                            <input type="text" class="form-control" placeholder="Imię">
+                                                        </div>
+                                                        <div class="col">
+                                                            <input type="text" class="form-control" placeholder="Nazwisko">
+                                                        </div>
+                                                    </div>
+                                                    <input type="text" class="form-control form-control-md mt-1" placeholder="Email"/>
+                                                </div>
+
+                                                <div class="mt-3">
+                                                    <a style="text-decoration: none;" class="mb-0">
+                                                        <button class="btn btn-danger btn-lg btn-block" type="submit">
+                                                            Wpłać teraz <i class="fas fa-long-arrow-alt-right"></i>
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                            </form>
+                                            <!-- -->
+
+                                            <div>
                                                 <button type="button" class="btn btn-secondary btn-lg btn-block mt-2">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
                                                         <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>

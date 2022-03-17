@@ -1,12 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Tidea;
 using Tidea.Core.Entities;
+using Tidea.Web.Models.Order;
 
 namespace Tidea.Web.Pages.Campaign
 {
@@ -20,6 +22,10 @@ namespace Tidea.Web.Pages.Campaign
         }
 
         public Core.Entities.Campaign Campaign { get; set; }
+        public Core.Entities.Donation Donation { get; set; }
+        
+        [BindProperty]
+        public int MyRadioOption { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -34,7 +40,16 @@ namespace Tidea.Web.Pages.Campaign
             {
                 return NotFound();
             }
+
             return Page();
+        }
+        
+        public async Task<IActionResult> OnPostAsync()
+        {
+            //return RedirectToPage("/Order/CreateOrder");
+            var a = MyRadioOption;
+            
+            return RedirectToPage("");
         }
     }
 }
