@@ -9,6 +9,7 @@ using RestSharp;
 using Tidea.Web.ViewModels;
 using System.Net.Http;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using Tidea.Web.Models;
 using Tidea.Web.Models.Order;
@@ -24,9 +25,35 @@ namespace Tidea.Web.Pages.Order
         private const string clientId = "428004";
         private const string clientSecret = "eca193ab1e753aaa0cf8f6324561713b";
         
-        public void OnGet()
+        
+        private readonly Tidea.Infrastructure.Data.TideaDbContext _context;
+        public Core.Entities.Campaign Campaign { get; set; }
+        public PayUMethodsViewModel PayUMethods { get; set; }
+        
+        public CreateOrder(Tidea.Infrastructure.Data.TideaDbContext context)
         {
-            
+            _context = context;
+        }
+        public async Task<IActionResult> OnGetAsync(int? id)
+        {
+            //testowo na chwile, potem inicjalizacja id do usunięcia
+            id = 6;
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            Campaign = await _context.Campaigns.FirstOrDefaultAsync(m => m.Id == id);
+
+            if (Campaign == null)
+            {
+                return NotFound();
+            }
+
+            PayUMethods = GetPayMethods().Result;
+
+
+            return Page();
         }
         
         //Create Order
@@ -58,8 +85,7 @@ namespace Tidea.Web.Pages.Order
                     }
                 }
             };
-            
-            
+
             string accessToken = GetAccessToken().Result.access_token;
 
             using (var httpClient = new HttpClient{ BaseAddress = baseAddress })
@@ -96,6 +122,24 @@ namespace Tidea.Web.Pages.Order
                         payUToken = JsonConvert.DeserializeObject<PayUToken>(responseData);
                         return payUToken;
                     }
+                }
+            }
+        }
+        
+        private async Task<PayUMethodsViewModel> GetPayMethods()
+        {
+            PayUMethodsViewModel payUMethods = null;
+            string accessToken = GetAccessToken().Result.access_token;
+            
+            using (var httpClient = new HttpClient{ BaseAddress = baseAddress })
+            {
+                httpClient.DefaultRequestHeaders.TryAddWithoutValidation("authorization", "Bearer" + accessToken);
+  
+                using(var response = await httpClient.GetAsync("api/v2_1/paymethods/"))
+                {
+                    string responseData = await response.Content.ReadAsStringAsync();
+                    payUMethods = JsonConvert.DeserializeObject<PayUMethodsViewModel>(responseData);
+                    return payUMethods;
                 }
             }
         }

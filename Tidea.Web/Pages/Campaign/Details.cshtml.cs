@@ -22,8 +22,8 @@ namespace Tidea.Web.Pages.Campaign
         }
 
         public Core.Entities.Campaign Campaign { get; set; }
-        public Core.Entities.Donation Donation { get; set; }
         
+        //Do usuniecia
         [BindProperty]
         public int MyRadioOption { get; set; }
 
@@ -44,12 +44,9 @@ namespace Tidea.Web.Pages.Campaign
             return Page();
         }
         
-        public async Task<IActionResult> OnPostAsync()
+        public void OnPostAsync()
         {
-            //return RedirectToPage("/Order/CreateOrder");
-            var a = MyRadioOption;
             
-            return RedirectToPage("");
         }
     }
 }

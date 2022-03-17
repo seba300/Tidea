@@ -5,16 +5,17 @@
     <projectFile profileName="Tidea">Tidea/Tidea.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb5fbb89-b719-4f81-bef1-59daa0c9ed95" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Tidea.Web/Models/Order/Donate.cs" afterDir="false" />
+    <list default="true" id="bb5fbb89-b719-4f81-bef1-59daa0c9ed95" name="Changes" comment="TestRadioButtons">
+      <change afterPath="$PROJECT_DIR$/Tidea.Web/Models/Order/CardToken.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tidea.Web/Models/Order/PayByLink.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tidea.Web/Models/Order/PexToken.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tidea.Web/ViewModels/PayUMethodsViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tidea/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tidea/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Create.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Create.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/Models/Order/Donate.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Details.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Details.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Details.cshtml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Order/CreateOrder.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Order/CreateOrder.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Order/CreateOrder.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Order/CreateOrder.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Shared/_LoginPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Shared/_LoginPartial.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.dll" afterDir="false" />
@@ -22,8 +23,6 @@
       <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/ref/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/ref/Tidea.Web.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/Details.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/Details.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Order/CreateOrder.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Order/CreateOrder.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Shared/_Layout.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Shared/_Layout.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Shared/_LoginPartial.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Shared/_LoginPartial.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.csproj.CoreCompileInputs.cache" afterDir="false" />
@@ -55,6 +54,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/60bbda8a6e3a45ecb673ac50a3ed518366400/18/PageLoggerExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/60bbda8a6e3a45ecb673ac50a3ed518366400/30/PageActionInvoker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tidea.Web/Areas/Identity/Pages/Account/Manage/Index.cshtml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Immediate Window" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3da0403ae6e540a7a79283e509f3945b8d7e00/1C5/Task.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tidea.Web/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3da0403ae6e540a7a79283e509f3945b8d7e00/1A7/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
@@ -187,7 +187,7 @@
       <workItem from="1647096165976" duration="4514000" />
       <workItem from="1647287034986" duration="8478000" />
       <workItem from="1647382828243" duration="5506000" />
-      <workItem from="1647458680697" duration="14106000" />
+      <workItem from="1647458680697" duration="22079000" />
     </task>
     <task id="LOCAL-00001" summary="Create _AuthLayout.cshtml. Change site.css. Change Login and Register page view.">
       <created>1636073560221</created>
@@ -399,7 +399,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647299938233</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="TestRadioButtons">
+      <created>1647551069745</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1647551069746</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,7 +430,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Add TODO." />
     <MESSAGE value="Remove bullets from Login.cshtml validation-summary.&#10;Clear Index.cshtml." />
     <MESSAGE value="Create logo images.&#10;Customise page navbar." />
     <MESSAGE value="Combine _Layout.cshtml and _LoginPartial.cshtml." />
@@ -448,23 +454,24 @@
     <MESSAGE value="Prepared details page for donor." />
     <MESSAGE value="Prepare to apply pay function with sent parameters" />
     <MESSAGE value="Add form do Details.cshtml Campaign Page to prepare it for adding payment implementation with donator sign." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add form do Details.cshtml Campaign Page to prepare it for adding payment implementation with donator sign." />
+    <MESSAGE value="TestRadioButtons" />
+    <option name="LAST_COMMIT_MESSAGE" value="TestRadioButtons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Details.cshtml.cs</url>
-          <line>51</line>
-          <properties documentPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Details.cshtml.cs" initialLine="50" containingFunctionPresentation="method 'OnPostAsync'">
+          <url>file://$PROJECT_DIR$/Tidea.Web/Pages/Order/CreateOrder.cshtml.cs</url>
+          <line>55</line>
+          <properties documentPath="$PROJECT_DIR$/Tidea.Web/Pages/Order/CreateOrder.cshtml.cs" initialLine="51" containingFunctionPresentation="method 'OnGetAsync'">
             <startOffsets>
-              <option value="1371" />
+              <option value="1676" />
             </startOffsets>
             <endOffsets>
-              <option value="1397" />
+              <option value="1690" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="3" />
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -476,6 +483,7 @@
     <watches-manager>
       <configuration name="LaunchSettings">
         <watch expression="Empty" />
+        <watch expression="Methods = PayUMethodsViewModel " />
       </configuration>
     </watches-manager>
   </component>
