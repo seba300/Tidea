@@ -2,76 +2,86 @@
 @model Tidea.Web.Pages.Order.CreateOrder
 
 <style>
-    /*Zoom image and fill the card*/
-
+html,body{
+            min-height: 100vh;
+            min-width: 100vw;
+        }
+        .parent{
+            min-height: 50vh;
+        }
+        .parent>.row{
+            display: flex;
+            align-items: center;
+            height: 50%;
+        }
+        .col img{
+            height:100px;
+            width: 100%;
+            cursor: pointer;
+            transition: transform 1s;
+            object-fit: cover;
+        }
+        .col label{
+            overflow: hidden;
+            position: relative;
+        }
+        .imgbgchk:checked + label>.tick_container{
+            opacity: 1;
+        }
+/*         aNIMATION */
+        .imgbgchk:checked + label>img{
+            transform: scale(1.25);
+            opacity: 0.3;
+        }
+        .tick_container {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            cursor: pointer;
+            text-align: center;
+        }
+        .tick {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            padding: 6px 12px;
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+        }
 </style>
 
-<!-- Cards -->
-<div class="row row-cols-2 row-cols-md-4">
-    @foreach(var item in @Model.PayUMethods.payByLinks)
-    {
-        <div class="col mb-4">
-                <div class="card h-100 w-100">
-                    <a asp-page="Campaign/Details" class="stretched-link"></a>
-                    <img src="@item.brandImageUrl" class="card-img-top" alt="...">
-                </div>
-        </div>
-    }
-</div>
-@* <form method="post"> *@
-@*     <button type="submit">test</button> *@
-@* </form> *@
-
-<div class="card card-collapsable mb-4" id="card-payment-gateway" data-nomethoderror="Nie wybrano metody płatności">
+<div class="card card-collapsable mb-4">
     <div class="card-body pb-0 px-3 px-sm-4 mx-sm-4 mx-md-0 pt-md-4 mt-md-2 px-md-3">
         <div class="row">
             <div class="col-md-10 mx-auto">
-                <h3 class="mb-4">
-                                            Wybierz metodę płatności
-                                    </h3>
+                <h3 class="mb-4" style="text-align: center">
+                    Wybierz metodę płatności
+                </h3>
             </div>
         </div>
     </div>
 
-    
-    <div class="card-body pt-0 pb-0 px-3 mb-2">
-        <div class="row">
-            <div class="col-md-10 mx-auto">
-                
-                                    
-<div class="grid-buttons row d-flex flex-wrap mb-3 justify-content-center justify-content-xl-start">
-       @foreach (var item in @Model.PayUMethods.payByLinks)
-       {
-           <div
-               class="col-6 col-sm-4 col-xl-3 p-2">
-               <button
-                   type="button"
-                   class="btn btn-block btn-outline-link border position-relative text-center"
-                   title="BLIK"
-                   data-id="blik"
-                   data-type="payu">
-                   <img class="mw-100 h-auto" src="@item.brandImageUrl" width="99" height="40" alt="BLIK"/>
-               </button>
-           </div>
-       }
-            
-    
-            <div class="col-6 col-sm-4 col-xl-3 p-2">
-            <button type="button" class="btn btn-block btn-outline-link border position-relative text-center" data-id="bt" data-type="bt">
-                <img
-                        class="mw-100 h-auto"
-                        src="/build/images/payment-providers/transfer.png"
-                        width="94"
-                        height="45" alt="Zwykły przelew"
-                        srcset="/build/images/payment-providers/transfer@2x.png 2x, /build/images/payment-providers/transfer@3x.png 3x"
-                />
-                <span class="d-block text-center font-weight-normal pt-1">Zwykły przelew</span>
-            </button>
-        </div>
-    
-</div>
-
-            </div>
+    <div class="container parent">
+        <div class="row row-cols-2 row-cols-md-4">
+            @foreach (var item in @Model.PayUMethods.payByLinks)
+            {
+                <div class="col text-center p-4">
+                    <input type="radio" name="imgbackground" id="@item.value" class="d-none imgbgchk" value="">
+                    <label for="@item.value">
+                        <img src="@item.brandImageUrl" alt="Image 1" class="w-50 h-auto text-center">
+                        <div class="tick_container">
+                            <div class="tick">
+                                <i class="fa fa-check"></i>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            }
         </div>
     </div>
 </div>

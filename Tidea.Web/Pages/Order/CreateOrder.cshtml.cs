@@ -56,6 +56,9 @@ namespace Tidea.Web.Pages.Order
             return Page();
         }
         
+        [BindProperty]
+        public string CheckedPayUMethod { get; set; }
+        
         //Create Order
         public async Task<RedirectResult> OnPostAsync()
         {
@@ -103,6 +106,8 @@ namespace Tidea.Web.Pages.Order
                     }
                 }
             }
+
+            var a = CheckedPayUMethod;
         }
       
         private async Task<PayUToken> GetAccessToken()
