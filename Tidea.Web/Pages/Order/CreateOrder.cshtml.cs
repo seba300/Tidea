@@ -56,7 +56,7 @@ namespace Tidea.Web.Pages.Order
             return Page();
         }
         
-        [BindProperty]
+        [BindProperty(Name = "checkedPayUMethod")]
         public string CheckedPayUMethod { get; set; }
         
         //Create Order
@@ -106,8 +106,6 @@ namespace Tidea.Web.Pages.Order
                     }
                 }
             }
-
-            var a = CheckedPayUMethod;
         }
       
         private async Task<PayUToken> GetAccessToken()
