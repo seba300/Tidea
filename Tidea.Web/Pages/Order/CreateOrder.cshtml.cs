@@ -73,32 +73,42 @@ namespace Tidea.Web.Pages.Order
         [BindProperty(Name = "checkedPayUMethod")]
         public string CheckedPayUMethod { get; set; }
         
+        [BindProperty(Name = "checkedPaidIn")]
+        public string CheckedPaidIn { get; set; }
+        
         //Create Order
         public async Task<RedirectResult> OnPostAsync()
         {
             var createOrderViewModel = new CreateOrderViewModel
             {
-                merchantPosId = "428004",
+                merchantPosId = merchantPosId,
                 notifyUrl = "http://tidea.pl/notify",
                 currencyCode = "PLN",
                 description = "RTV market",
-                totalAmount = "21000",
+                totalAmount = CheckedPaidIn,
                 customerIp = "127.0.0.1",
+                payMethods = new PayMethods()
+                {
+                   payMethod = new PayMethod()
+                   {
+                       type = CheckedPayUMethod
+                   }
+                },
                 buyer = new Buyer
                 {
                     email = "john.doe@example.com",
-                    phone="654111654",
-                    firstName = "John",
-                    lastName = "Doe",
-                    language = "pl"
+                    language = "pl",
+                    firstName = "",
+                    lastName = "",
+                    phone = ""
                 },
                 products = new List<Product>()
                 {
-                    new Product()
+                    new()
                     {
                         name = "Wireless Mouse for Laptop",
                         quantity = "1",
-                        unitPrice = "15000"
+                        unitPrice = CheckedPaidIn
                     }
                 }
             };

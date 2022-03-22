@@ -25,10 +25,11 @@ html,body{
             overflow: hidden;
             position: relative;
         }
+        /*Green check */
         .imgbgchk:checked + label>.tick_container{
             opacity: 1;
         }
-/*         aNIMATION */
+        /*Animation */
         .imgbgchk:checked + label>img{
             transform: scale(1.15);
             opacity: 0.3;
@@ -74,7 +75,7 @@ html,body{
             @for (int i = 0; i < 8; i++)
             {
                 <div class="col text-center p-1">
-                    <input type="radio" name="paidIn" id="@i" class="d-none imgbgchk" value="@Model.PaidInList[i]">
+                    <input type="radio" name="checkedPaidIn" id="@i" class="d-none imgbgchk" value="@Model.PaidInList[i]">
                     <label for="@i">
                         <button type="button" class="text-center btn btn-lg border"><i class="fa-solid fa-money-bill-wave"></i> @Model.PaidInList[i] zł</button>
                         <div class="tick_container">
@@ -107,6 +108,6 @@ html,body{
                 }
             </div>
         </div>
-        <button class="btn-block btn btn-outline-dark" type="submit">Wpłać</button>
+        <button class="btn-block btn btn-outline-success" type="submit">Wpłać</button>
     </form>
 </div>
