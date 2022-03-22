@@ -29,6 +29,7 @@ namespace Tidea.Web.Pages.Order
         private readonly Tidea.Infrastructure.Data.TideaDbContext _context;
         public Core.Entities.Campaign Campaign { get; set; }
         public PayUMethodsViewModel PayUMethods { get; set; }
+        public List<int> PaidInList { get; set; }
         
         public CreateOrder(Tidea.Infrastructure.Data.TideaDbContext context)
         {
@@ -50,12 +51,25 @@ namespace Tidea.Web.Pages.Order
                 return NotFound();
             }
 
+            //Get PayU payment methods like blik, ipko etc.
             PayUMethods = GetPayMethods().Result;
+
+            //Initialize paidIn buttons with values
+            SetPaidInValues();
 
 
             return Page();
         }
+
+        private void SetPaidInValues()
+        {
+            PaidInList = new List<int>()
+            {
+                5, 10, 20, 50, 100, 200, 400, 500
+            };
+        }
         
+        //Selected PayU payment method
         [BindProperty(Name = "checkedPayUMethod")]
         public string CheckedPayUMethod { get; set; }
         
