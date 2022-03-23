@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -24,12 +25,13 @@ namespace Tidea.Web.Pages.Order
         private const string merchantPosId = "428004";
         private const string clientId = "428004";
         private const string clientSecret = "eca193ab1e753aaa0cf8f6324561713b";
-        
+       
         
         private readonly Tidea.Infrastructure.Data.TideaDbContext _context;
         public Core.Entities.Campaign Campaign { get; set; }
         public PayUMethodsViewModel PayUMethods { get; set; }
         public List<int> PaidInList { get; set; }
+        public IEnumerable<PayByLink> FilteredPayUMethods { get; set; }
 
         public CreateOrder(Tidea.Infrastructure.Data.TideaDbContext context)
         {
@@ -37,8 +39,6 @@ namespace Tidea.Web.Pages.Order
         }
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            //testowo na chwile, potem inicjalizacja id do usunięcia
-            id = 6;
             if (id == null)
             {
                 return NotFound();
@@ -53,7 +53,15 @@ namespace Tidea.Web.Pages.Order
 
             //Get PayU payment methods like blik, ipko etc.
             PayUMethods = GetPayMethods().Result;
-
+            
+            //Don't take methods PayPo, Twisto, PayU|Raty and PayU|Place pozniej
+            FilteredPayUMethods = PayUMethods.payByLinks.Where(x => 
+                x.value!="ai" &&
+                x.value!="dpt" &&
+                x.value!="dpp" &&
+                x.value!="dp"
+                );
+            
             //Initialize paidIn buttons with values
             SetPaidInValues();
 
