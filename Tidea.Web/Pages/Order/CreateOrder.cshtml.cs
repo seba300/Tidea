@@ -30,7 +30,7 @@ namespace Tidea.Web.Pages.Order
         public Core.Entities.Campaign Campaign { get; set; }
         public PayUMethodsViewModel PayUMethods { get; set; }
         public List<int> PaidInList { get; set; }
-        
+
         public CreateOrder(Tidea.Infrastructure.Data.TideaDbContext context)
         {
             _context = context;
@@ -74,24 +74,27 @@ namespace Tidea.Web.Pages.Order
         public string CheckedPayUMethod { get; set; }
         
         [BindProperty(Name = "checkedPaidIn")]
-        public string CheckedPaidIn { get; set; }
+        public int CheckedPaidIn { get; set; }
         
         //Create Order
         public async Task<RedirectResult> OnPostAsync()
         {
+            string PaidIn = (CheckedPaidIn * 100).ToString();
+            
             var createOrderViewModel = new CreateOrderViewModel
             {
                 merchantPosId = merchantPosId,
                 notifyUrl = "http://tidea.pl/notify",
                 currencyCode = "PLN",
                 description = "RTV market",
-                totalAmount = CheckedPaidIn,
+                totalAmount = PaidIn,
                 customerIp = "127.0.0.1",
                 payMethods = new PayMethods()
                 {
                    payMethod = new PayMethod()
                    {
-                       type = CheckedPayUMethod
+                       type = "PBL",
+                       value = CheckedPayUMethod
                    }
                 },
                 buyer = new Buyer
@@ -108,7 +111,7 @@ namespace Tidea.Web.Pages.Order
                     {
                         name = "Wireless Mouse for Laptop",
                         quantity = "1",
-                        unitPrice = CheckedPaidIn
+                        unitPrice = PaidIn
                     }
                 }
             };

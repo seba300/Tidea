@@ -22,11 +22,6 @@ namespace Tidea.Web.Pages.Campaign
         }
 
         public Core.Entities.Campaign Campaign { get; set; }
-        
-        //Do usuniecia
-        [BindProperty]
-        public int MyRadioOption { get; set; }
-
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)

@@ -70,27 +70,27 @@ html,body{
 
     <hr/>
     <form method="post">
-    <div class="container mt-lg-3 w-50" style="min-height: 20vh">
-        <div class="row row-cols-2 row-cols-md-4">
-            @for (int i = 0; i < 8; i++)
-            {
-                <div class="col text-center p-1">
-                    <input type="radio" name="checkedPaidIn" id="@i" class="d-none imgbgchk" value="@Model.PaidInList[i]">
-                    <label for="@i">
-                        <button type="button" class="text-center btn btn-lg border"><i class="fa-solid fa-money-bill-wave"></i> @Model.PaidInList[i] zł</button>
-                        <div class="tick_container">
-                            <div class="tick">
-                                <i class="fa fa-check"></i>
+        <div class="container mt-lg-3 w-50" style="min-height: 20vh">
+            <div class="row row-cols-2 row-cols-md-4">
+                @for (int i = 0; i < 8; i++)
+                {
+                    <div class="col text-center p-1">
+                        <input type="radio" name="checkedPaidIn" id="@i" class="d-none imgbgchk" value="@Model.PaidInList[i]">
+                        <label for="@i">
+                            <button type="button" class="text-center btn btn-lg border"><i class="fa-solid fa-money-bill-wave"></i> @Model.PaidInList[i] zł</button>
+                            <div class="tick_container">
+                                <div class="tick">
+                                    <i class="fa fa-check"></i>
+                                </div>
                             </div>
-                        </div>
-                    </label>
-                </div>
-            }
+                        </label>
+                    </div>
+                }
+            </div>
         </div>
-    </div>
 
-    <hr/>
-    <div class="container parent ">
+        <hr/>
+        <div class="container parent ">
             <div class="row row-cols-2 row-cols-md-4">
                 @foreach (var item in @Model.PayUMethods.payByLinks)
                 {
