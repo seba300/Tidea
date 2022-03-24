@@ -812,3 +812,4 @@
 /Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/Index.cshtml.g.cs
 /Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/bin/Debug/net5.0/RestSharp.dll
 /Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Order/CreateOrder.cshtml.g.cs
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Order/TestPayUNoti.cshtml.g.cs

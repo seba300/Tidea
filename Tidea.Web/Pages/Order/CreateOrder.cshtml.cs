@@ -14,6 +14,7 @@ using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using Tidea.Web.Models;
 using Tidea.Web.Models.Order;
+using Tidea.Web.Services;
 
 namespace Tidea.Web.Pages.Order
 {
@@ -30,20 +31,23 @@ namespace Tidea.Web.Pages.Order
         private readonly Tidea.Infrastructure.Data.TideaDbContext _context;
         public Core.Entities.Campaign Campaign { get; set; }
         public PayUMethodsViewModel PayUMethods { get; set; }
-        public List<int> PaidInList { get; set; }
         public IEnumerable<PayByLink> FilteredPayUMethods { get; set; }
-
+        public List<int> PaidInList { get; set; }
+        [BindProperty(Name = "Campaign.Id")]
+        public int CampaignId { get; set; }
+        
         public CreateOrder(Tidea.Infrastructure.Data.TideaDbContext context)
         {
             _context = context;
         }
         public async Task<IActionResult> OnGetAsync(int? id)
         {
+            var remoteIpAddress = HttpContext.Connection.RemoteIpAddress.ToString();
             if (id == null)
             {
                 return NotFound();
             }
-
+            
             Campaign = await _context.Campaigns.FirstOrDefaultAsync(m => m.Id == id);
 
             if (Campaign == null)
@@ -51,6 +55,7 @@ namespace Tidea.Web.Pages.Order
                 return NotFound();
             }
 
+            
             //Get PayU payment methods like blik, ipko etc.
             PayUMethods = GetPayMethods().Result;
             
@@ -62,9 +67,8 @@ namespace Tidea.Web.Pages.Order
                 x.value!="dp"
                 );
             
-            //Initialize paidIn buttons with values
+            //Initialize paidIn buttons with values 5, 10, 20 etc.
             SetPaidInValues();
-
 
             return Page();
         }
@@ -81,20 +85,23 @@ namespace Tidea.Web.Pages.Order
         [BindProperty(Name = "checkedPayUMethod")]
         public string CheckedPayUMethod { get; set; }
         
+        //Selected PaidIn value
         [BindProperty(Name = "checkedPaidIn")]
         public int CheckedPaidIn { get; set; }
         
         //Create Order
         public async Task<RedirectResult> OnPostAsync()
         {
-            string PaidIn = (CheckedPaidIn * 100).ToString();
+            Campaign = await _context.Campaigns.FirstOrDefaultAsync(m => m.Id == CampaignId);
             
+            string PaidIn = (CheckedPaidIn * 100).ToString();
+
             var createOrderViewModel = new CreateOrderViewModel
             {
                 merchantPosId = merchantPosId,
-                notifyUrl = "http://tidea.pl/notify",
+                notifyUrl = "https://tidea.pl/notify",
                 currencyCode = "PLN",
-                description = "RTV market",
+                description = Campaign.CampaignName,
                 totalAmount = PaidIn,
                 customerIp = "127.0.0.1",
                 payMethods = new PayMethods()
@@ -117,7 +124,7 @@ namespace Tidea.Web.Pages.Order
                 {
                     new()
                     {
-                        name = "Wireless Mouse for Laptop",
+                        name = "Zbiórka",
                         quantity = "1",
                         unitPrice = PaidIn
                     }

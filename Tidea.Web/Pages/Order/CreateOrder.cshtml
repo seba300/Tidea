@@ -7,7 +7,7 @@ html,body{
             min-width: 100vw;
         }
         .parent{
-            min-height: 50vh;
+            min-height: 40vh;
         }
         .parent>.row{
             display: flex;
@@ -56,26 +56,37 @@ html,body{
         }
 </style>
 
-<div class="card card-collapsable">
+<div class="card card-collapsable" id="CardContainer">
 
-    <div class="card-body pb-0 px-3 px-sm-4 mx-sm-4 mx-md-0 pt-md-4 mt-md-2 px-md-3">
-        <div class="row">
-            <div class="col-md-10 mx-auto">
-                <h3 class="mb-2" style="text-align: center">
-                    Wybierz kwotę oraz sposób płatności
-                </h3>
+    <form method="post">
+        <input type="hidden" asp-for="@Model.Campaign.Id"/>
+        <div class="container pb-0 px-3 px-sm-4 mx-sm-4 mx-md-0 pt-md-4 mt-md-2 px-md-3">
+            <div class="row justify-content-md-center">
+                <div class="col-md-10 mx-auto" style="text-align: center">
+                    <h3 class="mb-3">
+                        Wybierz kwotę oraz sposób płatności
+                    </h3>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-sm-4 mx-auto">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">@@</div>
+                        </div>
+                        <input type="email" class="form-control" id="inlineFormInputGroup" placeholder="Email wpłacającego" required>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <hr/>
-    <form method="post">
+        <hr/>
         <div class="container mt-lg-3 w-50" style="min-height: 20vh">
             <div class="row row-cols-2 row-cols-md-4">
                 @for (int i = 0; i < 8; i++)
                 {
                     <div class="col text-center p-1">
-                        <input type="radio" name="checkedPaidIn" id="@i" class="d-none imgbgchk" value="@Model.PaidInList[i]">
+                        <input type="radio" name="checkedPaidIn" id="@i" class="d-none imgbgchk" value="@Model.PaidInList[i]" required>
                         <label for="@i">
                             <button type="button" class="text-center btn btn-lg border"><i class="fa-solid fa-money-bill-wave"></i> @Model.PaidInList[i] zł</button>
                             <div class="tick_container">
@@ -94,20 +105,42 @@ html,body{
             <div class="row row-cols-2 row-cols-md-3">
                 @foreach (var item in @Model.FilteredPayUMethods)
                 {
-                        <div class="col text-center p-4">
-                            <input type="radio" name="checkedPayUMethod" id="@item.value" class="d-none imgbgchk" value="@item.value">
-                            <label for="@item.value">
-                                <img src="@item.brandImageUrl" alt="Image 1" class="w-50 h-auto text-center">
-                                <div class="tick_container">
-                                    <div class="tick">
-                                        <i class="fa fa-check"></i>
-                                    </div>
+                    <div class="col text-center p-4">
+                        <input type="radio" name="checkedPayUMethod" id="@item.value" class="d-none imgbgchk" value="@item.value" required>
+                        <label for="@item.value">
+                            <img src="@item.brandImageUrl" alt="Image 1" class="w-50 h-auto text-center">
+                            <div class="tick_container">
+                                <div class="tick">
+                                    <i class="fa fa-check"></i>
                                 </div>
-                            </label>
-                        </div>
+                            </div>
+                        </label>
+                    </div>
                 }
             </div>
+                <span id="msg" class="d-block text-center"></span>
         </div>
-        <button class="btn-block btn btn-outline-success" type="submit">Wpłać</button>
+
+        <button class="btn-block btn btn-outline-success mt-4" type="submit">Wpłać</button>
     </form>
 </div>
+
+<script>
+     
+      $("button[type=submit]").click(function()  {
+       // All <input> tags...
+       var chx = document.getElementsByTagName('input');
+       var twoChecked=0;
+       for (var i=0; i<chx.length; i++) {
+         if (chx[i].type === 'radio' && chx[i].checked) {
+           twoChecked+=1;
+         } 
+       }
+       if(twoChecked<2)
+           {
+                $("#msg").html(
+                       "<span class='alert alert-danger' id='error'>"
+                       + "Proszę wybrać kwotę oraz metodę płatności</span>");
+               }
+     });
+    </script>
