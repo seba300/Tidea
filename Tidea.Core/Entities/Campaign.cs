@@ -15,14 +15,6 @@ namespace Tidea.Core.Entities
         [Required]
         [Display(Name = "Tytuł zbiórki")]
         public string CampaignName { get; set; }
-        
-        // [Required]
-        // [Display(Name = "Wstęp zbiórki")]
-        // public string CampaignIntroduction { get; set; }
-        //
-        // [Required]
-        // [Display(Name = "Cel zbiórki")]
-        // public string CampaignPurpose { get; set; }
 
         [Required]
         [Display(Name = "Opis")]

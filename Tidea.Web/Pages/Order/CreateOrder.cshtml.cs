@@ -40,6 +40,7 @@ namespace Tidea.Web.Pages.Order
         {
             _context = context;
         }
+
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             var remoteIpAddress = HttpContext.Connection.RemoteIpAddress.ToString();
@@ -99,7 +100,8 @@ namespace Tidea.Web.Pages.Order
             var createOrderViewModel = new CreateOrderViewModel
             {
                 merchantPosId = merchantPosId,
-                notifyUrl = "https://tidea.pl/notify",
+                notifyUrl = "https://localhost:5001/api/test",
+                continueUrl = "https://localhost:5001/api/test",
                 currencyCode = "PLN",
                 description = Campaign.CampaignName,
                 totalAmount = PaidIn,

@@ -2,6 +2,7 @@
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;
   &lt;Assembly Path="/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Core/bin/Debug/net5.0/refs/System.IO.UnmanagedMemoryStream.dll" /&gt;
   &lt;Assembly Path="/Users/Dom/.nuget/packages/htmlagilitypack.netcore/1.5.0.1/lib/netstandard1.3/HtmlAgilityPack.NetCore.dll" /&gt;
+  &lt;Assembly Path="/usr/local/share/dotnet/packs/Microsoft.NETCore.App.Ref/5.0.0/ref/net5.0/System.Globalization.dll" /&gt;
 &lt;/AssemblyExplorer&gt;</s:String>
 	
 	

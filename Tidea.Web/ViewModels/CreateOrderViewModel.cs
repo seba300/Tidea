@@ -15,5 +15,6 @@ namespace Tidea.Web.ViewModels
         public string merchantPosId { get; set; }
         public string currencyCode { get; set; }
         public PayMethods payMethods { get; set; }
+        public string continueUrl { get; set; }
     }
 }
