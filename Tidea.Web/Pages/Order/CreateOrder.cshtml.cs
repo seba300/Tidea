@@ -100,8 +100,8 @@ namespace Tidea.Web.Pages.Order
             var createOrderViewModel = new CreateOrderViewModel
             {
                 merchantPosId = merchantPosId,
-                notifyUrl = "https://localhost:5001/api/test",
-                continueUrl = "https://localhost:5001/api/test",
+                notifyUrl = "https://localhost:5001/api/PayUNotify/notify",
+                continueUrl = "https://localhost:5001/Order/OrderNotify",
                 currencyCode = "PLN",
                 description = Campaign.CampaignName,
                 totalAmount = PaidIn,

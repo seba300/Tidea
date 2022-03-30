@@ -6,16 +6,17 @@ namespace Tidea.Web.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class TestController : Controller
+    public class PayUNotifyController : Controller
     {
         // GET
-        [HttpGet]
-        public void Get()
+        public IActionResult Index()
         {
-            
+            return View();
         }
         
-        [HttpPost]
+        //Catch PayU notify
+        //https://localhost:5001/api/PayUNotify/notify
+        [HttpPost("notify")]
         public async Task<IActionResult> OnPostAsync([FromBody] OrderNotifyViewModel orderNotifyViewModel)
         {
             var a = orderNotifyViewModel;
