@@ -104,7 +104,7 @@ namespace Tidea.Web.Pages.Order
         {
             Campaign = await _context.Campaigns.FirstOrDefaultAsync(m => m.Id == CampaignId);
             
-            string PaidIn = (CheckedPaidIn * 100).ToString();
+            string paidIn = (CheckedPaidIn * 100).ToString();
 
             var createOrderViewModel = new CreateOrderViewModel
             {
@@ -113,7 +113,7 @@ namespace Tidea.Web.Pages.Order
                 continueUrl = "https://localhost:5001/Order/ThanksForPayment",
                 currencyCode = "PLN",
                 description = Campaign.CampaignName,
-                totalAmount = PaidIn,
+                totalAmount = paidIn,
                 customerIp = RemoteIpAddress,
                 payMethods = new PayMethods()
                 {
@@ -137,23 +137,31 @@ namespace Tidea.Web.Pages.Order
                     {
                         name = "Zbiórka",
                         quantity = "1",
-                        unitPrice = PaidIn
+                        unitPrice = paidIn
                     }
                 }
             };
 
-            
+            var createOrderResponse = CreateDonation(createOrderViewModel).Result;
+
             //Redirect to PayU payment page
-            return Redirect(CreateDonation(createOrderViewModel).Result);
+            return Redirect(createOrderResponse.redirectUri);
         }
         
         //CreateOrder <- PayU
-        private async Task<string> CreateDonation(CreateOrderViewModel createOrderViewModel)
+        private async Task<CreateOrderResponseViewModel> CreateDonation(CreateOrderViewModel createOrderViewModel)
         {
             string accessToken = GetAccessToken().Result.access_token;
-
-            using (var httpClient = new HttpClient{ BaseAddress = baseAddress })
+            
+            //Turn off auto-redirect because HttpClient doesn't show json and he is jumping 1 step further to html page
+            var handler = new HttpClientHandler()
             {
+                AllowAutoRedirect = false
+            };
+
+            using (var httpClient = new HttpClient(handler){ BaseAddress = baseAddress })
+            {
+                CreateOrderResponseViewModel createOrderResponse = null;
                 httpClient.DefaultRequestHeaders.TryAddWithoutValidation("authorization", "Bearer " + accessToken);
 
                 //JsonConvert... -> convert object to json
@@ -164,9 +172,10 @@ namespace Tidea.Web.Pages.Order
                         //POST response from PayU
                         string responseData = await response.Content.ReadAsStringAsync();
                         
-                        //Redirect URL to PayU page
-                        var redirectUri = response.RequestMessage.RequestUri.AbsoluteUri;
-                        return redirectUri;
+                        //We are binding json result with prepared model class
+                        createOrderResponse = JsonConvert.DeserializeObject<CreateOrderResponseViewModel>(responseData);
+                
+                        return createOrderResponse;
                     }
                 }
             }
