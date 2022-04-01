@@ -27,8 +27,8 @@ namespace Tidea.Web.Pages.Order
         private const string merchantPosId = "428004";
         private const string clientId = "428004";
         private const string clientSecret = "eca193ab1e753aaa0cf8f6324561713b";
-       
         
+
         private readonly Tidea.Infrastructure.Data.TideaDbContext _context;
         public Core.Entities.Campaign Campaign { get; set; }
         public PayUMethodsViewModel PayUMethods { get; set; }
@@ -62,7 +62,6 @@ namespace Tidea.Web.Pages.Order
                 return NotFound();
             }
 
-            
             //Get PayU payment methods like blik, ipko etc.
             PayUMethods = GetPayMethods().Result;
             
@@ -97,8 +96,9 @@ namespace Tidea.Web.Pages.Order
         [BindProperty(Name = "checkedPaidIn")]
         public int CheckedPaidIn { get; set; }
         
-        public Donation Donation { get; set; }
-        
+        [BindProperty(Name="emailAddress")]
+        public string EmailAddress { get; set; }
+
         //Create Order
         public async Task<RedirectResult> OnPostAsync()
         {
@@ -125,7 +125,7 @@ namespace Tidea.Web.Pages.Order
                 },
                 buyer = new Buyer
                 {
-                    email = "john.doe@example.com",
+                    email = EmailAddress,
                     language = "pl",
                     firstName = "",
                     lastName = "",
@@ -143,6 +143,15 @@ namespace Tidea.Web.Pages.Order
             };
 
             var createOrderResponse = CreateDonation(createOrderViewModel).Result;
+
+            await _context.Donations.AddAsync(new Donation
+            {
+                DonationId = createOrderResponse.orderId,
+                Campaign = Campaign,
+                Status = "PENDING"
+            });
+
+            await _context.SaveChangesAsync();
 
             //Redirect to PayU payment page
             return Redirect(createOrderResponse.redirectUri);
