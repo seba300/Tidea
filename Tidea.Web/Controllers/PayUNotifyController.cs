@@ -19,7 +19,7 @@ namespace Tidea.Web.Controllers
         [HttpPost("notify")]
         public async Task<IActionResult> OnPostAsync([FromBody] OrderNotifyViewModel orderNotifyViewModel)
         {
-            var a = orderNotifyViewModel;
+            
             return Ok();
         }
     }

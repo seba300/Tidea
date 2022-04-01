@@ -12,6 +12,7 @@ using System.Net.Http;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using Tidea.Core.Entities;
 using Tidea.Web.Models;
 using Tidea.Web.Models.Order;
 using Tidea.Web.Services;
@@ -36,6 +37,9 @@ namespace Tidea.Web.Pages.Order
         [BindProperty(Name = "Campaign.Id")]
         public int CampaignId { get; set; }
         
+        [BindProperty(Name = "remoteIpAddress")]
+        public string RemoteIpAddress { get; set; }
+        
         public CreateOrder(Tidea.Infrastructure.Data.TideaDbContext context)
         {
             _context = context;
@@ -43,7 +47,9 @@ namespace Tidea.Web.Pages.Order
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            var remoteIpAddress = HttpContext.Connection.RemoteIpAddress.ToString();
+            //Get user IP Address
+            RemoteIpAddress = HttpContext.Connection.RemoteIpAddress.ToString();
+            
             if (id == null)
             {
                 return NotFound();
@@ -74,6 +80,7 @@ namespace Tidea.Web.Pages.Order
             return Page();
         }
 
+        //Initialize PaidIn List with values
         private void SetPaidInValues()
         {
             PaidInList = new List<int>()
@@ -90,6 +97,8 @@ namespace Tidea.Web.Pages.Order
         [BindProperty(Name = "checkedPaidIn")]
         public int CheckedPaidIn { get; set; }
         
+        public Donation Donation { get; set; }
+        
         //Create Order
         public async Task<RedirectResult> OnPostAsync()
         {
@@ -101,11 +110,11 @@ namespace Tidea.Web.Pages.Order
             {
                 merchantPosId = merchantPosId,
                 notifyUrl = "https://localhost:5001/api/PayUNotify/notify",
-                continueUrl = "https://localhost:5001/Order/OrderNotify",
+                continueUrl = "https://localhost:5001/Order/ThanksForPayment",
                 currencyCode = "PLN",
                 description = Campaign.CampaignName,
                 totalAmount = PaidIn,
-                customerIp = "127.0.0.1",
+                customerIp = RemoteIpAddress,
                 payMethods = new PayMethods()
                 {
                    payMethod = new PayMethod()
@@ -133,6 +142,14 @@ namespace Tidea.Web.Pages.Order
                 }
             };
 
+            
+            //Redirect to PayU payment page
+            return Redirect(CreateDonation(createOrderViewModel).Result);
+        }
+        
+        //CreateOrder <- PayU
+        private async Task<string> CreateDonation(CreateOrderViewModel createOrderViewModel)
+        {
             string accessToken = GetAccessToken().Result.access_token;
 
             using (var httpClient = new HttpClient{ BaseAddress = baseAddress })
@@ -144,14 +161,18 @@ namespace Tidea.Web.Pages.Order
                 {
                     using (var response = await httpClient.PostAsync("api/v2_1/orders/", content))
                     {
+                        //POST response from PayU
                         string responseData = await response.Content.ReadAsStringAsync();
+                        
+                        //Redirect URL to PayU page
                         var redirectUri = response.RequestMessage.RequestUri.AbsoluteUri;
-                        return Redirect(redirectUri);
+                        return redirectUri;
                     }
                 }
             }
         }
-      
+        
+        //GetAccessToken to PayU
         private async Task<PayUToken> GetAccessToken()
         {
             PayUToken payUToken = null;
@@ -173,6 +194,7 @@ namespace Tidea.Web.Pages.Order
             }
         }
         
+        //Get all pay PayU methods
         private async Task<PayUMethodsViewModel> GetPayMethods()
         {
             PayUMethodsViewModel payUMethods = null;
