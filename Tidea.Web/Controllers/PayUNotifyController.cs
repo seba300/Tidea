@@ -1,5 +1,9 @@
+using System;
+using System.Globalization;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Tidea.Core.Entities;
 using Tidea.Web.ViewModels;
 
 namespace Tidea.Web.Controllers
@@ -8,6 +12,14 @@ namespace Tidea.Web.Controllers
     [Route("api/[controller]")]
     public class PayUNotifyController : Controller
     {
+        private readonly Tidea.Infrastructure.Data.TideaDbContext _context;
+        private Donation Donation { get; set; }
+        
+        public PayUNotifyController(Tidea.Infrastructure.Data.TideaDbContext context)
+        {
+            _context = context;
+        }
+
         // GET
         public IActionResult Index()
         {
@@ -16,10 +28,38 @@ namespace Tidea.Web.Controllers
         
         //Catch PayU notify
         //https://localhost:5001/api/PayUNotify/notify
+        //FromHeader będzie później potrzebny do weryfikacji podpisu notyfikacji
         [HttpPost("notify")]
-        public async Task<IActionResult> OnPostAsync([FromBody] OrderNotifyViewModel orderNotifyViewModel)
+        public async Task<IActionResult> OnPostAsync([FromBody] OrderNotifyViewModel orderNotifyViewModel, [FromHeader(Name = "OpenPayu-Signature")] string openPayuSignature)
         {
-            
+            string paymentStatus=null;
+            string paymentNotifyId = null;
+
+            paymentNotifyId = orderNotifyViewModel.order.orderId;
+            paymentStatus = orderNotifyViewModel.order.status;
+
+            if (paymentStatus == "COMPLETED")
+            {
+                Donation = _context.Donations.Single(x => x.DonationId == paymentNotifyId);
+                if (Donation.Status == "PENDING")
+                {
+                    Donation.Status = "COMPLETED";
+                    Donation.DonationDate = Convert.ToDateTime(orderNotifyViewModel.order.orderCreateDate);
+                    Donation.DonorEmail = orderNotifyViewModel.order.buyer.email;
+                    Donation.PaidAmount = Convert.ToDecimal(orderNotifyViewModel.order.totalAmount);
+
+                    await _context.SaveChangesAsync();
+                }
+            }
+            else if (paymentStatus == "CANCELED")
+            {
+                Donation = _context.Donations.Single(x => x.DonationId == paymentNotifyId);
+                if (Donation.Status == "PENDING")
+                {
+                    Donation.Status = "CANCELED";
+                    await _context.SaveChangesAsync();
+                }
+            }
             return Ok();
         }
     }
