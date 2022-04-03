@@ -30,6 +30,11 @@
                 <span asp-validation-for="Campaign.CampaignEndDate" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Campaign.AvailableAmountCollected" class="control-label"></label>
+                <input asp-for="Campaign.AvailableAmountCollected" class="form-control" />
+                <span asp-validation-for="Campaign.AvailableAmountCollected" class="text-danger"></span>
+            </div>            
+            <div class="form-group">
                 <label asp-for="Campaign.TotalAmountCollected" class="control-label"></label>
                 <input asp-for="Campaign.TotalAmountCollected" class="form-control" />
                 <span asp-validation-for="Campaign.TotalAmountCollected" class="text-danger"></span>

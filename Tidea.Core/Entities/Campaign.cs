@@ -31,8 +31,11 @@ namespace Tidea.Core.Entities
         
         [Column(TypeName = "decimal(18,2)")]
         [Display(Name = "Zebrana kwota")]
-        public decimal TotalAmountCollected { get; set; }
+        public decimal TotalAmountCollected { get; set; }       
         
+        [Column(TypeName = "decimal(18,2)")]
+        [Display(Name = "Dostępne pieniądze")]
+        public decimal AvailableAmountCollected { get; set; }
         
         public virtual ApplicationUser ApplicationUser { get; set; }
         public virtual ICollection<Donation> Donations { get; set; }

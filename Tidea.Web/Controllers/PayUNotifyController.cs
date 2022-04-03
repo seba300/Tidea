@@ -3,17 +3,21 @@ using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Tidea.Core.Entities;
 using Tidea.Web.ViewModels;
 
 namespace Tidea.Web.Controllers
-{
+{/// <summary>
+ /// Add payment into DB
+ /// </summary>
     [ApiController]
     [Route("api/[controller]")]
     public class PayUNotifyController : Controller
     {
         private readonly Tidea.Infrastructure.Data.TideaDbContext _context;
         private Donation Donation { get; set; }
+        private Campaign Campaign { get; set; }
         
         public PayUNotifyController(Tidea.Infrastructure.Data.TideaDbContext context)
         {
@@ -38,9 +42,14 @@ namespace Tidea.Web.Controllers
             paymentNotifyId = orderNotifyViewModel.order.orderId;
             paymentStatus = orderNotifyViewModel.order.status;
 
+            //If someone has successful donated campaign
             if (paymentStatus == "COMPLETED")
             {
-                Donation = _context.Donations.Single(x => x.DonationId == paymentNotifyId);
+                Donation = _context.Donations
+                    .Where(x => x.DonationId == paymentNotifyId)
+                    .Include(y=>y.Campaign)
+                    .Single();
+                
                 if (Donation.Status == "PENDING")
                 {
                     Donation.Status = "COMPLETED";
@@ -48,9 +57,15 @@ namespace Tidea.Web.Controllers
                     Donation.DonorEmail = orderNotifyViewModel.order.buyer.email;
                     Donation.PaidAmount = Convert.ToDecimal(orderNotifyViewModel.order.totalAmount);
 
+                    //Update campaign amount of money
+                    Campaign = _context.Campaigns.Single(x => x.Id == Donation.Campaign.Id);
+                    Campaign.TotalAmountCollected+=Convert.ToDecimal(orderNotifyViewModel.order.totalAmount);
+                    Campaign.AvailableAmountCollected+=Convert.ToDecimal(orderNotifyViewModel.order.totalAmount);
+
                     await _context.SaveChangesAsync();
                 }
             }
+            //If someone has canceled campaign donation
             else if (paymentStatus == "CANCELED")
             {
                 Donation = _context.Donations.Single(x => x.DonationId == paymentNotifyId);
