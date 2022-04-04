@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tidea.Infrastructure.Data;
 
 namespace Tidea.Infrastructure.Migrations
 {
     [DbContext(typeof(TideaDbContext))]
-    partial class TideaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220404180105_AddCamapignStartDate")]
+    partial class AddCamapignStartDate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

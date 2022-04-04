@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Tidea;
 using Tidea.Core.Entities;
 using Tidea.Infrastructure.Data;
+using Tidea.Web.Services;
 
 namespace Tidea.Web.Pages.Campaign
 {
@@ -19,6 +20,10 @@ namespace Tidea.Web.Pages.Campaign
         private readonly TideaDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
+        public List<string> campaignEndDates { get; set; }
+        public List<decimal> moneyProgress { get; set; }
+        public List<string> campaignStartDate { get; set; }
+        public List<string> campaignEndDate { get; set; }
 
         public IndexModel(TideaDbContext context,
             UserManager<ApplicationUser> userManager,
@@ -33,10 +38,53 @@ namespace Tidea.Web.Pages.Campaign
 
         public async Task OnGetAsync()
         {
+            HtmlConverter htmlConverter = new HtmlConverter();
+            
             var userId = _userManager.GetUserId(_signInManager.Context.User);
             Campaign = await _context.Campaigns
                 .Where(x => x.ApplicationUser.Id == userId)
+                .Select(y=>new Core.Entities.Campaign
+                {
+                    Id=y.Id,
+                    CampaignName = y.CampaignName,
+                    Description = htmlConverter.ConvertHtmlToPlainText(y.Description),
+                    CampaignEndDate = y.CampaignEndDate,
+                    AmountNeeded = y.AmountNeeded,
+                    TotalAmountCollected = y.TotalAmountCollected,
+                    AvailableAmountCollected = y.AvailableAmountCollected,
+                    Category = y.Category,
+                    CampaignStartDate = y.CampaignStartDate,
+                })
                 .ToListAsync();
+
+            //Testy daty
+            campaignEndDates = new List<string>();
+            moneyProgress = new List<decimal>();
+            campaignStartDate = new List<string>();
+            campaignEndDate = new List<string>();
+            
+            foreach (var item in Campaign)
+            {
+                campaignEndDates.Add(item.CampaignEndDate.ToString("g"));
+            }
+            
+            //Money progress
+            foreach (var item in Campaign)
+            {
+                moneyProgress.Add((item.AvailableAmountCollected/item.AmountNeeded)*100);
+            }
+            
+            //Start Date format
+            foreach (var item in Campaign)
+            {
+                campaignStartDate.Add(item.CampaignStartDate.ToString("d"));
+            }
+                        
+            //End Date format
+            foreach (var item in Campaign)
+            {
+                campaignEndDate.Add(item.CampaignEndDate.ToString("d"));
+            }
         }
     }
 }
