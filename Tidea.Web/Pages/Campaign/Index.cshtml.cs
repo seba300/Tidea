@@ -20,7 +20,6 @@ namespace Tidea.Web.Pages.Campaign
         private readonly TideaDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
-        public List<string> campaignEndDates { get; set; }
         public List<decimal> moneyProgress { get; set; }
         public List<string> campaignStartDate { get; set; }
         public List<string> campaignEndDate { get; set; }
@@ -57,17 +56,11 @@ namespace Tidea.Web.Pages.Campaign
                 })
                 .ToListAsync();
 
-            //Testy daty
-            campaignEndDates = new List<string>();
+           
             moneyProgress = new List<decimal>();
             campaignStartDate = new List<string>();
             campaignEndDate = new List<string>();
-            
-            foreach (var item in Campaign)
-            {
-                campaignEndDates.Add(item.CampaignEndDate.ToString("g"));
-            }
-            
+
             //Money progress
             foreach (var item in Campaign)
             {

@@ -15,6 +15,7 @@ namespace Tidea.Web.Pages.Campaign
     public class DetailsModel : PageModel
     {
         private readonly Tidea.Infrastructure.Data.TideaDbContext _context;
+        public string imagePath { get; set; }
 
         public DetailsModel(Tidea.Infrastructure.Data.TideaDbContext context)
         {
@@ -29,12 +30,17 @@ namespace Tidea.Web.Pages.Campaign
                 return NotFound();
             }
 
-            Campaign = await _context.Campaigns.FirstOrDefaultAsync(m => m.Id == id);
+            Campaign = await _context.Campaigns
+                .Where(m => m.Id == id)
+                .Include(y=>y.Media)
+                .SingleAsync();
 
             if (Campaign == null)
             {
                 return NotFound();
             }
+
+            imagePath = "/CampaignsMedia/" + Campaign.Media.ImageName;
 
             return Page();
         }

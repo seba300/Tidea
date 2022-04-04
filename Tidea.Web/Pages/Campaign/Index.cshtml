@@ -16,25 +16,12 @@ p {
     overflow: hidden;
 } 
 
-.icon-container {
-    border-radius: 7px
-}
-
 .stars i {
     margin-right: 2px;
     color: red;
     font-size: 13px
 }
 
-.rating-number {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 2px
-}
-
-.number-ratings {
-    font-size: 12px
-}
 
 .listing-title {
     margin-bottom: -7px
@@ -59,124 +46,181 @@ p {
     background-color: green;
     color: #fff
 }
+
+
+
+
+/*TEST GUZIKA*/
+
+
+/* Button Style 1 (Left Icons) */
+.icon-btn{
+    min-height:150px;
+    float:left;
+}
+
+.icon-btn button{
+    float:left;
+    margin:10px;
+}
+
+.btn-gradient {    
+    width:40%;
+    position: relative;
+    display: inline-block;
+    left:-20px;
+    background: rgba(0, 0, 0, 0.15);
+    border-top-right-radius: 60px;
+    padding: 8px 24px 8px 16px;
+    box-shadow: 2px 0px 0px 0px rgba(78, 72, 72, 0.4);
+}
+
+.btn-green{
+    font-size:17px;
+    padding:0px 20px;
+    color: #fff;
+    background-color: #47a447;
+    border:none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width:230px;
+}
+
+.btn-text{
+    width:60%;
+}
+
+.btn-gradient i{
+  font-size:30px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.normal-icon a{
+    margin:20px;
+    border-radius:0;
+}
+
+.radius-icon a{
+    margin:20px;
+    border-radius: 20px;
+    font-size: 13px;
+    width: 150px;
+    font-weight:bold;
+}
+
+
+.circle-btn button{
+    margin:10px;
+    border-radius: 50%;
+    height:80px;
+    width:80px;
+    font-size: 15px;
+}
+
+.rounded-btn button{
+    border-radius:12px;
+    margin:10px;
+}
+
+.hover-btn button{
+   margin:10px; 
+   color:#FFF;
+   padding:10px 40px;
+}
+
+.hover-btn button:hover{
+    background:#5a5a5a;
+}
+
+.line-btn button{
+   margin:10px; 
+   color:#FFF;
+   padding:5px 120px;
+}
+
+
+/* Line Style 8 (Left Icon) */
+
+.radius-style button{
+    border-radius:30px;
+}
 </style>
-@* <style> *@
-@* *@
-@*     /*Cut the Campaign description to 3 lines*/ *@
-@*     p { *@
-@*         display: -webkit-box; *@
-@*         -webkit-line-clamp: 4; *@
-@*         -webkit-box-orient: vertical; *@
-@*         overflow: hidden; *@
-@*     }  *@
-@* </style> *@
-@* *@
-@* <p> *@
-@*     <a asp-page="Create">Create New</a> *@
-@* </p> *@
-@* <table class="table"> *@
-@*     <thead> *@
-@*     <tr> *@
-@*         <th> *@
-@*             @Html.DisplayNameFor(model => model.Campaign[0].CampaignName) *@
-@*         </th> *@
-@*         <th> *@
-@*             @Html.DisplayNameFor(model => model.Campaign[0].Description) *@
-@*         </th> *@
-@*         <th> *@
-@*             @Html.DisplayNameFor(model => model.Campaign[0].CampaignEndDate) *@
-@*         </th> *@
-@*         <th> *@
-@*             @Html.DisplayNameFor(model => model.Campaign[0].AvailableAmountCollected) *@
-@*         </th>             *@
-@*         <th> *@
-@*             @Html.DisplayNameFor(model => model.Campaign[0].TotalAmountCollected) *@
-@*         </th> *@
-@*     </tr> *@
-@*     </thead> *@
-@*     <tbody> *@
-@*     @foreach (var item in Model.Campaign) { *@
-@*         <tr> *@
-@*             <td> *@
-@*                 @Html.DisplayFor(modelItem => item.CampaignName) *@
-@*             </td> *@
-@*             <td><p> *@
-@*                 @Html.DisplayFor(modelItem => item.Description) *@
-@*             </p></td> *@
-@*             <td> *@
-@*                 @Html.DisplayFor(modelItem => item.CampaignEndDate) *@
-@*             </td> *@
-@*             <td> *@
-@*                 @Html.DisplayFor(modelItem => item.AvailableAmountCollected) *@
-@*             </td> *@
-@*             <td> *@
-@*                 <a asp-page="./Edit" asp-route-id="@item.Id"><i class="fa-solid fa-pen-to-square"></i></a> | *@
-@*                 <a asp-page="./Details" asp-route-id="@item.Id"><i class="fa-solid fa-circle-info"></i></a> | *@
-@*                 <a asp-page="./Delete" asp-route-id="@item.Id"><i class="fa-solid fa-trash-can"></i></a> *@
-@*             </td> *@
-@*         </tr> *@
-@*     } *@
-@*     </tbody> *@
-@* </table> *@
 
 <div class="container mt-5 mb-5">
+
+    <div class="row">
+        <div class="col icon-btn">
+            <a style="text-decoration: none;" asp-page="Create">
+                <button class="btn-green">
+                    <span class="btn-gradient">
+                        <i class="fa fa-plus"></i>
+                    </span>
+                    <span class="btn-text">Stwórz zbiórkę</span>
+                </button>
+            </a>
+        </div>
+    </div>
+    
     <div class="row">
         <div class="col-md-12">
-            
-            @for (int i=0;i<Model.Campaign.Count;i++)
+
+            @for (int i = 0; i < Model.Campaign.Count; i++)
             {
                 <div class="bg-white p-3 rounded mt-2">
-                <div class="row">
-                    <!--ZDJ-->
-                    <div class="col-md-3">
-                        <div class="d-flex flex-column justify-content-center align-items-center bg-success text-white mb-2"><i class="fa fa-coins fa-7x mb-3 mt-5"></i><span class="mb-4"></span></div>
-                    </div>
-                    <div class="col-md-6 border-right">
-                        <!--TITLE-->
-                        <div class="listing-title">
-                            <h5>@Model.Campaign[i].CampaignName</h5>
+                    <div class="row">
+                        <!--ZDJ-->
+                        <div class="col-md-3">
+                            <div class="d-flex flex-column justify-content-center align-items-center bg-success text-white mb-2"><i class="fa fa-coins fa-7x mb-3 mt-5"></i><span class="mb-4"></span></div>
                         </div>
-                        <!--RATING -> MONEY-->
-                        <div class="d-flex flex-row align-items-center mb-1">
-                            <div class="level mr-2"><span class="font-weight-bold">@Model.campaignStartDate[i] - @Model.campaignEndDate[i]</span></div>
+                        <div class="col-md-6 border-right">
+                            <!--TITLE-->
+                            <div class="listing-title">
+                                <h5>@Model.Campaign[i].CampaignName</h5>
+                            </div>
+                            <!--RATING -> MONEY-->
+                            <div class="d-flex flex-row align-items-center mb-1">
+                                <div class="level mr-2"><span class="font-weight-bold">@Model.campaignStartDate[i] - @Model.campaignEndDate[i]</span></div>
+                            </div>
+                            <!--DESC-->
+                            <div class="description">
+                                <p>@Model.Campaign[i].Description<br></p>
+                            </div>
+                            <!--CATEGORY-->
+                            <div class="tags mb-2"><span>@Model.Campaign[i].Category.CategoryName</span></div>
                         </div>
-                        <!--DESC-->
-                        <div class="description">
-                            <p>@Model.Campaign[i].Description<br></p>
-                        </div>
-                        <!--CATEGORY-->
-                        <div class="tags mb-2"><span>@Model.Campaign[i].Category.CategoryName</span></div>
-                    </div>
-                    <div class="d-flex col-md-3">
-                        <div class="d-flex flex-column justify-content-start user-profile w-100">
+                        <div class="d-flex col-md-3">
+                            <div class="d-flex flex-column justify-content-start user-profile w-100">
 
-                            <div class="progresses mb-2"><span><strong>Zebrano:</strong></span><br/>
-                                @Model.Campaign[i].TotalAmountCollected / @Model.Campaign[i].AmountNeeded zł
-                                <div class="progress mt-1">
-                                    <div class="progress-bar" aria-valuenow="@Model.moneyProgress[i]" aria-valuemin="0" aria-valuemax="100" style="width: @Model.moneyProgress[i]%;">@Model.moneyProgress[i]%</div>
+                                <div class="progresses mb-2"><span><strong>Zebrano:</strong></span><br/>
+                                    @Model.Campaign[i].TotalAmountCollected / @Model.Campaign[i].AmountNeeded zł
+                                    <div class="progress mt-1">
+                                        <div class="progress-bar" aria-valuenow="@Model.moneyProgress[i]" aria-valuemin="0" aria-valuemax="100" style="width: @Model.moneyProgress[i]%;">@Model.moneyProgress[i]%</div>
+                                    </div>
                                 </div>
-                            </div>
-                            
-                            <div class="progresses mb-2"><span><strong>Dostępne:</strong> @Model.Campaign[i].AvailableAmountCollected zł</span>
-                            </div>
-                            
-                            <div>
-                                <a asp-page="./Edit" asp-route-id="@Model.Campaign[i].Id"><i class="fa-solid fa-pen-to-square p-1"></i></a>
-                                <a asp-page="./Details" asp-route-id="@Model.Campaign[i].Id"><i class="fa-solid fa-circle-info p-1"></i></a>
-                            </div>
-                            
-                            <div class="mb-1">
-                                <button class="btn btn-block btn-danger">Zakończ zbiórkę</button>
-                            </div>                       
-                            <div>
-                            <button class="btn btn-block btn-info">Wypłać dostępne środkis</button>
+
+                                <div class="progresses mb-2"><span><strong>Dostępne:</strong> @Model.Campaign[i].AvailableAmountCollected zł</span>
+                                </div>
+
+                                <div>
+                                    <a asp-page="./Edit" asp-route-id="@Model.Campaign[i].Id"><i class="fa-solid fa-pen-to-square p-1"></i></a>
+                                    <a asp-page="./Details" asp-route-id="@Model.Campaign[i].Id"><i class="fa-solid fa-circle-info p-1"></i></a>
+                                </div>
+
+                                <div class="mb-1">
+                                    <button class="btn btn-block btn-danger">Zakończ zbiórkę</button>
+                                </div>
+                                <div>
+                                    <button class="btn btn-block btn-info">Wypłać dostępne środki</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
             }
-            
+
         </div>
     </div>
 </div>

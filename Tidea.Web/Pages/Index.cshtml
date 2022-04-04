@@ -1,8 +1,10 @@
 ﻿@page
 @using Microsoft.AspNetCore.Identity
 @model IndexModel
+
 @{
     ViewData["Title"] = "Home page";
+
 }
 <style>
     /*Zoom image and fill the card*/
@@ -17,7 +19,7 @@
         -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
         overflow: hidden;
-    } 
+    }
 </style>
 
 <!-- Cards -->
@@ -29,7 +31,7 @@
                     <a asp-page="Campaign/Details" asp-route-id="@x.Id" class="stretched-link"></a>
                     <img src="@x.Media.ImagePath" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">@x.CampaignName</h5>
+                        <h5 class="card-title"><strong>@x.CampaignName</strong></h5>
                         <p class="card-text">@x.Description</p>
                     </div>
                 </div>

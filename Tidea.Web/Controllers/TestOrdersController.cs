@@ -31,6 +31,7 @@ namespace Tidea.Web.Controllers
             _context = context;
         }
 
+        //Pobierz listę wpłat na zbiórkę
         [HttpGet("test")]
         public async Task<IActionResult> OnGetAsync()
         {
