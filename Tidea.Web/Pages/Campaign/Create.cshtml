@@ -6,57 +6,215 @@
 @{
     ViewData["Title"] = "Create";
 }
+@* *@
+@* <form method="post" enctype="multipart/form-data"> *@
+@*     <div asp-validation-summary="ModelOnly" class="text-danger"></div> *@
+@*     $1$ Nazwa zbiórki #1# *@
+@*     <div class="form-group"> *@
+@*         <label asp-for="CreateCampaignViewModel.Campaign.CampaignName" class="control-label h4"></label> *@
+@*         <textarea asp-for="CreateCampaignViewModel.Campaign.CampaignName" class="form-control" style="resize:none" rows="1"></textarea> *@
+@*         <span asp-validation-for="CreateCampaignViewModel.Campaign.CampaignName" class="text-danger"></span> *@
+@*     </div> *@
+@*     $1$ Zdjecie zbiórki #1# *@
+@*     <div class="form-group"> *@
+@*         <label class="h4">Zdjęcie zbiorki</label> *@
+@*         <input asp-for="CreateCampaignViewModel.Media.ImageFile" accept="image/*" type="file" id="imgInp" class="form-control-file"/> *@
+@*         <span asp-validation-for="CreateCampaignViewModel.Media.ImageFile" class="text-danger"></span> *@
+@*         <br/> *@
+@*         <img id="imgPreview" src="#" alt="Podgląd zdjęcia" height="200" width="200"/> *@
+@*     </div> *@
+@*     $1$ Kategoria zbiórki #1# *@
+@*     <div class="form-group"> *@
+@*         <label class="control-label h4">Kategorie</label> *@
+@*         <select class="form-control" asp-for="CreateCampaignViewModel.Category.CategoryName" asp-items="Html.GetEnumSelectList<CategoryName>()"></select> *@
+@*         <span asp-validation-for="CreateCampaignViewModel.Category.CategoryName" class="text-danger"></span> *@
+@*     </div> *@
+@*     $1$ Opis zbiórki #1# *@
+@*     <div class="form-group"> *@
+@*         <label asp-for="CreateCampaignViewModel.Campaign.Description" class="control-label h4"></label> *@
+@*         <textarea asp-for="CreateCampaignViewModel.Campaign.Description" class="form-control" id="summernoteDescription"></textarea> *@
+@*         <span asp-validation-for="CreateCampaignViewModel.Campaign.Description" class="text-danger"></span> *@
+@*     </div> *@
+@*     $1$ Potrzebna kwota do realizacji zbiórki #1# *@
+@*     <div class="form-group"> *@
+@*         <label asp-for="CreateCampaignViewModel.Campaign.AmountNeeded" class="control-label h4"></label> *@
+@*         <div class="input-group mb-2"> *@
+@*             <input asp-for="CreateCampaignViewModel.Campaign.AmountNeeded" class="form-control" value="222"/> *@
+@*             <div class="input-group-prepend"> *@
+@*                 <div class="input-group-text">zł</div> *@
+@*             </div> *@
+@*             <span asp-validation-for="CreateCampaignViewModel.Campaign.AmountNeeded" class="text-danger"></span> *@
+@*         </div> *@
+@*     </div> *@
+@*     $1$ Data zakończenia zbiórki #1# *@
+@*     <div class="form-group"> *@
+@*         <label asp-for="CreateCampaignViewModel.Campaign.CampaignEndDate" class="control-label h4"></label> *@
+@*         <input asp-for="CreateCampaignViewModel.Campaign.CampaignEndDate" class="form-control"/> *@
+@*         <span asp-validation-for="CreateCampaignViewModel.Campaign.CampaignEndDate" class="text-danger"></span> *@
+@*     </div> *@
+@*     <div class="form-group"> *@
+@*         <input type="submit" value="Utwórz zbiórkę" class="btn btn-primary"/> *@
+@*     </div> *@
+@* </form> *@
+@* *@
+@* <form id="summernote"></form> *@
+@* *@
+@* *@
+@* <script> *@
+@* $('#summernoteDescription').summernote({ *@
+@*   toolbar: [ *@
+@*     // [groupName, [list of button]] *@
+@*     ['style', ['bold', 'italic', 'underline', 'clear']], *@
+@*     ['font', ['strikethrough', 'superscript', 'subscript']], *@
+@*     ['fontsize', ['fontsize']], *@
+@*     ['para', ['ul', 'ol', 'paragraph']], *@
+@*     ['insert', ['picture', 'video']] *@
+@*   ], *@
+@*   height: 400 *@
+@* }); *@
+@* //Hide right summernote bar *@
+@* $('.note-statusbar').hide(); *@
+@* *@
+@* //Display image on page as a preview *@
+@* imgInp.onchange = evt => { *@
+@*   const [file] = imgInp.files *@
+@*   if (file) { *@
+@*     imgPreview.src = URL.createObjectURL(file) *@
+@*   } *@
+@* } *@
+@* </script> *@
+@* *@
+@* <!--Alert before leave page--> *@
+@* <script> *@
+@*   window.onbeforeunload = confirmExit; *@
+@*   function confirmExit() *@
+@*   { *@
+@*     return "You have attempted to leave this page.  If you have made any changes to the fields without clicking the Save button, your changes will be lost.  Are you sure you want to exit this page?"; *@
+@*   } *@
+@* </script> *@
+@* *@
+@* @section Scripts { *@
+@*     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");} *@
+@* } *@
+
+<style>
+    body {
+        font-family: 'Lato', sans-serif
+    }
+    
+    h1 {
+        margin-bottom: 40px
+    }
+    
+    label {
+        color: #333
+    }
+    
+    .btn-send {
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        width: 80%;
+        margin-left: 3px
+    }
+</style>
+
+
 <form method="post" enctype="multipart/form-data">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    @* Nazwa zbiórki *@
-    <div class="form-group">
-        <label asp-for="CreateCampaignViewModel.Campaign.CampaignName" class="control-label h4"></label>
-        <textarea asp-for="CreateCampaignViewModel.Campaign.CampaignName" class="form-control" style="resize:none" rows="1"></textarea>
-        <span asp-validation-for="CreateCampaignViewModel.Campaign.CampaignName" class="text-danger"></span>
-    </div>
-    @* Zdjecie zbiórki *@
-    <div class="form-group">
-        <label class="h4">Zdjęcie zbiorki</label>
-        <input asp-for="CreateCampaignViewModel.Media.ImageFile" accept="image/*" type="file" id="imgInp" class="form-control-file"/>
-        <span asp-validation-for="CreateCampaignViewModel.Media.ImageFile" class="text-danger"></span>
-        <br/>
-        <img id="imgPreview" src="#" alt="Podgląd zdjęcia" height="200" width="200"/>
-    </div>
-    @* Kategoria zbiórki *@
-    <div class="form-group">
-        <label class="control-label h4">Kategorie</label>
-        <select class="form-control" asp-for="CreateCampaignViewModel.Category.CategoryName" asp-items="Html.GetEnumSelectList<CategoryName>()"></select>
-        <span asp-validation-for="CreateCampaignViewModel.Category.CategoryName" class="text-danger"></span>
-    </div>
-    @* Opis zbiórki *@
-    <div class="form-group">
-        <label asp-for="CreateCampaignViewModel.Campaign.Description" class="control-label h4"></label>
-        <textarea asp-for="CreateCampaignViewModel.Campaign.Description" class="form-control" id="summernoteDescription"></textarea>
-        <span asp-validation-for="CreateCampaignViewModel.Campaign.Description" class="text-danger"></span>
-    </div>
-    @* Potrzebna kwota do realizacji zbiórki *@
-    <div class="form-group">
-        <label asp-for="CreateCampaignViewModel.Campaign.AmountNeeded" class="control-label h4"></label>
-        <div class="input-group mb-2">
-            <input asp-for="CreateCampaignViewModel.Campaign.AmountNeeded" class="form-control" value="222"/>
-            <div class="input-group-prepend">
-                <div class="input-group-text">zł</div>
-            </div>
-            <span asp-validation-for="CreateCampaignViewModel.Campaign.AmountNeeded" class="text-danger"></span>
+    <div class="container">
+        <div class="text-center mt-5 ">
+            <h1>Formularz tworzenia zbiórki</h1>
+        </div>
+        <div class="row ">
+            <div class="col-lg-10 mx-auto">
+                <div class="card mt-2 mx-auto p-4 bg-light">
+                    <div class="card-body bg-light">
+                        <div class="container">
+                            <form id="contact-form" role="form">
+                                <div class="controls">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label asp-for="CreateCampaignViewModel.Campaign.CampaignName">
+                                                    <strong>Tytuł zbiórki</strong>
+                                                </label> <input type="text" asp-for="CreateCampaignViewModel.Campaign.CampaignName" class="form-control" placeholder="Tytuł zbiórki" required="required">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>
+                                                    <strong>Zdjęcie zbiorki</strong>
+                                                </label>
+                                                <input asp-for="CreateCampaignViewModel.Media.ImageFile" accept="image/*" type="file" id="imgInp" class="form-control-file"/>
+                                                <span asp-validation-for="CreateCampaignViewModel.Media.ImageFile" class="text-danger"></span>
+                                                <br/>
+                                                <img id="imgPreview" src="#" alt="Podgląd zdjęcia" height="200" width="200"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>
+                                                    <strong>Kategorie</strong>
+                                                </label>
+                                                <select class="form-control" asp-for="CreateCampaignViewModel.Category.CategoryName" asp-items="Html.GetEnumSelectList<CategoryName>()"></select>
+                                                <span asp-validation-for="CreateCampaignViewModel.Category.CategoryName" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>
+                                                    <strong>Opis zbiórki</strong>
+                                                </label>
+                                                <textarea asp-for="CreateCampaignViewModel.Campaign.Description" id="summernoteDescription" class="form-control" placeholder="Opis zbiórki" required="required">
+                                            </textarea>
+                                                <span asp-validation-for="CreateCampaignViewModel.Campaign.Description" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>
+                                                    <strong>Potrzebna kwota</strong>
+                                                </label>
+                                                <div class="input-group mb-2">
+                                                    <input asp-for="CreateCampaignViewModel.Campaign.AmountNeeded" class="form-control" placeholder="0"/>
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text">zł</div>
+                                                    </div>
+                                                    <span asp-validation-for="CreateCampaignViewModel.Campaign.AmountNeeded" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>
+                                                    <strong>Data zakończenia zbiórki</strong>
+                                                </label>
+
+                                                <input asp-for="CreateCampaignViewModel.Campaign.CampaignEndDate" class="form-control"/>
+                                                <span asp-validation-for="CreateCampaignViewModel.Campaign.CampaignEndDate" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-12">
+                                            <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Utwórz zbiórkę">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div> <!-- /.8 -->
+            </div> <!-- /.row-->
         </div>
     </div>
-    @* Data zakończenia zbiórki *@
-    <div class="form-group">
-        <label asp-for="CreateCampaignViewModel.Campaign.CampaignEndDate" class="control-label h4"></label>
-        <input asp-for="CreateCampaignViewModel.Campaign.CampaignEndDate" class="form-control"/>
-        <span asp-validation-for="CreateCampaignViewModel.Campaign.CampaignEndDate" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <input type="submit" value="Utwórz zbiórkę" class="btn btn-primary"/>
-    </div>
 </form>
-
-<form id="summernote"></form>
 
 
 <script>

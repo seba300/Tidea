@@ -14,6 +14,7 @@ namespace Tidea.Core.Entities
 
         [Required]
         [Display(Name = "Tytuł zbiórki")]
+        [MaxLength(40)]
         public string CampaignName { get; set; }
 
         [Required]
