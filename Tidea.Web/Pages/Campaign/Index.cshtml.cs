@@ -61,7 +61,7 @@ namespace Tidea.Web.Pages.Campaign
             campaignStartDate = new List<string>();
             campaignEndDate = new List<string>();
 
-            //Money progress
+            //Money progress %
             foreach (var item in Campaign)
             {
                 moneyProgress.Add((item.AvailableAmountCollected/item.AmountNeeded)*100);

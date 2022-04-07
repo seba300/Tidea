@@ -4,8 +4,8 @@
 
 @{
     ViewData["Title"] = "Details";
+  
 }
-
 
 @* <div> *@
 @*     <a asp-page="./Edit" asp-route-id="@Model.Campaign.Id">Edit</a> | *@
@@ -17,20 +17,21 @@
         max-width: 100%;
         height: auto;
     }
+    
 </style>
 
 
-<div class="container-fluid border border-success">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-8 ">
             <div class="row">
-                <div class="pb-3 pt-3 col-md-12 ">
+                <div class="pb-3 pt-3 col-md-12 text-center">
                     <h1>@Model.Campaign.CampaignName</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12" style="min-height: 50vh;max-height: 60vh;">
-                    <img src="@Model.imagePath" class="img-fluid" style='height: 100%; width: auto; object-fit: cover; border-radius: 7%'/>
+                    <img src="@Model.ImagePath" class="img-fluid" style='height: 100%; width: auto; object-fit: cover; border-radius: 7%'/>
                 </div>
             </div>
         </div>
@@ -39,16 +40,16 @@
             <div class="row">
                     <div class="col-md-12 pr-5 pl-5 pb-2">
                         <div class="progresses mb-2">
-                            <span class="h3 align-content-center">200.00 zł</span> z 2000.00 zł
+                            <span class="h3 align-content-center">@Model.Campaign.TotalAmountCollected zł</span> z @Model.Campaign.AmountNeeded zł
                             <div class="progress mt-2">
-                                <div class="progress-bar bg-success" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
+                                <div class="progress-bar bg-success" aria-valuenow="@Model.MoneyProgress" aria-valuemin="0" aria-valuemax="100" style="width: @Model.MoneyProgress%;"></div>
                             </div>
                         </div>
-                        Wpłaciło <b>2000</b> osób
+                        Liczba wpłat <b>@Model.DonorsNumber</b>
                         <hr/>
                     </div>
                 <div class="col-md-12 pr-5 pl-5 pb-2">
-                    Pozostało <b>45 dni</b>
+                    Pozostało <b>@Model.DaysToFinish dni</b>
                 </div>
                 <div class="col-md-12 pr-5 pl-5">
                    
@@ -58,13 +59,15 @@
                         </button>
                     </a>
                 </div>
-                    <div class="col-md-12 mt-1 pr-5 pl-5">
-                        <button type="button" class="btn btn-outline-secondary btn-lg btn-block">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
-                                <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
-                            </svg>
-                            Udostępnij
-                        </button>
+                    <div class="col-md-12 mt-2 pr-5 pl-5">
+                        <div class="row pr-3 pl-3">
+                            <div class="col-md-12 text-center pt-1 ">
+                                 <a target="_blank" href="@Model.FbUrl" class="fa-brands fa-facebook h3 mr-2" style="text-decoration: none;"></a>
+                                <a target="_blank" href="@Model.LinkedInUrl" class="fa-brands fa-linkedin h3 mr-2" style="text-decoration: none;"></a>
+                                <a target="_blank" href="@Model.TwitterUrl" class="fa-brands fa-twitter h3" style="text-decoration: none;"></a>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
         </div>

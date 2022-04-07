@@ -13,6 +13,7 @@ namespace Tidea.Core.Entities
         public string ImageName { get; set; }
         public string VideoUrl { get; set; }
         [NotMapped]
+        [Required]
         [DisplayName("Upload File")]
         public IFormFile ImageFile { get; set; }
         [NotMapped]
