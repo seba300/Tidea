@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -8,18 +10,24 @@ using Tidea.Core.Entities;
 namespace Tidea.Web.Pages.Order
 {
     [Authorize]
-    public class TestAccount : PageModel
+    public class TestEditAccount : PageModel
     {
-        
         private readonly Infrastructure.Data.TideaDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
+        [BindProperty]
+        [Required]
         public string FirstName { get; set; }
+        [BindProperty]
+        [Required]
         public string LastName { get; set; }
+        [BindProperty]
+        [Required]
         public string Email { get; set; }
+        [BindProperty]
         public string Iban { get; set; }
         
-        public TestAccount(Infrastructure.Data.TideaDbContext context,
+        public TestEditAccount(Infrastructure.Data.TideaDbContext context,
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager)
         {
@@ -27,6 +35,7 @@ namespace Tidea.Web.Pages.Order
             _userManager = userManager;
             _signInManager = signInManager;
         }
+
         public async Task<IActionResult> OnGetAsync()
         {
             var user = await _userManager.GetUserAsync(User);
@@ -42,6 +51,19 @@ namespace Tidea.Web.Pages.Order
             }
 
             return Page();
+        }
+
+        public async Task<IActionResult> OnPostAsync()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            user.Email = Email;
+            user.FirstName = FirstName;
+            user.LastName = LastName;
+            user.Iban = Iban;
+            user.UserName = Email;
+            await _userManager.UpdateAsync(user);
+            
+            return RedirectToPage("TestAccount");
         }
     }
 }

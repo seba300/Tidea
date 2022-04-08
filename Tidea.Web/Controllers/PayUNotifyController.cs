@@ -55,12 +55,12 @@ namespace Tidea.Web.Controllers
                     Donation.Status = "COMPLETED";
                     Donation.DonationDate = Convert.ToDateTime(orderNotifyViewModel.order.orderCreateDate);
                     Donation.DonorEmail = orderNotifyViewModel.order.buyer.email;
-                    Donation.PaidAmount = Convert.ToDecimal(orderNotifyViewModel.order.totalAmount);
+                    Donation.PaidAmount = (Convert.ToDecimal(orderNotifyViewModel.order.totalAmount)/100);
 
                     //Update campaign amount of money
                     Campaign = _context.Campaigns.Single(x => x.Id == Donation.Campaign.Id);
-                    Campaign.TotalAmountCollected+=Convert.ToDecimal(orderNotifyViewModel.order.totalAmount);
-                    Campaign.AvailableAmountCollected+=Convert.ToDecimal(orderNotifyViewModel.order.totalAmount);
+                    Campaign.TotalAmountCollected+=(Convert.ToDecimal(orderNotifyViewModel.order.totalAmount)/100);
+                    Campaign.AvailableAmountCollected+=(Convert.ToDecimal(orderNotifyViewModel.order.totalAmount)/100);
 
                     await _context.SaveChangesAsync();
                 }
