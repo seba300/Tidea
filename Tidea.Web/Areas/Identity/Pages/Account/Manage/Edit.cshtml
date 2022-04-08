@@ -1,7 +1,8 @@
 @page
-@model Tidea.Web.Pages.Order.TestAccount
+@model Tidea.Web.Areas.Identity.Pages.Account.Manage.Edit
 
 @{
+  Layout = "/Pages/Shared/_Layout.cshtml";
 }
 
 <style>
@@ -68,7 +69,9 @@
         </div>
       </div>
             
+      
       <div class="col-md-8">
+        <form method="post">
         <div class="card mb-3">
           <div class="card-body">
             <div class="row">
@@ -76,7 +79,7 @@
                 <h6 class="mb-0">Imię</h6>
               </div>
               <div class="col-sm-9 text-secondary">
-                @Model.FirstName
+                <input type="text" class="form-control" asp-for="FirstName" value="@Model.FirstName"/>
               </div>
             </div>
             <hr>
@@ -85,7 +88,7 @@
                 <h6 class="mb-0">Nazwisko</h6>
               </div>
               <div class="col-sm-9 text-secondary">
-                @Model.LastName
+                <input type="text" class="form-control" asp-for="LastName" value="@Model.LastName"/>
               </div>
             </div>
             <hr>
@@ -94,28 +97,27 @@
                 <h6 class="mb-0">Email</h6>
               </div>
               <div class="col-sm-9 text-secondary">
-                @Model.Email
+                <input type="text" class="form-control" asp-for="Email" value="@Model.Email"/>
               </div>
             </div>
-                  
+
             <hr>
             <div class="row">
               <div class="col-sm-3">
                 <h6 class="mb-0">Konto bankowe</h6>
               </div>
               <div class="col-sm-9 text-secondary">
-                @Model.Iban
+                <input type="text" class="form-control" asp-for="Iban" value="@Model.Iban" maxlength="26" pattern="[0-9]{26}"/>
               </div>
             </div>
-            <hr>
             <div class="row">
               <div class="col-sm-12">
-                <a class="btn btn-info" asp-page="TestEditAccount">Edytuj dane konta</a>
-                <a class="btn btn-info" href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Zmień hasło</a>
+                <button type="submit" class="btn btn-info">Zapisz</button>
               </div>
             </div>
           </div>
         </div>
+         </form>
       </div>
     </div>
 
