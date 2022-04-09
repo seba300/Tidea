@@ -47,9 +47,6 @@ namespace Tidea.Web.Pages.Order
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            //Get user IP Address
-            RemoteIpAddress = HttpContext.Connection.RemoteIpAddress.ToString();
-            
             if (id == null)
             {
                 return NotFound();
@@ -61,6 +58,9 @@ namespace Tidea.Web.Pages.Order
             {
                 return NotFound();
             }
+            
+            //Get user IP Address
+            RemoteIpAddress = HttpContext.Connection.RemoteIpAddress.ToString();
 
             //Get PayU payment methods like blik, ipko etc.
             PayUMethods = GetPayMethods().Result;

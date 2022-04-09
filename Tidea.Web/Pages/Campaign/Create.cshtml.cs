@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Tidea.Web.Services;
 using Tidea.Core.Entities;
+using Tidea.Web.Areas.Identity.Pages.Account.Manage;
 using Tidea.Web.Models.Order;
 using Tidea.Web.ViewModels;
 using Category = Tidea.Core.Entities.Category;
@@ -23,18 +24,23 @@ namespace Tidea.Web.Pages.Campaign
     {
         private readonly Tidea.Infrastructure.Data.TideaDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _signInManager;
         public CreateModel(Tidea.Infrastructure.Data.TideaDbContext context,
-            UserManager<ApplicationUser> userManager,
-            SignInManager<ApplicationUser> signInManager)
+            UserManager<ApplicationUser> userManager)
         {
             _context = context;
             _userManager = userManager;
-            _signInManager = signInManager;
         }
         
-        public IActionResult OnGet()
+        public async Task<IActionResult> OnGetAsync()
         {
+            //Verify that user has given IBAN 
+            var user = await _userManager.GetUserAsync(User);
+            if (user.Iban == null)
+            {
+                TempData["HasIbanMessage"] = "Do utworzenia zbiórki, wymagany jest numer konta bankowego";
+                return Redirect("/Identity/Account/Manage/Edit");
+            }
+            
             return Page();
         }
 

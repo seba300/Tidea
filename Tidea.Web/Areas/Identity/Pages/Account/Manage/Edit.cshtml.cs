@@ -13,13 +13,16 @@ namespace Tidea.Web.Areas.Identity.Pages.Account.Manage
     {
         private readonly UserManager<ApplicationUser> _userManager;
         [BindProperty]
-        [Required]
+        [Required(ErrorMessage = "Pole nie może być puste")]
+        [MinLength(3,ErrorMessage = "Imię musi składać się przynajmniej z 3 znaków")]
         public string FirstName { get; set; }
         [BindProperty]
-        [Required]
+        [Required(ErrorMessage = "Pole nie może być puste")]
+        [MinLength(3,ErrorMessage = "Nazwisko musi składać się przynajmniej z 3 znaków")]
         public string LastName { get; set; }
         [BindProperty]
-        [Required]
+        [Required(ErrorMessage = "Pole nie może być puste")]
+        [EmailAddress(ErrorMessage = "Wprowadzona wartość nie jest adresem email")]
         public string Email { get; set; }
         [BindProperty]
         public string Iban { get; set; }

@@ -72,52 +72,62 @@
       
       <div class="col-md-8">
         <form method="post">
-        <div class="card mb-3">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-sm-3">
-                <h6 class="mb-0">Imię</h6>
+          <div class="card mb-3">
+            <div class="card-body">
+              <!-- IBAN number required alert-->
+              @if (TempData["HasIbanMessage"] != null)
+              {
+                <div class="alert alert-secondary" role="alert">
+                  @TempData["HasIbanMessage"]
+                </div>
+              }
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Imię</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <input type="text" class="form-control" asp-for="FirstName" value="@Model.FirstName"/>
+                  <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
               </div>
-              <div class="col-sm-9 text-secondary">
-                <input type="text" class="form-control" asp-for="FirstName" value="@Model.FirstName"/>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Nazwisko</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <input type="text" class="form-control" asp-for="LastName" value="@Model.LastName"/>
+                  <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
               </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <h6 class="mb-0">Nazwisko</h6>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Email</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <input type="email" class="form-control" asp-for="Email" value="@Model.Email"/>
+                  <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
               </div>
-              <div class="col-sm-9 text-secondary">
-                <input type="text" class="form-control" asp-for="LastName" value="@Model.LastName"/>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <h6 class="mb-0">Email</h6>
-              </div>
-              <div class="col-sm-9 text-secondary">
-                <input type="text" class="form-control" asp-for="Email" value="@Model.Email"/>
-              </div>
-            </div>
 
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <h6 class="mb-0">Konto bankowe</h6>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Konto bankowe</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <input type="text" class="form-control" asp-for="Iban" value="@Model.Iban" maxlength="26" pattern="[0-9]{26}"/>
+                </div>
               </div>
-              <div class="col-sm-9 text-secondary">
-                <input type="text" class="form-control" asp-for="Iban" value="@Model.Iban" maxlength="26" pattern="[0-9]{26}"/>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-12">
-                <button type="submit" class="btn btn-info">Zapisz</button>
+              <div class="row">
+                <div class="col-sm-12">
+                  <button type="submit" class="btn btn-info">Zapisz</button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-         </form>
+        </form>
       </div>
     </div>
 

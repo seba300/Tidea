@@ -24,17 +24,17 @@ namespace Tidea.Web.Areas.Identity.Pages.Account.Manage
         [Required]
         public string LastName { get; set; }
 
-        [Required(ErrorMessage = "Pole jest wymagane")]
+        [Required(ErrorMessage = "Pole nie może być puste")]
         [BindProperty] 
         [DataType(DataType.Password)]
         public string CurrentPassword { get; set; }
-        [Required(ErrorMessage = "Pole jest wymagane")]
+        [Required(ErrorMessage = "Pole nie może być puste")]
         [BindProperty] 
         [StringLength(100, ErrorMessage = "Hasło musi mieć conajmniej {2} znaki i nie więcej niż {1} znaków długości",
             MinimumLength = 6)]
         [DataType(DataType.Password)]
         public string NewPassword { get; set; }
-        [Required(ErrorMessage = "Pole jest wymagane")]
+        [Required(ErrorMessage = "Pole nie może być puste")]
         [BindProperty] 
         [DataType(DataType.Password)]
         [Compare("NewPassword", ErrorMessage = "Hasła muszą być takie same")]
@@ -74,8 +74,7 @@ namespace Tidea.Web.Areas.Identity.Pages.Account.Manage
             await _signInManager.RefreshSignInAsync(user);
             _logger.LogInformation("User changed their password successfully.");
             StatusMessage = "Hasło zostało zmienione";
-            TempData.Keep();
-            
+
             return RedirectToPage("Index");
         }
     }
