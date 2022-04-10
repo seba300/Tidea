@@ -35,12 +35,12 @@ namespace Tidea.Web.Pages.Campaign
 
         public IList<Core.Entities.Campaign> Campaign { get;set; }
 
-        public async Task OnGetAsync()
+        public IActionResult OnGet()
         {
             HtmlConverter htmlConverter = new HtmlConverter();
             
             var userId = _userManager.GetUserId(_signInManager.Context.User);
-            Campaign = await _context.Campaigns
+            Campaign =  _context.Campaigns
                 .Where(x => x.ApplicationUser.Id == userId)
                 .Select(y=>new Core.Entities.Campaign
                 {
@@ -55,7 +55,7 @@ namespace Tidea.Web.Pages.Campaign
                     CampaignStartDate = y.CampaignStartDate,
                     Status = y.Status
                 })
-                .ToListAsync();
+                .ToList();
 
            
             moneyProgress = new List<decimal>();
@@ -79,6 +79,8 @@ namespace Tidea.Web.Pages.Campaign
             {
                 campaignEndDate.Add(item.CampaignEndDate.ToString("d"));
             }
+
+            return Page();
         }
     }
 }
