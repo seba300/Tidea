@@ -41,6 +41,8 @@ namespace Tidea.Core.Entities
         [Display(Name = "Dostępne pieniądze")]
         public decimal AvailableAmountCollected { get; set; }
         
+        public string Status { get; set; }
+        
         public virtual ApplicationUser ApplicationUser { get; set; }
         public virtual ICollection<Donation> Donations { get; set; }
         public virtual Media Media { get; set; }

@@ -53,6 +53,7 @@ namespace Tidea.Web.Pages.Campaign
                     AvailableAmountCollected = y.AvailableAmountCollected,
                     Category = y.Category,
                     CampaignStartDate = y.CampaignStartDate,
+                    Status = y.Status
                 })
                 .ToListAsync();
 

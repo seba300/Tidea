@@ -70,6 +70,7 @@ namespace Tidea.Web.Pages.Campaign
                 AmountNeeded = CreateCampaignViewModel.Campaign.AmountNeeded,
                 CampaignEndDate = CreateCampaignViewModel.Campaign.CampaignEndDate,
                 Category = CreateCampaignViewModel.Category,
+                Status = "PENDING",
                 CampaignStartDate = DateTime.Now,
                 Media = new Media {
                     ImageName = imageName

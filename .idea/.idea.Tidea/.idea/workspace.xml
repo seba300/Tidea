@@ -7,20 +7,52 @@
     <projectFile profileName="Tidea.Api">Tidea.Api/Tidea.Api.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb5fbb89-b719-4f81-bef1-59daa0c9ed95" name="Changes" comment="">
+    <list default="true" id="bb5fbb89-b719-4f81-bef1-59daa0c9ed95" name="Changes" comment="Add role Administrator. Assign role administrator to user admin@student.ath.edu.pl.">
+      <change afterPath="$PROJECT_DIR$/Tidea.Infrastructure/Migrations/20220410123838_AddCamapignStatus.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tidea.Infrastructure/Migrations/20220410123838_AddCamapignStatus.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tidea/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tidea/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Core/Entities/Campaign.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Core/Entities/Campaign.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Core/bin/Debug/net5.0/Tidea.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Core/bin/Debug/net5.0/Tidea.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Core/bin/Debug/net5.0/Tidea.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Core/bin/Debug/net5.0/Tidea.Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Core/bin/Debug/net5.0/ref/Tidea.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Core/bin/Debug/net5.0/ref/Tidea.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Core/obj/Debug/net5.0/Tidea.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Core/obj/Debug/net5.0/Tidea.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Core/obj/Debug/net5.0/Tidea.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Core/obj/Debug/net5.0/Tidea.Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Core/obj/Debug/net5.0/ref/Tidea.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Core/obj/Debug/net5.0/ref/Tidea.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Core/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Core/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Infrastructure/Migrations/TideaDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Infrastructure/Migrations/TideaDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Infrastructure/bin/Debug/net5.0/Tidea.Infrastructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Infrastructure/bin/Debug/net5.0/ref/Tidea.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Infrastructure/bin/Debug/net5.0/ref/Tidea.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Infrastructure/obj/Debug/net5.0/Tidea.Infrastructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Infrastructure/obj/Debug/net5.0/ref/Tidea.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Infrastructure/obj/Debug/net5.0/ref/Tidea.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Infrastructure/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Infrastructure/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Create.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Create.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Index.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Index.cshtml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Index.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Index.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Infrastructure.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/ref/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/ref/Tidea.Web.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/Index.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Index.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/ref/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/ref/Tidea.Web.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +98,7 @@
     <setting file="file://$PROJECT_DIR$/Tidea.Core/Entities/ApplicationUser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tidea.Core/Entities/Campaign.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tidea.Web/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/Pages/Index.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tidea.Core/Entities/Donation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3da0403ae6e540a7a79283e509f3945b8d7e00/2AC/AsyncTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tidea.Web/appsettings.json" root0="FORCE_HIGHLIGHTING" />
@@ -237,14 +270,7 @@
       <workItem from="1649149275866" duration="15740000" />
       <workItem from="1649269881376" duration="25457000" />
       <workItem from="1649446106075" duration="18695000" />
-      <workItem from="1649587677483" duration="3688000" />
-    </task>
-    <task id="LOCAL-00011" summary="Add files ChangePassword.* and Email.*.&#10;Create TODO.">
-      <created>1637015594802</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1637015594802</updated>
+      <workItem from="1649587677483" duration="8145000" />
     </task>
     <task id="LOCAL-00012" summary="Create classes which will be migrated to db.">
       <created>1637620225279</created>
@@ -582,7 +608,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649541590379</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Add role Administrator. Assign role administrator to user admin@student.ath.edu.pl.">
+      <created>1649592146049</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1649592146050</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -606,7 +639,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Final CreateOrder payment method form." />
     <MESSAGE value="Transparent payment configuring." />
     <MESSAGE value="Working transparent PayU payment." />
     <MESSAGE value="Filter PayU Methods to this which don't provide credit PayPo, Twisto, PayU|Raty, PayU|Place pozniej." />
@@ -631,7 +663,8 @@
     <MESSAGE value="Account management." />
     <MESSAGE value="Finish user management page and edit user data page." />
     <MESSAGE value="Require IBAN if want create the Campaign. Add Edit Account validation messages." />
-    <option name="LAST_COMMIT_MESSAGE" value="Require IBAN if want create the Campaign. Add Edit Account validation messages." />
+    <MESSAGE value="Add role Administrator. Assign role administrator to user admin@student.ath.edu.pl." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add role Administrator. Assign role administrator to user admin@student.ath.edu.pl." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
