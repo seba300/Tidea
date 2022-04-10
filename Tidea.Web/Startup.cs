@@ -28,6 +28,7 @@ namespace Tidea.Web
                 options.UseSqlServer(Configuration.GetConnectionString("TideaDbContextConnection")));
 
             services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<TideaDbContext>();
 
             services.AddRazorPages();
