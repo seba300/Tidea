@@ -7,8 +7,17 @@
     <projectFile profileName="Tidea.Api">Tidea.Api/Tidea.Api.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb5fbb89-b719-4f81-bef1-59daa0c9ed95" name="Changes" comment="User panel display campaign with style which dependent on campaign status.">
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Index.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Index.cshtml.cs" afterDir="false" />
+    <list default="true" id="bb5fbb89-b719-4f81-bef1-59daa0c9ed95" name="Changes" comment="Main page shows only confirmed campaigns by admin">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tidea/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tidea/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Details.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Details.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,14 +235,7 @@
       <workItem from="1649149275866" duration="15740000" />
       <workItem from="1649269881376" duration="25457000" />
       <workItem from="1649446106075" duration="18695000" />
-      <workItem from="1649587677483" duration="8488000" />
-    </task>
-    <task id="LOCAL-00013" summary="Create migration with entities Campaign, Donation, Media.&#10;Move ApplicationUser.cs to .Core project.&#10;Update database.&#10;Fix problems with password changing and email changing">
-      <created>1637878029390</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1637878029394</updated>
+      <workItem from="1649587677483" duration="9522000" />
     </task>
     <task id="LOCAL-00014" summary="Implement summernote WYSIWYG text editor.">
       <created>1639007172100</created>
@@ -571,7 +573,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649598771806</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Main page shows only confirmed campaigns by admin">
+      <created>1649599139601</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1649599139602</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -595,7 +604,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Working transparent PayU payment." />
     <MESSAGE value="Filter PayU Methods to this which don't provide credit PayPo, Twisto, PayU|Raty, PayU|Place pozniej." />
     <MESSAGE value="Add email into CreateOrder view.&#10;Add CreateOrder validation(.js).&#10;Add campaign name assigment into order description." />
     <MESSAGE value="Test PayU notify." />
@@ -620,7 +628,8 @@
     <MESSAGE value="Require IBAN if want create the Campaign. Add Edit Account validation messages." />
     <MESSAGE value="Add role Administrator. Assign role administrator to user admin@student.ath.edu.pl." />
     <MESSAGE value="User panel display campaign with style which dependent on campaign status." />
-    <option name="LAST_COMMIT_MESSAGE" value="User panel display campaign with style which dependent on campaign status." />
+    <MESSAGE value="Main page shows only confirmed campaigns by admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main page shows only confirmed campaigns by admin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -653,6 +662,7 @@
         <watch expression="FbUrl" />
         <watch expression="LinkedInUrl" />
         <watch expression="TwitterUrl" />
+        <watch expression="User.IsInRole(&quot;ADMINISTRATOR&quot;)" />
       </configuration>
     </watches-manager>
   </component>

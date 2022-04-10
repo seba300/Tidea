@@ -47,6 +47,12 @@ namespace Tidea.Web.Pages.Campaign
             {
                 return NotFound();
             }
+
+            //If campaign wasn't confirmed by admin, redirect user to main page
+            if (Campaign.Status != "SUCCESSFUL" && !User.IsInRole("Administrator"))
+            {
+                return RedirectToPage("../Index");
+            }
                 
             //Path to campaign image
             ImagePath = "/CampaignsMedia/" + Campaign.Media.ImageName;
