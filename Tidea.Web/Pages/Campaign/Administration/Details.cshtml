@@ -1,0 +1,75 @@
+@page
+@model DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+
+}
+
+@* <div> *@
+@*     <a asp-page="./Edit" asp-route-id="@Model.Campaign.Id">Edit</a> | *@
+@*     <a asp-page="./Index">Back to List</a> *@
+@* </div> *@
+
+<style>
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 ">
+            <div class="row">
+                <div class="pb-3 pt-3 col-md-12 text-center">
+                    <h1>@Model.Campaign.CampaignName</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="min-height: 50vh;max-height: 60vh;">
+                    <img src="@Model.ImagePath" class="img-fluid" style='height: 100%; width: auto; object-fit: cover; border-radius: 7%'/>
+                </div>
+            </div>
+        </div>
+        <!--Right buttons-->
+        <div class="col-md-4  my-auto pt-2 pb-2">
+            <div class="row">
+                <div class="col-md-12 pr-5 pl-5 pb-2">
+                    <div class="progresses mb-2">
+                        Potrzebna kwota:<br/>
+                        <span class="h3 align-content-center"> @Model.Campaign.AmountNeeded zł</span>
+                        <div class="progress mt-2">
+                            <div class="progress-bar bg-success" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" style=""></div>
+                        </div>
+                    </div>
+                    <hr/>
+                </div>
+
+                <div class="col-md-12 pr-5 pl-5">
+
+                    <a style="text-decoration: none;" asp-page="/Order/CreateOrder" asp-route-id="@Model.Campaign.Id" class="mb-0">
+                        <button class="btn btn-success btn-lg btn-block">
+                            Zatwierdź zbiórkę
+                        </button>
+                    </a>
+                </div>
+                <div class="col-md-12 mt-2 pr-5 pl-5">
+                    <a style="text-decoration: none;" asp-page="/Order/CreateOrder" asp-route-id="@Model.Campaign.Id" class="mb-0">
+                        <button class="btn btn-danger btn-lg btn-block">
+                            Anuluj zbiórkę
+                        </button>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <!---->
+    </div>
+    <div class="row">
+        <div class="col-md-8  pt-3">
+            @Html.Raw(Model.Campaign.Description)
+        </div>
+    </div>
+</div>

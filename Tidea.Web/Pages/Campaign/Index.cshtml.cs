@@ -34,7 +34,6 @@ namespace Tidea.Web.Pages.Campaign
         }
 
         public IList<Core.Entities.Campaign> Campaign { get;set; }
-
         public IActionResult OnGet()
         {
             HtmlConverter htmlConverter = new HtmlConverter();

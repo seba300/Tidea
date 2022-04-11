@@ -1,0 +1,162 @@
+@page
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+body {
+    background: #eee
+}
+
+
+p {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+} 
+
+.stars i {
+    margin-right: 2px;
+    color: red;
+    font-size: 13px
+}
+
+
+.listing-title {
+    margin-bottom: -7px
+}
+
+
+.tags span {
+    margin-right: 9px;
+    border: 1px solid green;
+    padding-right: 9px;
+    padding-left: 9px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    border-radius: 7px;
+    background-color: green;
+    color: #fff
+}
+
+
+.icon-btn button{
+    float:left;
+    margin:10px;
+}
+
+
+.btn-gradient i{
+  font-size:30px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.normal-icon a{
+    margin:20px;
+    border-radius:0;
+}
+
+.radius-icon a{
+    margin:20px;
+    border-radius: 20px;
+    font-size: 13px;
+    width: 150px;
+    font-weight:bold;
+}
+
+
+.circle-btn button{
+    margin:10px;
+    border-radius: 50%;
+    height:80px;
+    width:80px;
+    font-size: 15px;
+}
+
+.rounded-btn button{
+    border-radius:12px;
+    margin:10px;
+}
+
+.hover-btn button{
+   margin:10px; 
+   color:#FFF;
+   padding:10px 40px;
+}
+
+.hover-btn button:hover{
+    background:#5a5a5a;
+}
+
+.line-btn button{
+   margin:10px; 
+   color:#FFF;
+   padding:5px 120px;
+}
+
+
+/* Line Style 8 (Left Icon) */
+
+.radius-style button{
+    border-radius:30px;
+}
+</style>
+
+<div class="container mt-5 mb-5">
+    
+    <div class="row">
+        <div class="col-md-12">
+
+            @for (int i = 0; i < Model.Campaign.Count; i++)
+            {
+                    <div class="bg-white p-3 rounded mt-2">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="d-flex flex-column justify-content-center align-items-center bg-success text-white mb-2">
+                                    <i class="fa fa-coins fa-7x mb-3 mt-5"></i><span class="mb-4"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 border-right">
+                                <!--TITLE-->
+                                <div class="listing-title">
+                                    <h5>@Model.Campaign[i].CampaignName</h5>
+                                </div>
+                                <!--DESC-->
+                                <div class="description">
+                                    <p>@Model.Campaign[i].Description<br></p>
+                                </div>
+                                <!--CATEGORY-->
+                                <div class="tags mb-2"><span>@Model.Campaign[i].Category.CategoryName</span></div>
+                            </div>
+                            <div class="d-flex col-md-3">
+                                <div class="d-flex flex-column justify-content-start user-profile w-100">
+
+                                    <div class="progresses mb-2"><span><strong>Cel: </strong></span>@Model.Campaign[i].AmountNeeded zł
+                                        
+                                    </div>
+
+                                <div class="mb-1 mt-3">
+                                <a asp-page="./Details" asp-route-id="@Model.Campaign[i].Id" style="text-decoration: none;">
+                                        <button class="btn btn-block btn-info">Sprawdź zbiórkę</button>
+                                        </a>
+                                    </div>
+
+                                    <div class="mb-1">
+                                        <button class="btn btn-block btn-success">Zatwierdź zbiórkę</button>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-block btn-danger">Anuluj zbiórkę</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>

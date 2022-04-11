@@ -7,22 +7,34 @@
     <projectFile profileName="Tidea.Api">Tidea.Api/Tidea.Api.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb5fbb89-b719-4f81-bef1-59daa0c9ed95" name="Changes" comment="If campaign wasn't confirmed by admin and someone try to get into by url, redirect user to main page">
+    <list default="true" id="bb5fbb89-b719-4f81-bef1-59daa0c9ed95" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Administration/Details.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Administration/Details.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Administration/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Administration/Index.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/Administration/Details.cshtml.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/Administration/Index.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tidea/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tidea/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Index.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Index.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Index.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Index.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Shared/_LoginPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Shared/_LoginPartial.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/Tidea.Web.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Tidea.Web.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/ref/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/ref/Tidea.Web.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Shared/_LoginPartial.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Shared/_LoginPartial.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.RazorCoreGenerate.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.RazorCoreGenerate.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/ref/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/ref/Tidea.Web.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/40612d05-caaf-4e72-a7f7-14a514ecdc83-rob-pumphrey-Bxs4hihdTtA-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/40612d05-caaf-4e72-a7f7-14a514ecdc83-rob-pumphrey-Bxs4hihdTtA-unsplash.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/926bc014-b3d2-4d71-9a53-ec3672c39c45-nathan-dumlao-Y3AqmbmtLQI-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/926bc014-b3d2-4d71-9a53-ec3672c39c45-nathan-dumlao-Y3AqmbmtLQI-unsplash.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/bb1df503-7cce-44fb-83be-f5aa2d3a3f6d-pascal-m-4PchFKrUw84-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/bb1df503-7cce-44fb-83be-f5aa2d3a3f6d-pascal-m-4PchFKrUw84-unsplash.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +62,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3da0403ae6e540a7a79283e509f3945b8d7e00/1C2/Future.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/Pages/Campaign/Details.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/080655c71f3f4743b265dfff268833ab97200/6/EndpointRoutingApplicationBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tidea.Web/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tidea.Api/Controllers/WeatherForecastController.cs" root0="SKIP_HIGHLIGHTING" />
@@ -69,7 +80,6 @@
     <setting file="file://$PROJECT_DIR$/Tidea.Core/Entities/ApplicationUser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tidea.Core/Entities/Campaign.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tidea.Web/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/Pages/Index.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tidea.Core/Entities/Donation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3da0403ae6e540a7a79283e509f3945b8d7e00/2AC/AsyncTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tidea.Web/appsettings.json" root0="FORCE_HIGHLIGHTING" />
@@ -241,14 +251,8 @@
       <workItem from="1649149275866" duration="15740000" />
       <workItem from="1649269881376" duration="25457000" />
       <workItem from="1649446106075" duration="18695000" />
-      <workItem from="1649587677483" duration="14151000" />
-    </task>
-    <task id="LOCAL-00015" summary="Fix bootstrap and summernote problems">
-      <created>1639010301003</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1639010301005</updated>
+      <workItem from="1649587677483" duration="14415000" />
+      <workItem from="1649702579215" duration="4875000" />
     </task>
     <task id="LOCAL-00016" summary="Create Campaign CRUD.&#10;Modify WYSIWYG props.">
       <created>1639431258776</created>
@@ -586,7 +590,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649600022022</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Main page, show only confirmed by admin pages. Fix problem with performance on main page after sign in.">
+      <created>1649606588356</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1649606588357</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -610,7 +621,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Add email into CreateOrder view.&#10;Add CreateOrder validation(.js).&#10;Add campaign name assigment into order description." />
     <MESSAGE value="Test PayU notify." />
     <MESSAGE value="PayU notify:&#10;- remove test methods&#10;- create PayUNotifyController and made tests" />
     <MESSAGE value="Code refactor" />
@@ -635,7 +645,8 @@
     <MESSAGE value="User panel display campaign with style which dependent on campaign status." />
     <MESSAGE value="Main page shows only confirmed campaigns by admin" />
     <MESSAGE value="If campaign wasn't confirmed by admin and someone try to get into by url, redirect user to main page" />
-    <option name="LAST_COMMIT_MESSAGE" value="If campaign wasn't confirmed by admin and someone try to get into by url, redirect user to main page" />
+    <MESSAGE value="Main page, show only confirmed by admin pages. Fix problem with performance on main page after sign in." />
+    <option name="LAST_COMMIT_MESSAGE" value="Main page, show only confirmed by admin pages. Fix problem with performance on main page after sign in." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
