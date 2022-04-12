@@ -218,7 +218,7 @@ p {
                     </div>
                 </div>
                 }
-                else
+                else if(Model.Campaign[i].Status == "PENDING")
                 {
                     <div class="p-3 rounded mt-2" style="background-color: lightgray;">
                         <div class="row">
@@ -241,6 +241,63 @@ p {
                             </div>
                             <!--CATEGORY-->
                             <div class="tags mb-2"><span class="bg-secondary border-secondary">@Model.Campaign[i].Category.CategoryName</span></div>
+                        </div>
+                        <div class="d-flex col-md-3">
+                            <div class="d-flex flex-column justify-content-start user-profile w-100">
+
+                                <div class="progresses mb-2"><span><strong>Zebrano:</strong></span><br/>
+                                    @Model.Campaign[i].TotalAmountCollected / @Model.Campaign[i].AmountNeeded zł
+                                    <div class="progress mt-1">
+                                        <div class="progress-bar" aria-valuenow="@Model.moneyProgress[i]" aria-valuemin="0" aria-valuemax="100" style="width: @Model.moneyProgress[i]%;">@Model.moneyProgress[i]%</div>
+                                    </div>
+                                </div>
+
+                                <div class="progresses mb-2"><span><strong>Dostępne:</strong> @Model.Campaign[i].AvailableAmountCollected zł</span>
+                                </div>
+
+                                <div>
+                                    <a asp-page="./Edit" asp-route-id="@Model.Campaign[i].Id" style="pointer-events: none; cursor: default; color: gray;">
+                                        <i class="fa-solid fa-pen-to-square p-1"></i>
+                                    </a>
+                                    <a asp-page="./Details" asp-route-id="@Model.Campaign[i].Id" style="pointer-events: none; cursor: default; color: gray;">
+                                        <i class="fa-solid fa-circle-info p-1"></i>
+                                    </a>
+                                </div>
+
+                                <div class="mb-1">
+                                    <button class="btn btn-block btn-danger" disabled>Zakończ zbiórkę</button>
+                                </div>
+                                <div>
+                                    <button class="btn btn-block btn-info" disabled>Wypłać dostępne środki</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+                else
+                {
+                    <div class="p-3 rounded mt-2" style="background-color: #FFCDD2;">
+                        <div class="row">
+                        <!--ZDJ-->
+                        <div class="col-md-3">
+                            <div class="d-flex flex-column justify-content-center align-items-center bg-danger text-white mb-2"><i class="fa fa-coins fa-7x mb-3 mt-5"></i><span class="mb-4"></span></div>
+                        </div>
+                        <div class="col-md-6 border-right">
+                            <!--TITLE-->
+                            <div class="listing-title">
+                                <h5>@Model.Campaign[i].CampaignName <small class="text-danger">[Anulowana]</small></h5>
+                            </div>
+                            <!--RATING -> MONEY-->
+                            <div class="d-flex flex-row align-items-center mb-1">
+                                <div class="level mr-2"><span class="font-weight-bold">@Model.campaignStartDate[i] - @Model.campaignEndDate[i]</span></div>
+                            </div>
+                            <!--DESC-->
+                            <div class="description">
+                                <p>@Model.Campaign[i].Description<br></p>
+                            </div>
+                            <!--CATEGORY-->
+                            <div class="tags mb-2"><span class="bg-danger border-danger">@Model.Campaign[i].Category.CategoryName</span></div>
                         </div>
                         <div class="d-flex col-md-3">
                             <div class="d-flex flex-column justify-content-start user-profile w-100">

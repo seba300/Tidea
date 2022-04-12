@@ -19,6 +19,7 @@ namespace Tidea.Web.Pages.Campaign.Administration
         private readonly Tidea.Infrastructure.Data.TideaDbContext _context;
         public string ImagePath { get; set; }
 
+
         public DetailsModel(Tidea.Infrastructure.Data.TideaDbContext context)
         {
             _context = context;
@@ -57,6 +58,31 @@ namespace Tidea.Web.Pages.Campaign.Administration
         public void OnPostAsync()
         {
             
+        }
+
+        public async Task<IActionResult> OnGetApproveCampaign(int id)
+        {
+            Campaign = _context.Campaigns.Single(m => m.Id == id);
+            Campaign.Status = "SUCCESSFUL";
+            
+            await _context.SaveChangesAsync();
+            
+            TempData["CampaignAccepted"] = "Zbiórka została zaakceptowana";
+            
+            return RedirectToPage("./Index");
+        }
+        
+        public async Task<IActionResult> OnGetCancelCampaign(int id)
+        {
+            
+            Campaign = _context.Campaigns.Single(m => m.Id == id);
+            Campaign.Status = "CANCELED";
+            
+            await _context.SaveChangesAsync();
+            
+            TempData["CampaignCanceled"] = "Zbiórka została anulowana";
+            
+            return RedirectToPage("./Index");
         }
     }
 }
