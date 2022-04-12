@@ -7,25 +7,15 @@
     <projectFile profileName="Tidea.Api">Tidea.Api/Tidea.Api.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb5fbb89-b719-4f81-bef1-59daa0c9ed95" name="Changes" comment="">
+    <list default="true" id="bb5fbb89-b719-4f81-bef1-59daa0c9ed95" name="Changes" comment="Added admin campaign verification before it will be visible.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tidea/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tidea/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Administration/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Administration/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Administration/Details.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Administration/Details.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Administration/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Administration/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Shared/_Layout.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/ref/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/ref/Tidea.Web.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/Administration/Details.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/Administration/Details.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/Administration/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/Administration/Index.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/Index.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/ref/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/ref/Tidea.Web.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,14 +234,7 @@
       <workItem from="1649446106075" duration="18695000" />
       <workItem from="1649587677483" duration="14415000" />
       <workItem from="1649702579215" duration="6555000" />
-      <workItem from="1649791275257" duration="3121000" />
-    </task>
-    <task id="LOCAL-00017" summary="Prepare campaign create form.">
-      <created>1639519874215</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1639519874216</updated>
+      <workItem from="1649791275257" duration="4546000" />
     </task>
     <task id="LOCAL-00018" summary="Create: Category entity, CategoryModel&#10;Update: UI Campaign/Create, Media entity, db migration">
       <created>1641687055112</created>
@@ -589,7 +572,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649709963115</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Added admin campaign verification before it will be visible.">
+      <created>1649796896834</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1649796896835</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -613,7 +603,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="PayU notify:&#10;- remove test methods&#10;- create PayUNotifyController and made tests" />
     <MESSAGE value="Code refactor" />
     <MESSAGE value="Add HttpClient handler to prevent auto-redirect after CreateOrder post." />
     <MESSAGE value="Update Donations table after post CreateOrder to PayU." />
@@ -638,7 +627,8 @@
     <MESSAGE value="If campaign wasn't confirmed by admin and someone try to get into by url, redirect user to main page" />
     <MESSAGE value="Main page, show only confirmed by admin pages. Fix problem with performance on main page after sign in." />
     <MESSAGE value="Created: administrator detail campaign page and administrator index campaign page. Need to add func. for buttons." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created: administrator detail campaign page and administrator index campaign page. Need to add func. for buttons." />
+    <MESSAGE value="Added admin campaign verification before it will be visible." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added admin campaign verification before it will be visible." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
