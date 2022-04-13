@@ -1,0 +1,49 @@
+@page
+@model Tidea.Web.Pages.Campaign.CampaignCatalog
+
+@{
+}
+<style>
+     /*Zoom image and fill the card*/
+        .card-img-top {
+            width: 100%;
+            height: 10vw;
+            object-fit: cover;
+        }
+        /*Cut the Campaign description to 3 lines*/
+        p {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+</style>
+
+<h1>Katalog kampanii</h1>
+    <!-- Cards -->
+<div class="row row-cols-2 row-cols-md-4 mt-lg-5">
+    @foreach(var x in Model.Campaigns)
+    {
+        <div class="col mb-4">
+            <div class="card h-100">
+                <a asp-page="../Campaign/Details" asp-route-id="@x.Id" class="stretched-link"></a>
+                <img src="@x.Media.ImagePath" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><strong>@x.CampaignName</strong></h5>
+                    <p class="card-text">@x.Description</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<div>
+    <ul class="pagination">
+        @for (var i = 1; i <= Model.TotalPages; i++)
+        {
+            <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                <a asp-page="./CampaignCatalog" asp-route-currentpage="@i" class="page-link">@i</a>
+            </li>
+        }
+    </ul>
+</div>

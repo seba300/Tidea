@@ -37,19 +37,20 @@
                     <a class="nav-link" asp-page="/Index">Strona główna</a>
                 </li>
                 <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Katalog kampanii
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" asp-page="#">Sport</a>
-                                    <a class="dropdown-item" asp-page="#">Moda</a>
-                                    <a class="dropdown-item" asp-page="#">Technologia</a>
-                                    <a class="dropdown-item" asp-page="#">Gry</a>
-                                    <a class="dropdown-item" asp-page="#">Książki</a>
-                                    <a class="dropdown-item" asp-page="#">Ekologia</a>
-                                    <a class="dropdown-item" asp-page="#">Edukacja</a>
-                                </div>
-                            </li>
+                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Katalog kampanii
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" asp-page="./Campaign/CampaignCatalog">Wszystkie</a>
+                        <a class="dropdown-item" asp-page="./Campaign/CampaignCatalog" asp-route-id="1">Technologia</a>
+                        <a class="dropdown-item" asp-page="./Campaign/CampaignCatalog" asp-route-id="2">Sport</a>
+                        <a class="dropdown-item" asp-page="./Campaign/CampaignCatalog" asp-route-id="3">Ekologia</a>
+                        <a class="dropdown-item" asp-page="./Campaign/CampaignCatalog" asp-route-id="4">Moda</a>
+                        <a class="dropdown-item" asp-page="./Campaign/CampaignCatalog" asp-route-id="5">Edukacja</a>
+                        <a class="dropdown-item" asp-page="./Campaign/CampaignCatalog" asp-route-id="6">Gry</a>
+                        <a class="dropdown-item" asp-page="./Campaign/CampaignCatalog" asp-route-id="7">Książki</a>
+                    </div>
+                </li>
                 
             </ul>
             <!--Search form-->
