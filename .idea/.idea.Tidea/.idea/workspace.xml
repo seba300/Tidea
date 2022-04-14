@@ -7,9 +7,7 @@
     <projectFile profileName="Tidea.Api">Tidea.Api/Tidea.Api.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb5fbb89-b719-4f81-bef1-59daa0c9ed95" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/CampaignSearch.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/CampaignSearch.cshtml.cs" afterDir="false" />
+    <list default="true" id="bb5fbb89-b719-4f81-bef1-59daa0c9ed95" name="Changes" comment="Add searching feature.">
       <change afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/CampaignSearch.cshtml.g.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/13a9aaff-e865-4069-960c-fa3c76e65273-background2.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/1d632586-de0f-4ee3-9152-5a7a20cb72fd-background3.jpg" afterDir="false" />
@@ -260,14 +258,7 @@
       <workItem from="1649702579215" duration="6555000" />
       <workItem from="1649791275257" duration="6108000" />
       <workItem from="1649883734085" duration="4103000" />
-      <workItem from="1649954731558" duration="11835000" />
-    </task>
-    <task id="LOCAL-00020" summary="Change relations. Fix creating campaign. Reset migrations.">
-      <created>1642113390902</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1642113390902</updated>
+      <workItem from="1649954731558" duration="13234000" />
     </task>
     <task id="LOCAL-00021" summary="Added possibility to set campaign primary photo">
       <created>1642202699476</created>
@@ -605,7 +596,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649887819606</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Add searching feature.">
+      <created>1649972098756</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1649972098757</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -629,7 +627,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Update Donations table after post CreateOrder to PayU." />
     <MESSAGE value="Save received data from PayU notify into Database. Testing OrderRetrieveRequest to list of CampaignID's." />
     <MESSAGE value="Update money after completed payment." />
     <MESSAGE value="User Camapign list." />
@@ -654,7 +651,8 @@
     <MESSAGE value="Added admin campaign verification before it will be visible." />
     <MESSAGE value="Create dropdown menu for campaign catalog." />
     <MESSAGE value="Add all campaigns view and pagination." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add all campaigns view and pagination." />
+    <MESSAGE value="Add searching feature." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add searching feature." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
