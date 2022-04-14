@@ -8,22 +8,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb5fbb89-b719-4f81-bef1-59daa0c9ed95" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/CampaignCatalog.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/CampaignCatalog.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/CampaignCatalog.cshtml.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/CampaignSearch.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/CampaignSearch.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/CampaignSearch.cshtml.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/13a9aaff-e865-4069-960c-fa3c76e65273-background2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/1d632586-de0f-4ee3-9152-5a7a20cb72fd-background3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/48882d25-2d7f-4084-9936-db8ddf149d3d-Zrzut ekranu 2022-04-10 o 17.05.56.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/68a686e7-145a-40af-aca8-2f8fdf3c9a5e-karsten-winegeart-qy0BHykaq0E-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/7d34d54d-85da-4f55-b2a0-898a09fd5814-background3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/a4fde4cc-48c4-4f00-ad02-5929d751afcb-background4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/ae28a1f9-0922-461e-8c32-38fe7d333efd-Zrzut ekranu 2022-04-12 o 23.50.05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/e57f07b5-dcca-475b-a648-d399ce78bd63-karsten-winegeart-qy0BHykaq0E-unsplash.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tidea/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tidea/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/CampaignCatalog.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/CampaignCatalog.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/CampaignCatalog.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/CampaignCatalog.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Create.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Create.cshtml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Shared/_Layout.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/ref/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/ref/Tidea.Web.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/CampaignCatalog.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/CampaignCatalog.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Shared/_Layout.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Shared/_Layout.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.RazorCoreGenerate.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.RazorCoreGenerate.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.dll" afterDir="false" />
@@ -96,7 +107,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="azure&#10;sqlserver" />
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.27212876" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.27251554" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -248,14 +259,8 @@
       <workItem from="1649587677483" duration="14415000" />
       <workItem from="1649702579215" duration="6555000" />
       <workItem from="1649791275257" duration="6108000" />
-      <workItem from="1649883734085" duration="3876000" />
-    </task>
-    <task id="LOCAL-00019" summary="Create migration, udpate entities, update create campaign form">
-      <created>1641936979484</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1641936979484</updated>
+      <workItem from="1649883734085" duration="4103000" />
+      <workItem from="1649954731558" duration="11835000" />
     </task>
     <task id="LOCAL-00020" summary="Change relations. Fix creating campaign. Reset migrations.">
       <created>1642113390902</created>
@@ -593,7 +598,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649798544127</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Add all campaigns view and pagination.">
+      <created>1649887819605</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1649887819606</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -617,7 +629,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Add HttpClient handler to prevent auto-redirect after CreateOrder post." />
     <MESSAGE value="Update Donations table after post CreateOrder to PayU." />
     <MESSAGE value="Save received data from PayU notify into Database. Testing OrderRetrieveRequest to list of CampaignID's." />
     <MESSAGE value="Update money after completed payment." />
@@ -642,7 +653,8 @@
     <MESSAGE value="Created: administrator detail campaign page and administrator index campaign page. Need to add func. for buttons." />
     <MESSAGE value="Added admin campaign verification before it will be visible." />
     <MESSAGE value="Create dropdown menu for campaign catalog." />
-    <option name="LAST_COMMIT_MESSAGE" value="Create dropdown menu for campaign catalog." />
+    <MESSAGE value="Add all campaigns view and pagination." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add all campaigns view and pagination." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -685,6 +697,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Create.cshtml.cs</url>
+          <line>82</line>
+          <properties documentPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Create.cshtml.cs" initialLine="87" containingFunctionPresentation="method 'OnPostAsync'">
+            <startOffsets>
+              <option value="3015" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3049" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="75" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

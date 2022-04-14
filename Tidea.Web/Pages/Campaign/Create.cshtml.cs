@@ -61,6 +61,7 @@ namespace Tidea.Web.Pages.Campaign
             
             //Upload image do drive and get image name with extension
             var imageName = uploadFile.UploadImage(CreateCampaignViewModel.Media.ImageFile);
+
             
             //Add to queue
             await _context.Campaigns.AddAsync(new Core.Entities.Campaign
@@ -69,7 +70,7 @@ namespace Tidea.Web.Pages.Campaign
                 Description = CreateCampaignViewModel.Campaign.Description,
                 AmountNeeded = CreateCampaignViewModel.Campaign.AmountNeeded,
                 CampaignEndDate = CreateCampaignViewModel.Campaign.CampaignEndDate,
-                Category = CreateCampaignViewModel.Category,
+                Category=CreateCampaignViewModel.Category,
                 Status = "PENDING",
                 CampaignStartDate = DateTime.Now,
                 Media = new Media {
@@ -77,7 +78,7 @@ namespace Tidea.Web.Pages.Campaign
                 },
                 ApplicationUser = await _userManager.GetUserAsync(User)
             });
-
+            
             //Save to DB
             await _context.SaveChangesAsync();
 

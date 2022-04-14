@@ -35,30 +35,17 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" asp-page="/Index">Strona główna</a>
+                </li>           
+                <li class="nav-item">
+                    <a class="nav-link" asp-page="/Campaign/CampaignCatalog">Katalog zbiórek</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Katalog kampanii
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" asp-page="./Campaign/CampaignCatalog">Wszystkie</a>
-                        <a class="dropdown-item" asp-page="./Campaign/CampaignCatalog" asp-route-id="1">Technologia</a>
-                        <a class="dropdown-item" asp-page="./Campaign/CampaignCatalog" asp-route-id="2">Sport</a>
-                        <a class="dropdown-item" asp-page="./Campaign/CampaignCatalog" asp-route-id="3">Ekologia</a>
-                        <a class="dropdown-item" asp-page="./Campaign/CampaignCatalog" asp-route-id="4">Moda</a>
-                        <a class="dropdown-item" asp-page="./Campaign/CampaignCatalog" asp-route-id="5">Edukacja</a>
-                        <a class="dropdown-item" asp-page="./Campaign/CampaignCatalog" asp-route-id="6">Gry</a>
-                        <a class="dropdown-item" asp-page="./Campaign/CampaignCatalog" asp-route-id="7">Książki</a>
-                    </div>
-                </li>
-                
             </ul>
             <!--Search form-->
-            <form class="w-50 mr-auto">
+            <form class="w-50 mr-auto" method="get" asp-page="/Campaign/CampaignCatalog">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Szukaj">
+                    <input type="text" class="form-control" name="SearchString" placeholder="Szukaj">
                     <div class="input-group-append">
-                        <button class="btn btn-secondary" type="button">
+                        <button class="btn btn-secondary" type="submit">
                             <i class="fa fa-search"></i>
                         </button>
                     </div>
@@ -92,11 +79,3 @@
 @await RenderSectionAsync("Scripts", false)
 </body>
 </html>
-
-<script>
-$('.navbar .dropdown').hover(function() {
-  $(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();
-}, function() {
-  $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp()
-});
-</script>
