@@ -7,37 +7,10 @@
     <projectFile profileName="Tidea.Api">Tidea.Api/Tidea.Api.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb5fbb89-b719-4f81-bef1-59daa0c9ed95" name="Changes" comment="Add searching feature.">
-      <change afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/CampaignSearch.cshtml.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/13a9aaff-e865-4069-960c-fa3c76e65273-background2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/1d632586-de0f-4ee3-9152-5a7a20cb72fd-background3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/48882d25-2d7f-4084-9936-db8ddf149d3d-Zrzut ekranu 2022-04-10 o 17.05.56.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/68a686e7-145a-40af-aca8-2f8fdf3c9a5e-karsten-winegeart-qy0BHykaq0E-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/7d34d54d-85da-4f55-b2a0-898a09fd5814-background3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/a4fde4cc-48c4-4f00-ad02-5929d751afcb-background4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/ae28a1f9-0922-461e-8c32-38fe7d333efd-Zrzut ekranu 2022-04-12 o 23.50.05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tidea.Web/wwwroot/CampaignsMedia/e57f07b5-dcca-475b-a648-d399ce78bd63-karsten-winegeart-qy0BHykaq0E-unsplash.jpg" afterDir="false" />
+    <list default="true" id="bb5fbb89-b719-4f81-bef1-59daa0c9ed95" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tidea/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tidea/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/CampaignCatalog.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/CampaignCatalog.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/CampaignCatalog.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/CampaignCatalog.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Create.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Campaign/Create.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/Pages/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/Pages/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/Tidea.Web.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/ref/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/bin/Debug/net5.0/ref/Tidea.Web.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/CampaignCatalog.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/CampaignCatalog.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Shared/_Layout.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Shared/_Layout.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.RazorCoreGenerate.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.RazorCoreGenerate.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/Tidea.Web.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/ref/Tidea.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tidea.Web/obj/Debug/net5.0/ref/Tidea.Web.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,14 +231,8 @@
       <workItem from="1649702579215" duration="6555000" />
       <workItem from="1649791275257" duration="6108000" />
       <workItem from="1649883734085" duration="4103000" />
-      <workItem from="1649954731558" duration="13234000" />
-    </task>
-    <task id="LOCAL-00021" summary="Added possibility to set campaign primary photo">
-      <created>1642202699476</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1642202699476</updated>
+      <workItem from="1649954731558" duration="13768000" />
+      <workItem from="1650308636702" duration="287000" />
     </task>
     <task id="LOCAL-00022" summary="To be sure">
       <created>1642203020796</created>
@@ -603,7 +570,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649972098757</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="Add search.">
+      <created>1649972828033</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1649972828034</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -627,7 +601,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Save received data from PayU notify into Database. Testing OrderRetrieveRequest to list of CampaignID's." />
     <MESSAGE value="Update money after completed payment." />
     <MESSAGE value="User Camapign list." />
     <MESSAGE value="s" />
@@ -652,7 +625,8 @@
     <MESSAGE value="Create dropdown menu for campaign catalog." />
     <MESSAGE value="Add all campaigns view and pagination." />
     <MESSAGE value="Add searching feature." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add searching feature." />
+    <MESSAGE value="Add search." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add search." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

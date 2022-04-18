@@ -55,7 +55,7 @@ namespace Tidea.Web.Pages.Campaign
                     Media = x.Media
                 }).ToList<Core.Entities.Campaign>();
 
-            //Get only pagesize number of campaigns
+            //Get only page size number of campaigns
             Campaigns = GetPaginatedResult(CurrentPage, SearchString, PageSize).Result;
             Count = data.Count;
             
@@ -73,9 +73,9 @@ namespace Tidea.Web.Pages.Campaign
         {
             var data=await _context.Campaigns
                 .OrderBy(y=>y.Id)
+                .Where(y=>y.Status=="SUCCESSFUL" && y.CampaignName.Contains(searchString))
                 .Skip((currentPage-1)*pageSize)
                 .Take(pageSize)
-                .Where(y=>y.Status=="SUCCESSFUL" && y.CampaignName.Contains(searchString))
                 .Select(x => new Core.Entities.Campaign
                 {
                     Id = x.Id,
