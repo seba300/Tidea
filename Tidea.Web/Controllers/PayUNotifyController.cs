@@ -52,15 +52,22 @@ namespace Tidea.Web.Controllers
                 
                 if (Donation.Status == "PENDING")
                 {
+                    decimal payment = Convert.ToDecimal(orderNotifyViewModel.order.totalAmount) / 100;
+                    
+                    //Payment provision 5% for everyone donation
+                    double provision = 0.95;
+
+                    payment = payment * (decimal) provision;
+
                     Donation.Status = "COMPLETED";
                     Donation.DonationDate = Convert.ToDateTime(orderNotifyViewModel.order.orderCreateDate);
                     Donation.DonorEmail = orderNotifyViewModel.order.buyer.email;
-                    Donation.PaidAmount = (Convert.ToDecimal(orderNotifyViewModel.order.totalAmount)/100);
+                    Donation.PaidAmount = payment;
 
                     //Update campaign amount of money
                     Campaign = _context.Campaigns.Single(x => x.Id == Donation.Campaign.Id);
-                    Campaign.TotalAmountCollected+=(Convert.ToDecimal(orderNotifyViewModel.order.totalAmount)/100);
-                    Campaign.AvailableAmountCollected+=(Convert.ToDecimal(orderNotifyViewModel.order.totalAmount)/100);
+                    Campaign.TotalAmountCollected+=payment;
+                    Campaign.AvailableAmountCollected+=payment;
 
                     await _context.SaveChangesAsync();
                 }

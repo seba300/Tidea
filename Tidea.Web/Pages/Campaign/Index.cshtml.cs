@@ -1,17 +1,21 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using Tidea;
 using Tidea.Core.Entities;
 using Tidea.Infrastructure.Data;
+using Tidea.Web.Models.Order;
 using Tidea.Web.Services;
-
+using Tidea.Web.ViewModels;
+//DO WYJAŚNIENIA Z PAYU
 namespace Tidea.Web.Pages.Campaign
 {
     [Authorize]
@@ -23,6 +27,8 @@ namespace Tidea.Web.Pages.Campaign
         public List<decimal> moneyProgress { get; set; }
         public List<string> campaignStartDate { get; set; }
         public List<string> campaignEndDate { get; set; }
+        private const string ShopId = "VACUVbsW";
+        private Uri baseAddress = new Uri("https://secure.snd.payu.com/");
 
         public IndexModel(TideaDbContext context,
             UserManager<ApplicationUser> userManager,
@@ -80,6 +86,94 @@ namespace Tidea.Web.Pages.Campaign
             }
 
             return Page();
+        }
+
+        public IActionResult OnGetPayOut(int id)
+        {
+            PayOutViewModel payOutViewModel = new PayOutViewModel();
+            var campaign = _context.Campaigns.Single(x => x.Id == id);
+            var user =  _userManager.GetUserAsync(User);
+
+            payOutViewModel.shopId = ShopId;
+            payOutViewModel.payout = new Payout
+            {
+                amount =  (campaign.AvailableAmountCollected*100).ToString(),
+                description = campaign.CampaignName
+            };
+            payOutViewModel.customerAddress = new CustomerAddress
+            {
+                name = user.Result.FirstName + " " + user.Result.LastName
+            };
+            payOutViewModel.account = new Account
+            {
+                accountNumber = user.Result.Iban
+            };
+
+            var result = PayOut(payOutViewModel).Result;
+
+            if (result.status.statusCode == "SUCCESS")
+            {
+                TempData["PayedOutSuccess"] = "Dostępne środki ze zbiórki "+campaign.CampaignName+" zostały przelane na konto";
+                return RedirectToPage("Index");
+            }
+            else
+            {
+                TempData["PayedOutFailed"] = "Dostępne środki ze zbiórki "+campaign.CampaignName+" nie zostały przelane na konto. Skontaktuj się z administratorem serwisu";
+                return RedirectToPage("Index");
+            }
+        }
+
+        private async Task<PayOutResponseViewModel> PayOut(PayOutViewModel payOutViewModel)
+        {
+           
+            string accessToken = GetAccessToken().Result.access_token;
+
+            using (var httpClient = new HttpClient{ BaseAddress = baseAddress })
+            {
+
+                httpClient.DefaultRequestHeaders.TryAddWithoutValidation("authorization", "Bearer "+accessToken);
+  
+  
+                using (var content = new StringContent(JsonConvert.SerializeObject(payOutViewModel), System.Text.Encoding.Default, "application/json"))
+                {
+                    using (var response = await httpClient.PostAsync("api/v2_1/payouts", content))
+                    {
+                        string responseData = await response.Content.ReadAsStringAsync();
+
+                        PayOutResponseViewModel payOutResponseViewModel = new PayOutResponseViewModel();
+                        
+                        //We are binding json result with prepared model class
+                        payOutResponseViewModel = JsonConvert.DeserializeObject<PayOutResponseViewModel>(responseData);
+                
+                        return payOutResponseViewModel;
+                    }
+                }
+            }
+        }
+        private async Task<PayUToken> GetAccessToken()
+        {
+            PayUToken payUToken = null;
+            
+            //Configuration store properties
+            const string merchantPosId = "428004";
+            const string clientId = "428004";
+            const string clientSecret = "eca193ab1e753aaa0cf8f6324561713b";
+            
+            using (var httpClient = new HttpClient{ BaseAddress = baseAddress })
+            {
+                using (var content = new StringContent("grant_type=client_credentials&client_id="+clientId+"&client_secret="+clientSecret, System.Text.Encoding.Default, "application/x-www-form-urlencoded"))
+                {
+                    using (var response = await httpClient.PostAsync("pl/standard/user/oauth/authorize", content))
+                    {
+                        //Json result
+                        string responseData = await response.Content.ReadAsStringAsync();
+                        
+                        //We are binding json result with prepared model class
+                        payUToken = JsonConvert.DeserializeObject<PayUToken>(responseData);
+                        return payUToken;
+                    }
+                }
+            }
         }
     }
 }
