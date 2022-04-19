@@ -817,3 +817,4 @@
 /Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/Administration/Details.cshtml.g.cs
 /Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/Administration/Index.cshtml.g.cs
 /Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/CampaignCatalog.cshtml.g.cs
+/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/CloseCampaign.cshtml.g.cs

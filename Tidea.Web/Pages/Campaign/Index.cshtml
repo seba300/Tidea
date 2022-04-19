@@ -218,7 +218,7 @@ p {
                                 </div>
 
                                 <div class="mb-1">
-                                    <a style="text-decoration: none;" class="mb-0">
+                                    <a style="text-decoration: none;" asp-route-id="@Model.Campaign[i].Id" asp-page="CloseCampaign" class="mb-0">
                                         <button class="btn btn-block btn-danger">Zakończ zbiórkę</button>
                                     </a>
                                 </div>
@@ -415,7 +415,9 @@ p {
                                 else
                                 {
                                     <div>
-                                        <button class="btn btn-block btn-info" disabled>Wypłać dostępne środki</button>
+                                        <a style="text-decoration: none;" asp-page-handler="PayOut" asp-route-id="@Model.Campaign[i].Id" class="mb-0">
+                                            <button class="btn btn-block btn-info" disabled>Wypłać dostępne środki</button>
+                                        </a>
                                     </div>
                                 }
                             </div>

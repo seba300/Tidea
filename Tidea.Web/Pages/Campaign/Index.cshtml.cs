@@ -113,12 +113,12 @@ namespace Tidea.Web.Pages.Campaign
 
             if (result.status.statusCode == "SUCCESS")
             {
-                TempData["PayedOutSuccess"] = "Dostępne środki ze zbiórki "+campaign.CampaignName+" zostały przelane na konto";
+                TempData["PayedOutSuccess"] = "Dostępne środki ze zbiórki \""+campaign.CampaignName+"\" zostały przelane na konto";
                 return RedirectToPage("Index");
             }
             else
             {
-                TempData["PayedOutFailed"] = "Dostępne środki ze zbiórki "+campaign.CampaignName+" nie zostały przelane na konto. Skontaktuj się z administratorem serwisu";
+                TempData["PayedOutFailed"] = "Dostępne środki ze zbiórki \""+campaign.CampaignName+"\" nie zostały przelane na konto. Skontaktuj się z administratorem serwisu";
                 return RedirectToPage("Index");
             }
         }

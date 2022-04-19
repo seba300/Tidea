@@ -1,0 +1,13 @@
+@page
+@model Tidea.Web.Pages.Campaign.CloseCampaign
+
+@{
+}
+
+<div class="alert alert-info mt-4">Czy aby na pewno chcesz zakończyć zbiórkę "@Model.Campaign.CampaignName"? 
+    Po tej operacji, pieniądze ze zbiórki nadal będą mogły zostać wypłacone, o ile zebrana kwota osiąga minimalną wartość 20 złotych.</div>
+<div class="mt-2">
+    <a style="text-decoration: none;" asp-page-handler="Close" asp-route-id="@Model.Campaign.Id" class="mb-0">
+        <button class="btn btn-block btn-danger">Zakończ zbiórkę</button>
+    </a>
+</div>

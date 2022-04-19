@@ -26,6 +26,14 @@ namespace Tidea.Web.Pages
         {
             _context = context;
             _logger = logger;
+
+            //Check campaigns which must be closed
+            var result = _context.Campaigns.Where(x => x.Status == "SUCCESSFUL" &&(x.CampaignEndDate<DateTime.Today)).ToList();
+            for (int i = 0; i < result.Count; i++)
+            {
+                result[i].Status = "FINISHED";
+            }
+            _context.SaveChanges();
         }
         public List<Core.Entities.Campaign> Campaigns { get; set; }
         private HtmlConverter htmlConverter { get; set; }
