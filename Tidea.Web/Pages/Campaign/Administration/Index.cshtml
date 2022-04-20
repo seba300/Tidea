@@ -139,7 +139,7 @@ p {
                                     <p>@Model.Campaign[i].Description<br></p>
                                 </div>
                                 <!--CATEGORY-->
-                                <div class="tags mb-2"><span>@Model.Campaign[i].Category.CategoryName</span></div>
+                                <div class="tags mb-2"><span>@Html.DisplayTextFor(x=>x.Campaign[i].Category.CategoryName)</span></div>
                             </div>
                             <div class="d-flex col-md-3 mt-4">
                                 <div class="d-flex flex-column justify-content-start user-profile w-100">

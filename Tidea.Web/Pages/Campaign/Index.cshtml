@@ -197,7 +197,7 @@ p {
                                 <p>@Model.Campaign[i].Description<br></p>
                             </div>
                             <!--CATEGORY-->
-                            <div class="tags mb-2"><span>@Model.Campaign[i].Category.CategoryName</span></div>
+                            <div class="tags mb-2"><span>@Html.DisplayTextFor(x=>x.Campaign[i].Category.CategoryName)</span></div>
                         </div>
                         <div class="d-flex col-md-3">
                             <div class="d-flex flex-column justify-content-start user-profile w-100">
@@ -265,7 +265,7 @@ p {
                                 <p>@Model.Campaign[i].Description<br></p>
                             </div>
                             <!--CATEGORY-->
-                            <div class="tags mb-2"><span class="bg-info border-info">@Model.Campaign[i].Category.CategoryName</span></div>
+                            <div class="tags mb-2"><span class="bg-info border-info">@Html.DisplayTextFor(x=>x.Campaign[i].Category.CategoryName)</span></div>
                         </div>
                         <div class="d-flex col-md-3">
                             <div class="d-flex flex-column justify-content-start user-profile w-100">
@@ -322,7 +322,7 @@ p {
                                 <p>@Model.Campaign[i].Description<br></p>
                             </div>
                             <!--CATEGORY-->
-                            <div class="tags mb-2"><span class="bg-danger border-danger">@Model.Campaign[i].Category.CategoryName</span></div>
+                            <div class="tags mb-2"><span class="bg-danger border-danger">@Html.DisplayTextFor(x=>x.Campaign[i].Category.CategoryName)</span></div>
                         </div>
                         <div class="d-flex col-md-3">
                             <div class="d-flex flex-column justify-content-start user-profile w-100">
@@ -379,7 +379,7 @@ p {
                                 <p>@Model.Campaign[i].Description<br></p>
                             </div>
                             <!--CATEGORY-->
-                            <div class="tags mb-2"><span class="bg-secondary border-secondary">@Model.Campaign[i].Category.CategoryName</span></div>
+                            <div class="tags mb-2"><span class="bg-secondary border-secondary">@Html.DisplayTextFor(x=>x.Campaign[i].Category.CategoryName)</span></div>
                         </div>
                         <div class="d-flex col-md-3">
                             <div class="d-flex flex-column justify-content-start user-profile w-100">

@@ -97,7 +97,8 @@ namespace Tidea.Web.Pages.Campaign
             payOutViewModel.shopId = ShopId;
             payOutViewModel.payout = new Payout
             {
-                amount =  (campaign.AvailableAmountCollected*100).ToString(),
+                //Provide amount in format ex. 9245 not in ex. 9245.00
+                amount =  ((int)(campaign.AvailableAmountCollected*100)).ToString(),
                 description = campaign.CampaignName
             };
             payOutViewModel.customerAddress = new CustomerAddress
@@ -110,10 +111,14 @@ namespace Tidea.Web.Pages.Campaign
             };
 
             var result = PayOut(payOutViewModel).Result;
-
+            
+            //If everything went well and payment was send to user
             if (result.status.statusCode == "SUCCESS")
             {
-                TempData["PayedOutSuccess"] = "Dostępne środki ze zbiórki \""+campaign.CampaignName+"\" zostały przelane na konto";
+                campaign.AvailableAmountCollected -= campaign.AvailableAmountCollected;
+                _context.SaveChanges();
+                
+                TempData["PayedOutSuccess"] = "Środki ze zbiórki \""+campaign.CampaignName+"\" zostały zlecone do wypłaty na konto";
                 return RedirectToPage("Index");
             }
             else
@@ -123,6 +128,7 @@ namespace Tidea.Web.Pages.Campaign
             }
         }
 
+        //PayOut to specified account number
         private async Task<PayOutResponseViewModel> PayOut(PayOutViewModel payOutViewModel)
         {
            

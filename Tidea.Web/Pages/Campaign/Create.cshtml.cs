@@ -62,7 +62,10 @@ namespace Tidea.Web.Pages.Campaign
             //Upload image do drive and get image name with extension
             var imageName = uploadFile.UploadImage(CreateCampaignViewModel.Media.ImageFile);
 
-            
+            //TEST CATEGORY ASSIGN
+            Category category =
+                _context.Categories.First(x => x.CategoryName == CreateCampaignViewModel.Category.CategoryName);
+
             //Add to queue
             await _context.Campaigns.AddAsync(new Core.Entities.Campaign
             {
@@ -70,7 +73,7 @@ namespace Tidea.Web.Pages.Campaign
                 Description = CreateCampaignViewModel.Campaign.Description,
                 AmountNeeded = CreateCampaignViewModel.Campaign.AmountNeeded,
                 CampaignEndDate = CreateCampaignViewModel.Campaign.CampaignEndDate,
-                Category=CreateCampaignViewModel.Category,
+                Category=category,
                 Status = "PENDING",
                 CampaignStartDate = DateTime.Now,
                 Media = new Media {
