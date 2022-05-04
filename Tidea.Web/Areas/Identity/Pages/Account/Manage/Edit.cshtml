@@ -81,6 +81,13 @@
                   @TempData["HasIbanMessage"]
                 </div>
               }
+              <!-- IBAN cant be null-->
+              @if (TempData["NullIban"] != null)
+              {
+                <div class="alert alert-secondary" role="alert">
+                  @TempData["NullIban"]
+                </div>
+              }
               <div class="row">
                 <div class="col-sm-3">
                   <h6 class="mb-0">Imię</h6>
@@ -117,7 +124,8 @@
                   <h6 class="mb-0">Konto bankowe</h6>
                 </div>
                 <div class="col-sm-9 text-secondary">
-                  <input type="text" class="form-control" asp-for="Iban" value="@Model.Iban" maxlength="26" pattern="[0-9]{26}"/>
+                  <input type="text" class="form-control" asp-for="Iban" value="@Model.Iban" minlength="26" maxlength="26" pattern="[0-9]{26}"/>
+                  <span asp-validation-for="Iban" class="text-danger"></span>
                 </div>
               </div>
               <div class="row">

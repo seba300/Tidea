@@ -25,6 +25,7 @@ namespace Tidea.Web.Areas.Identity.Pages.Account.Manage
         [EmailAddress(ErrorMessage = "Wprowadzona wartość nie jest adresem email")]
         public string Email { get; set; }
         [BindProperty]
+        [MinLength(26,ErrorMessage = "Numer konta bankowego musi się składać z 26 znaków")]
         public string Iban { get; set; }
         
         public Edit(UserManager<ApplicationUser> userManager)
@@ -52,6 +53,13 @@ namespace Tidea.Web.Areas.Identity.Pages.Account.Manage
         public async Task<IActionResult> OnPostAsync()
         {
             var user = await _userManager.GetUserAsync(User);
+
+            if (user.Iban != null&&Iban==null||user.Iban != null&&Iban=="")
+            {
+                TempData["NullIban"] = "Numer konta bankowego nie może być pusty.";
+                return Page();
+            }
+            
             user.Email = Email;
             user.FirstName = FirstName;
             user.LastName = LastName;
