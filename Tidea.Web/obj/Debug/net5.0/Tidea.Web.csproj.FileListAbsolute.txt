@@ -805,7 +805,6 @@
 /Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/bin/Debug/net5.0/runtimes/win-x64/native/e_sqlite3.dll
 /Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/bin/Debug/net5.0/runtimes/win-x86/native/e_sqlite3.dll
 /Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/Create.cshtml.g.cs
-/Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/Delete.cshtml.g.cs
 /Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/Details.cshtml.g.cs
 /Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/Edit.cshtml.g.cs
 /Users/Dom/Desktop/Praca Dyplomowa/Tidea/Tidea.Web/obj/Debug/net5.0/Razor/Pages/Campaign/Index.cshtml.g.cs
